@@ -1,19 +1,28 @@
 "use client"
 import React from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { ModeToggle } from "./ui/mode-toggle";
+
+import { RiHome4Line } from "react-icons/ri";
+import { IoMdInformationCircleOutline } from "react-icons/io";
+import { BsMenuUp } from "react-icons/bs";
+import { SiFreelancer } from "react-icons/si";
+import { RiSendPlaneLine } from "react-icons/ri";
 
 export const Navbar = () => {
 
-    // const router = useRouter()
-
     return (
-        <ul className="hidden md:min-w-max md:flex justify-evenly items-center md:py-2 md:mx-2">
-            <li className="italic font-semibold"><Link href="/blogs">About</Link></li>
-            <li className="italic font-semibold"><Link href="/Contact">Contact</Link></li>
-            <li className="italic font-semibold"><Link href="/services">Services</Link></li>
-            <li><ModeToggle /></li>
+
+        <ul className="flex justify-evenly md:justify-center items-end fixed md:sticky shrink-0 bottom-0 md:flex-col md:py-2 py-3 md:my-2 md:space-y-10 md:h-screen md:w-1/5 max-sm:space-x-7 w-screen border-r dark:border-slate-800 z-50 backdrop-filter backdrop-blur-lg">
+            <li className="italic font-semibold md:mr-8"><Link href="/"><RiHome4Line size={26} /></Link></li>
+            <li className="italic font-semibold md:mr-8"><Link href="/blogs"><IoMdInformationCircleOutline size={26} /></Link></li>
+            <li className="italic font-semibold md:mr-8"><Link href="/Contact"><BsMenuUp size={26} /></Link></li>
+            <li className="italic font-semibold md:mr-8"><Link href="/services"><SiFreelancer size={26} /></Link></li>
+            <li className="italic font-semibold md:mr-8"><Link href="/message"><RiSendPlaneLine size={26} /></Link></li>
+            {/* <li className="md:mr-8"><ModeToggle /></li> */}
         </ul>
+
     )
 }
+
+//
