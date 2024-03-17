@@ -18,7 +18,7 @@ export const Navbar = () => {
             <li className="italic font-semibold md:mr-8"><Link href="/blogs"><IoMdInformationCircleOutline size={26} /></Link></li>
             <li className="italic font-semibold md:mr-8"><Link href="/Contact"><BsMenuUp size={26} /></Link></li>
             <li className="italic font-semibold md:mr-8"><Link href="/services"><SiFreelancer size={26} /></Link></li>
-            <li className="italic font-semibold md:mr-8"><Link href="/message"><RiSendPlaneLine size={26} /></Link></li>
+            <li className="italic font-semibold md:mr-8"><Link href="/messages"><RiSendPlaneLine size={26} /></Link></li>
             {/* <li className="md:mr-8"><ModeToggle /></li> */}
         </ul>
 
