@@ -43,13 +43,7 @@ export default function Kaizen() {
           <div className='h-screen space-y-6 pl-6 pt-8 w-1/2 flex flex-col'>
             <Header />
             <div className=''>
-              <div className='flex flex-col space-y-3'>
-                <input type="file" onChange={(e) => setImageUpload(e.target.files[0])} />
-                <button className='bg-blue-500' onClick={onSubmit}>Submit</button>
-                {getImage.map((index) => (
-                  <img src={index} />
-                ))}
-              </div>
+             
             </div>
           </div>
         </div>
