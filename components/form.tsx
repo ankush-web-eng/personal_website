@@ -25,12 +25,12 @@ export default function Form() {
           alert("SUCCESS!");
         },
         (error) => {
-          alert("FAILED...", error);
+          alert("FAILED...");
         }
       );
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e:any) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
