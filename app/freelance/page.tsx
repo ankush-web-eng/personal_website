@@ -32,6 +32,7 @@ function ContactUs() {
             <Projects />
             <div className='py-4'></div>
             <Skills />
+            <div className='py-4'></div>
             <h1 className='text-4xl font-bold '>Connect with <span className='text-blue-500'>Me</span></h1>
             <Form />
             <div className='pb-8'></div>

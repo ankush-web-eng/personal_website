@@ -4,7 +4,6 @@ import { Navbar } from "@/components/navbar";
 import { Header } from "@/components/header";
 import { Sociallinks } from "@/components/social";
 import Link from "next/link";
-import { BsMailbox } from "react-icons/bs";
 import { RiMailCheckFill } from "react-icons/ri";
 import { FaArrowRight } from "react-icons/fa";
 
