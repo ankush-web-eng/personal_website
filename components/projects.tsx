@@ -10,6 +10,7 @@ import { TbBrandNextjs } from "react-icons/tb";
 import { FaPython } from "react-icons/fa6";
 import { MdInsertLink } from "react-icons/md";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Projects() {
   return (
@@ -22,7 +23,7 @@ export default function Projects() {
       </span>
       <div className="flex flex-col">
         <div className="flex border-t space-x-4 items-center">
-          <img
+          <Image
             src="https://img.freepik.com/premium-vector/chat-app-logo-sms-messenger-label-design-mobile-app-online-conversation-with-texting-message-ui-design-concept-vector-illustration_172533-1513.jpg?w=740"
             alt="chat-app"
             className="h-10 w-10 mr-4 rounded-2xl"
@@ -59,7 +60,7 @@ export default function Projects() {
           </div>
         </div>{" "}
         <div className="flex border-t space-x-4 items-center">
-          <img
+          <Image
             src="https://t3.ftcdn.net/jpg/02/15/61/92/360_F_215619203_9mmrDaPnSHOUBfz9XVkjBAknw5XFEK0D.jpg"
             alt="bot icon"
             className="h-10 w-10 mr-4 rounded-2xl"

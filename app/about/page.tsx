@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { RiMailCheckFill } from "react-icons/ri";
 import { FaArrowRight } from "react-icons/fa";
+import Image from "next/image";
 
 function page() {
   return (
@@ -16,10 +17,12 @@ function page() {
             <h1 className="text-7xl">
               Hi, I&apos;m <span className="text-blue-500 font-bold">Ankush</span>
             </h1>
-            <img
+            <Image
               src="/ankush-pro.png"
               alt="about image"
               className="rounded-full"
+              height={520}
+              width={520}
             />
             <h1 className="text-5xl text-blue-500 font-bold">
               <span className="text-black dark:text-white">About</span> Me
@@ -105,10 +108,12 @@ function page() {
             <h1 className="text-6xl">
               Hi, I&apos;m <span className="text-blue-500 font-bold">Ankush</span>
             </h1>
-            <img
+            <Image
               src="/ankush-pro.png"
               alt="about image"
               className="rounded-full"
+              height={520}
+              width={520}
             />
             <h1 className="text-5xl text-blue-500 font-bold">
               <span className="text-black dark:text-white">About</span> Me

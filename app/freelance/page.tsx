@@ -7,6 +7,7 @@ import Projects from "@/components/projects";
 import Form from "@/components/form";
 import dynamic from "next/dynamic";
 import Skills from "@/components/skills";
+import Image from "next/image";
 
 function ContactUs() {
   const openCV = () => {
@@ -20,7 +21,13 @@ function ContactUs() {
         <div className="flex h-screen w-1/2 space-y-6 flex-col pt-8 pl-6">
           <Header />
           <div className="flex flex-col space-y-5">
-            <img src="/freelance.png" className="rounded-md" />
+            <Image
+              src="/freelance.png"
+              className="rounded-md"
+              height={320}
+              width={640}
+              alt="kaizen"
+            />
             <p className="text-gray-500">
               Being a developer, I need to keep polishing my skills to keep
               myself updated.
@@ -54,7 +61,13 @@ function ContactUs() {
         <div className="flex h-screen w-full space-y-6 flex-col pt-8 pl-2 pr-2">
           <Header />
           <div className="flex flex-col space-y-5">
-            <img src="/freelance.png" className="rounded-md" />
+          <Image
+              src="/freelance.png"
+              className="rounded-md"
+              height={320}
+              width={640}
+              alt="kaizen"
+            />
             <p className="text-gray-500">
               Being a developer, I need to keep polishing my skills to keep
               myself updated.

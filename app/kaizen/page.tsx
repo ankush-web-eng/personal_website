@@ -5,6 +5,7 @@ import React, { useEffect } from "react";
 import { ref, uploadBytes, getDownloadURL, listAll } from "firebase/storage";
 import { storage } from "@/config/firebase";
 import { v4 } from "uuid";
+import Image from "next/image";
 
 export default function Kaizen() {
   // const [imageupload, setImageUpload] = React.useState(null);
@@ -42,7 +43,12 @@ export default function Kaizen() {
         <div className="h-screen space-y-6 pl-6 pt-8 w-1/2 flex flex-col">
           <Header />
           <div className="flex flex-col space-y-5">
-            <img src="/kaizen.png" alt="kaizen image" />
+            <Image
+              src="/kaizen.png"
+              alt="kaizen image"
+              height={320}
+              width={640}
+            />
             <h1 className="text-5xl text-blue-500 font-bold">
               <span className="text-black dark:text-white">Hey</span> Kaizenist
             </h1>
@@ -75,7 +81,12 @@ export default function Kaizen() {
         <div className="h-screen space-y-6 pl-2 pr-2 pt-8 w-full flex flex-col">
           <Header />
           <div className="flex flex-col space-y-5">
-            <img src="/kaizen.png" alt="kaizen image" />
+          <Image
+              src="/kaizen.png"
+              alt="kaizen image"
+              height={320}
+              width={640}
+            />
             <h1 className="text-5xl text-blue-500 font-bold">
               <span className="text-black dark:text-white">Hey</span> Kaizenist
             </h1>

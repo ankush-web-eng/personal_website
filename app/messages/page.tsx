@@ -57,7 +57,7 @@ const deleteMessage = async (id: string): Promise<void> => {
     } else if (chat.length === 0) {
       setIsTyped(false);
     }
-  }, [chat]);
+  }, [chat, isTyped]);
 
   useEffect(() => {
     if (user) {
