@@ -1,8 +1,6 @@
 "use client"
 import { googleProvier, auth } from "@/config/firebase"
-import { GoogleLogin } from "react-google-login"
 import { signInWithPopup, signOut } from "firebase/auth"
-import { Button } from "./ui/button"
 import { FcGoogle } from "react-icons/fc";
 import React from "react";
 
