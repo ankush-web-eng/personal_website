@@ -1,23 +1,28 @@
-"use client";
-
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, ChangeEvent, FormEvent } from 'react';
 import emailjs from '@emailjs/browser';
 import { Button } from '@/components/ui/button';
 
-const initialState = {
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
+const initialState: FormData = {
   name: "",
   email: "",
   message: "",
 };
-export default function Form() {
-  const form = useRef();
-  const [formData, setFormData] = useState(initialState);
 
-  const sendEmail = (e) => {
+export default function Form(): JSX.Element {
+  const form = useRef<HTMLFormElement>(null);
+  const [formData, setFormData] = useState<FormData>(initialState);
+
+  const sendEmail = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_frml4s2", "template_e57nkkk", form.current, {
+      .sendForm("service_frml4s2", "template_e57nkkk", form.current!, {
         publicKey: "Opj9b1VdgmAW7WtD4",
       })
       .then(
@@ -30,7 +35,7 @@ export default function Form() {
       );
   };
 
-  const handleChange = (e:any) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,

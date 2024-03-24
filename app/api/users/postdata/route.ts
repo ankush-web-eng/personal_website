@@ -1,8 +1,9 @@
 import { db } from "@/config/firebase";
 import { addDoc, collection } from "firebase/firestore"
 import { NextRequest, NextResponse } from "next/server";
+// import { json } from "next/server"; 
 
-export async function POST(req: NextResponse) {
+export async function POST(req: NextRequest) {
     try {
         const chatRefrence = collection(db, "chats")
         const data = await req.json()

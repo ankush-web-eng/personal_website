@@ -31,7 +31,7 @@ export default function Projects() {
             A Project developed with{" "}
             <span className="text-blue-500">NEXTJS</span>,{" "}
             <span className="text-blue-500">MONGODB</span> and{" "}
-            <span className="text-blue-500">WEB-SOCKETS</span>. It's Primary
+            <span className="text-blue-500">WEB-SOCKETS</span>. It&quot;s Primary
             Objective was to learn about Web-Sockets i.e.{" "}
             <span className="text-blue-500">Socket.io</span>. Since I was in my
             learning phase of NEXTJS, I also used{" "}

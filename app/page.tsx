@@ -18,7 +18,7 @@ export default function Home() {
             <img src="./ankush_bg_image.png" className="rounded-md" />
             <div className="flex justify-start text-start">
               <h1 className="font-semibold text-lg">
-                Hi, I'm <span className="text-blue-400">Ankush</span>
+                Hi, I&quot;m <span className="text-blue-400">Ankush</span>
               </h1>
             </div>
             <h1 className="text-5xl font-bold ">
@@ -109,7 +109,7 @@ export default function Home() {
             <img src="./ankush_bg_image.png" className="rounded-md" />
             <div className="flex justify-start text-start">
               <h1 className="font-semibold text-lg">
-                Hi, I'm <span className="text-blue-400">Ankush</span>
+                Hi, Im <span className="text-blue-400">Ankush</span>
               </h1>
             </div>
             <h1 className="text-5xl font-bold ">

@@ -39,7 +39,7 @@ function page() {
             </span>
             <h1 className="text-2xl py-2 font-bold">Education</h1>
             <span className="text-slate-500">
-              I am currently pursuing a Bachelor's degree in Computer Science
+              I am currently pursuing a Bachelor&quot;s degree in Computer Science
               from <span className="text-sky-500">GLA University, Mathura</span>. I have completed my higher and
               secondry Education from Rajasthan Board.
             </span>
@@ -47,7 +47,7 @@ function page() {
             <span className="text-gray-500">
               Initially, I was quite confused in life about deciding what to
               chose as a career so I decided to go with the flow. In India, the
-              most followed degree is Engineering and I chose it's most popular
+              most followed degree is Engineering and I chose it&quot;s most popular
               branch Computer Science. I am quite happy with my decision as I am
               <span className="text-sky-500"> passionate</span> about
               development I and{" "}
@@ -128,7 +128,7 @@ function page() {
             </span>
             <h1 className="text-2xl py-2 font-bold">Education</h1>
             <span className="text-slate-500">
-              I am currently pursuing a Bachelor's degree in Computer Science
+              I am currently pursuing a Bachelor&quot;s degree in Computer Science
               from <span className="text-sky-500">GLA University, Mathura</span>. I have completed my higher and
               secondry Education from Rajasthan Board.
             </span>
@@ -136,7 +136,7 @@ function page() {
             <span className="text-gray-500">
               Initially, I was quite confused in life about deciding what to
               chose as a career so I decided to go with the flow. In India, the
-              most followed degree is Engineering and I chose it's most popular
+              most followed degree is Engineering and I chose it&quot;s most popular
               branch Computer Science. I am quite happy with my decision as I am
               <span className="text-sky-500"> passionate</span> about
               development I and{" "}
