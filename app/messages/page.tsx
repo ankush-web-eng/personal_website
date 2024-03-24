@@ -115,7 +115,7 @@ export default function Messages() {
                             ? "Loading..."
                             : messages.map((data, index) => (
                                 <span className="flex space-x-2" key={index}>
-                                    <p className="text-gray-700 dark:text-gray-200">{data.name}</p> : <p>{data.message}</p>
+                                    <p className="text-gray-700 dark:text-gray-200 inline-flex">{data.name}</p> : <p>{data.message}</p>
                                     <button className="" onClick={() => deleteMessage(data.id)}><RiDeleteBin6Fill /></button>
                                 </span>
                             ))}
@@ -130,6 +130,7 @@ export default function Messages() {
                         </div>}
                     </div>
                 </div>
+                <div className="pb-5"></div>
                 <Navbar />
             </div>
         </div>

@@ -33,8 +33,8 @@ export const Auth = () => {
 
     return (
         <div>
-            {isTrue && (<button onClick={onSuccess} className="hover:bg-blue-400 bg-white dark:bg-black rounded-full space-x-2 p-1 flex items-center border-2 border-gray-300 dark:border-gray-800" ><FcGoogle size={24} /><span className="border-l pl-1">Sign In With Google</span></button>)}
-            {!isTrue && (<button onClick={onLogout} className="hover:bg-blue-400 bg-white dark:bg-black rounded-full space-x-2 p-1 flex items-center border-2 border-gray-300 dark:border-gray-800" ><span className="px-2">Sign Out</span></button>)}
+            {isTrue && (<button onClick={onSuccess} className="hover:bg-blue-400 pr-2 bg-white dark:bg-black rounded-full space-x-2 p-1 flex items-center border-2 border-gray-300 dark:border-gray-800" ><FcGoogle size={24} /><span className="border-l pl-1">Sign In With Google</span></button>)}
+            {!isTrue && (<button onClick={onLogout} className="hover:bg-blue-400 pr-2 bg-white dark:bg-black rounded-full space-x-2 p-1 flex items-center border-2 border-gray-300 dark:border-gray-800" ><span className="px-2">Sign Out</span></button>)}
         </div>)
 }
 

@@ -13,8 +13,8 @@ export default function Skills() {
         a long way and learnt various technologies, frameworks and Libraries.
         And now I am on my way to dive deep into AI & ML. 
       </span>
-      <div className="flex flex-col md:flex-row md:justify-between">
-        <div className="bg-yellow-50 dark:bg-teal-100 flex flex-col w-max p-3 space-y-2 rounded-md border-2">
+      <div className="flex flex-col md:flex-row space-y-3 md:justify-between max-md:w-screen max-md:items-center">
+        <div className="bg-yellow-50 dark:bg-teal-100 flex flex-col w-5/6 mr-0 md:w-max p-3 space-y-2 rounded-md border-2">
           <h1 className="text-2xl text-blue-500 ml-4 font-semibold">
             Technical Skills
           </h1>
@@ -50,7 +50,7 @@ export default function Skills() {
             </li>
           </ul>
         </div>
-        <div className="bg-yellow-50 dark:bg-teal-100 flex flex-col w-max p-3 space-y-2 rounded-md border-2">
+        <div className="bg-yellow-50 dark:bg-teal-100 flex flex-col w-5/6 ml-0 md:w-max p-3 space-y-2 rounded-md border-2">
           <h1 className="text-2xl text-blue-500 ml-4 font-semibold">
             Frameworks & <br /> Libraries
           </h1>
@@ -86,7 +86,7 @@ export default function Skills() {
             </li>
           </ul>
         </div>
-        <div className="bg-yellow-50 dark:bg-teal-100 flex flex-col w-max p-3 space-y-2 rounded-md border-2">
+        <div className="bg-yellow-50 dark:bg-teal-100 flex flex-col w-5/6 mr-0 md:w-max p-3 space-y-2 rounded-md border-2">
           <h1 className="text-2xl text-blue-500 ml-4 font-semibold">
             Databases & <br />
             Others
