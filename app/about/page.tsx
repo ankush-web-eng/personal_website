@@ -23,6 +23,8 @@ function page() {
               className="rounded-full"
               height={520}
               width={520}
+              loading="eager"
+              fetchPriority="high"
             />
             <h1 className="text-5xl text-blue-500 font-bold">
               <span className="text-black dark:text-white">About</span> Me
@@ -114,6 +116,8 @@ function page() {
               className="rounded-full"
               height={520}
               width={520}
+              loading="eager"
+              fetchPriority="high"
             />
             <h1 className="text-5xl text-blue-500 font-bold">
               <span className="text-black dark:text-white">About</span> Me
