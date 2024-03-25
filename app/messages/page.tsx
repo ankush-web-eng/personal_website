@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -25,21 +25,21 @@ export default function Messages(): JSX.Element {
   const [isTyped, setIsTyped] = useState<boolean>(false);
   const [isAuth, setIsAuth] = useState<boolean>(false);
 
-const user = auth?.currentUser?.displayName;
+  const user = auth?.currentUser?.displayName;
 
-const newMessage: NewMessage = {
+  const newMessage: NewMessage = {
     name: user ?? null,
     message: chat,
-};
+  };
 
-const deleteMessage = async (id: string): Promise<void> => {
+  const deleteMessage = async (id: string): Promise<void> => {
     try {
-        await axios.post("/api/users/deletedata", { id });
-        getMessages();
+      await axios.post("/api/users/deletedata", { id });
+      getMessages();
     } catch (error) {
-        console.log("Not Deleted!");
+      console.log("Not Deleted!");
     }
-};
+  };
 
   const submitMessage = async (): Promise<void> => {
     try {
@@ -61,12 +61,15 @@ const deleteMessage = async (id: string): Promise<void> => {
 
   useEffect(() => {
     if (user) {
-      setIsAuth(true);
+      if (typeof user === 'string') {
+        setIsAuth(true);
+      } else {
+        console.log('User is not a string');
+      }
     } else {
       setIsAuth(false);
     }
   }, [user]);
-
   useEffect(() => {
     getMessages();
   }, []);
@@ -95,18 +98,17 @@ const deleteMessage = async (id: string): Promise<void> => {
             Leave a <span className="text-teal-500">Comment</span>
           </h1>
           <div className="flex flex-col">
-            {messages == null ? (
-              "Loading..."
-            ) : (
-              messages.map((data, index) => (
-                <span className="flex space-x-2" key={index}>
-                  <p className="text-gray-700">{data.name}</p> : <p>{data.message}</p>
-                  <button className="" onClick={() => deleteMessage(data.id)}>
-                    <RiDeleteBin6Fill />
-                  </button>
-                </span>
-              ))
-            )}
+            {messages == null
+              ? "Loading..."
+              : messages.map((data, index) => (
+                  <span className="flex space-x-2" key={index}>
+                    <p className="text-gray-700">{data.name}</p> :{" "}
+                    <p>{data.message}</p>
+                    <button className="" onClick={() => deleteMessage(data.id)}>
+                      <RiDeleteBin6Fill />
+                    </button>
+                  </span>
+                ))}
             {isAuth && (
               <div className="fixed shrink-0 bottom-0 rounded-full items-center flex space-x-3 pb-4  z-50 ">
                 <input
@@ -116,7 +118,11 @@ const deleteMessage = async (id: string): Promise<void> => {
                   onChange={(e) => setChat(e.target.value)}
                   className="rounded-full px-2 py-1 border-2 border-slate-500 dark:border-gray-400"
                 />
-                {isTyped && <button onClick={submitMessage}><IoIosSend size={24} /></button>}
+                {isTyped && (
+                  <button onClick={submitMessage}>
+                    <IoIosSend size={24} />
+                  </button>
+                )}
               </div>
             )}
           </div>
@@ -129,18 +135,19 @@ const deleteMessage = async (id: string): Promise<void> => {
             Leave a <span className="text-teal-500">Comment</span>
           </h1>
           <div className="flex flex-col">
-            {messages == null ? (
-              "Loading..."
-            ) : (
-              messages.map((data, index) => (
-                <span className="flex space-x-2" key={index}>
-                  <p className="text-gray-700 dark:text-gray-200 inline-flex">{data.name}</p> : <p>{data.message}</p>
-                  <button className="" onClick={() => deleteMessage(data.id)}>
-                    <RiDeleteBin6Fill />
-                  </button>
-                </span>
-              ))
-            )}
+            {messages == null
+              ? "Loading..."
+              : messages.map((data, index) => (
+                  <span className="flex space-x-2" key={index}>
+                    <p className="text-gray-700 dark:text-gray-200 inline-flex">
+                      {data.name}
+                    </p>{" "}
+                    : <p>{data.message}</p>
+                    <button className="" onClick={() => deleteMessage(data.id)}>
+                      <RiDeleteBin6Fill />
+                    </button>
+                  </span>
+                ))}
             {isAuth && (
               <div className="fixed shrink-0 bottom-0 rounded-full items-center flex space-x-3 pb-16 z-50 ">
                 <input
@@ -150,7 +157,11 @@ const deleteMessage = async (id: string): Promise<void> => {
                   onChange={(e) => setChat(e.target.value)}
                   className="rounded-full px-2 py-1 border-2 border-slate-500 dark:border-gray-400"
                 />
-                {isTyped && <button onClick={submitMessage}><IoIosSend size={24} /></button>}
+                {isTyped && (
+                  <button onClick={submitMessage}>
+                    <IoIosSend size={24} />
+                  </button>
+                )}
               </div>
             )}
           </div>
