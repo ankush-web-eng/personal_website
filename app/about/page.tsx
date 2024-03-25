@@ -18,7 +18,7 @@ function page() {
               Hi, I&apos;m <span className="text-blue-500 font-bold">Ankush</span>
             </h1>
             <Image
-              src="/ankush-pro.png"
+              src="/ankush_pro.png"
               alt="about image"
               className="rounded-full"
               height={520}
@@ -111,7 +111,7 @@ function page() {
               Hi, I&apos;m <span className="text-blue-500 font-bold">Ankush</span>
             </h1>
             <Image
-              src="/ankush-pro.png"
+              src="/ankush_pro.png"
               alt="about image"
               className="rounded-full"
               height={520}

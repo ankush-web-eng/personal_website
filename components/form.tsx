@@ -27,10 +27,12 @@ export default function Form(): JSX.Element {
       })
       .then(
         () => {
+          window.location.reload()
           alert("SUCCESS!");
         },
         (error) => {
           alert("FAILED...");
+          console.log("Error",error)
         }
       );
   };
@@ -55,7 +57,7 @@ export default function Form(): JSX.Element {
         name="name"
         value={formData.name}
         onChange={handleChange}
-        className="w-1/2 rounded-full px-2 py-1 border-2 focus:bg-yellow-50 bg-white dark:bg-black text-black dark:text-white"
+        className="md:w-1/2 w-full rounded-full px-2 py-1 border-2 focus:bg-yellow-50 bg-white dark:bg-black text-black dark:text-white"
         type="text"
       />
       <input
@@ -63,7 +65,7 @@ export default function Form(): JSX.Element {
         name="email"
         value={formData.email}
         onChange={handleChange}
-        className="w-1/2 rounded-full px-2 py-1 border-2 focus:bg-yellow-50 bg-white dark:bg-black text-black dark:text-white"
+        className="md:w-1/2 w-full rounded-full px-2 py-1 border-2 focus:bg-yellow-50 bg-white dark:bg-black text-black dark:text-white"
         type="email"
       />
       <input
@@ -71,7 +73,7 @@ export default function Form(): JSX.Element {
         name="message"
         value={formData.message}
         onChange={handleChange}
-        className="w-1/2 h-28 rounded-xl px-2 py-1 border-2 focus:bg-yellow-50 bg-white dark:bg-black text-black dark:text-white"
+        className="md:w-1/2 w-full h-28 rounded-xl px-2 py-1 border-2 focus:bg-yellow-50 bg-white dark:bg-black text-black dark:text-white"
         type="text"
       />
       <button

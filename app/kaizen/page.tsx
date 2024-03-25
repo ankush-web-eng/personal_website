@@ -4,8 +4,12 @@ import { Navbar } from "@/components/navbar";
 import React, { useEffect } from "react";
 import { ref, uploadBytes, getDownloadURL, listAll } from "firebase/storage";
 import { storage } from "@/config/firebase";
-import { v4 } from "uuid";
+// import { v4 } from "uuid";
+import Link from "next/link";
+import { RiMailCheckFill } from "react-icons/ri";
+import { FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
+
 
 export default function Kaizen() {
   // const [imageupload, setImageUpload] = React.useState(null);
@@ -38,7 +42,7 @@ export default function Kaizen() {
 
   return (
     <div>
-      <div className="hidden md:flex">
+      <div className="hidden md:flex overflow-y-auto">
         <Navbar />
         <div className="h-screen space-y-6 pl-6 pt-8 w-1/2 flex flex-col">
           <Header />
@@ -73,7 +77,35 @@ export default function Kaizen() {
               Read my Blogs on kaizen
             </h1>
             <div className="flex justify-center text-3xl">Coming Soon</div>
-            <div className="pb-6 pt-3"></div>
+            <div className="pt-8 pb-20 flex space-x-6 space-y-4 flex-wrap">
+              <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-teal-100 rounded-sm origin-top-left rotate-3 hover:rotate-0">
+                Want to know more about me ?
+                <span className="text-blue-500">
+                  <Link href="/about">
+                    Click here <FaArrowRight />
+                  </Link>
+                </span>
+              </div>
+              
+              <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-teal-100 rounded-sm origin-top-left rotate-3 hover:rotate-0">
+                Are you a client looking for project work?
+                <span className="text-blue-500">
+                  <Link href="/freelance">
+                    Click here <FaArrowRight />
+                  </Link>
+                </span>
+              </div>
+              <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-teal-100 rounded-sm origin-top-left rotate-3 hover:rotate-0">
+                Want to connect with me via Mail?
+                <span className="text-blue-500 flex space-x-2">
+                  <RiMailCheckFill />
+                  <Link href="https://mail.google.com/">
+                    deshwalankush23@gmail.com
+                  </Link>{" "}
+                </span>
+              </div>
+            </div>
+            <div className="pb-2 pt-3"></div>
           </div>
         </div>
       </div>
@@ -111,7 +143,35 @@ export default function Kaizen() {
               Read my Blogs on kaizen
             </h1>
             <div className="flex justify-center text-3xl">Coming Soon</div>
-            <div className="pb-6 pt-3"></div>
+            <div className="pt-8 pb-20 flex space-x-6 space-y-4 flex-wrap">
+              <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-teal-100 rounded-sm origin-top-left rotate-3 hover:rotate-0">
+                Want to know more about me ?
+                <span className="text-blue-500">
+                  <Link href="/about">
+                    Click here <FaArrowRight />
+                  </Link>
+                </span>
+              </div>
+              
+              <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-teal-100 rounded-sm origin-top-left rotate-3 hover:rotate-0">
+                Are you a client looking for project work?
+                <span className="text-blue-500">
+                  <Link href="/freelance">
+                    Click here <FaArrowRight />
+                  </Link>
+                </span>
+              </div>
+              <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-teal-100 rounded-sm origin-top-left rotate-3 hover:rotate-0">
+                Want to connect with me via Mail?
+                <span className="text-blue-500 flex space-x-2">
+                  <RiMailCheckFill />
+                  <Link href="https://mail.google.com/">
+                    deshwalankush23@gmail.com
+                  </Link>{" "}
+                </span>
+              </div>
+            </div>
+            <div className="pb-3 pt-3"></div>
           </div>
         </div>
         <Navbar />

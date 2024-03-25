@@ -8,6 +8,10 @@ import Form from "@/components/form";
 import dynamic from "next/dynamic";
 import Skills from "@/components/skills";
 import Image from "next/image";
+import { RiMailCheckFill } from "react-icons/ri";
+import { FaArrowRight } from "react-icons/fa";
+import Link from "next/link";
+
 
 function ContactUs() {
   const openCV = () => {
@@ -27,6 +31,7 @@ function ContactUs() {
               height={320}
               width={640}
               alt="kaizen"
+              fetchPriority="high"
             />
             <p className="text-gray-500">
               Being a developer, I need to keep polishing my skills to keep
@@ -53,7 +58,35 @@ function ContactUs() {
               Connect with <span className="text-blue-500">Me</span>
             </h1>
             <Form />
-            <div className="pb-8"></div>
+            <div className="pt-8 pb-20 flex space-x-6 space-y-4 flex-wrap">
+              <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-teal-100 rounded-sm origin-top-left rotate-3 hover:rotate-0">
+                Want to know more about me ?
+                <span className="text-blue-500">
+                  <Link href="/about">
+                    Click here <FaArrowRight />
+                  </Link>
+                </span>
+              </div>
+              <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-teal-100 rounded-sm origin-top-left rotate-3 hover:rotate-0">
+                Want to explore my blogs page ?
+                <span className="text-blue-500">
+                  <Link href="/kaizen">
+                    Click here <FaArrowRight />
+                  </Link>
+                </span>
+              </div>
+              
+              <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-teal-100 rounded-sm origin-top-left rotate-3 hover:rotate-0">
+                Want to connect with me via Mail?
+                <span className="text-blue-500 flex space-x-2">
+                  <RiMailCheckFill />
+                  <Link href="https://mail.google.com/">
+                    deshwalankush23@gmail.com
+                  </Link>{" "}
+                </span>
+              </div>
+            </div>
+            <div className="pb-3"></div>
           </div>
         </div>
       </div>
@@ -67,6 +100,7 @@ function ContactUs() {
               height={320}
               width={640}
               alt="kaizen"
+              fetchPriority="high"
             />
             <p className="text-gray-500">
               Being a developer, I need to keep polishing my skills to keep
@@ -93,7 +127,35 @@ function ContactUs() {
               Connect with <span className="text-blue-500">Me</span>
             </h1>
             <Form />
-            <div className="pb-8"></div>
+            <div className="pt-8 pb-20 flex space-x-6 space-y-4 flex-wrap">
+              <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-teal-100 rounded-sm origin-top-left rotate-3 hover:rotate-0">
+                Want to know more about me ?
+                <span className="text-blue-500">
+                  <Link href="/about">
+                    Click here <FaArrowRight />
+                  </Link>
+                </span>
+              </div>
+              <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-teal-100 rounded-sm origin-top-left rotate-3 hover:rotate-0">
+                Want to explore my blogs page ?
+                <span className="text-blue-500">
+                  <Link href="/kaizen">
+                    Click here <FaArrowRight />
+                  </Link>
+                </span>
+              </div>
+              
+              <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-teal-100 rounded-sm origin-top-left rotate-3 hover:rotate-0">
+                Want to connect with me via Mail?
+                <span className="text-blue-500 flex space-x-2">
+                  <RiMailCheckFill />
+                  <Link href="https://mail.google.com/">
+                    deshwalankush23@gmail.com
+                  </Link>{" "}
+                </span>
+              </div>
+            </div>
+            <div className="pb-4"></div>
           </div>
         </div>
         <Navbar />

@@ -25,10 +25,10 @@ export default function Messages(): JSX.Element {
   const [isTyped, setIsTyped] = useState<boolean>(false);
   const [isAuth, setIsAuth] = useState<boolean>(false);
 
-  const user = auth?.currentUser?.displayName;
+  const [user,setUser] = useState<string>("")
 
   const newMessage: NewMessage = {
-    name: user ?? null,
+    name: user,
     message: chat,
   };
 
@@ -59,19 +59,33 @@ export default function Messages(): JSX.Element {
     }
   }, [chat, isTyped]);
 
+
   useEffect(() => {
-    if (user) {
-      if (typeof user === 'string') {
-        setIsAuth(true);
-      } else {
-        console.log('User is not a string');
-      }
-    } else {
-      setIsAuth(false);
+    if (user == "null"){
+      setIsAuth(false)
+    }else{
+      setIsAuth(true)
     }
-  }, [user]);
+  },[user])
+
+  const getUserName =  async() => {
+    try {
+      const data = await axios.get("/api/users/getuser")
+      if (data.data.data === null){
+        setUser("null")
+      }
+      else{
+        setUser(data.data.data)
+      }
+    } catch (error) {
+      console.log("Server Side Error");
+      alert("Server Side Error")
+    }
+  }
+
   useEffect(() => {
     getMessages();
+    getUserName()
   }, []);
 
   const getMessages = async (): Promise<void> => {
@@ -104,9 +118,9 @@ export default function Messages(): JSX.Element {
                   <span className="flex space-x-2" key={index}>
                     <p className="text-gray-700">{data.name}</p> :{" "}
                     <p>{data.message}</p>
-                    <button className="" onClick={() => deleteMessage(data.id)}>
+                    {(user === data.name) && (<button className="" onClick={() => deleteMessage(data.id)}>
                       <RiDeleteBin6Fill />
-                    </button>
+                    </button>)}
                   </span>
                 ))}
             {isAuth && (
@@ -143,9 +157,9 @@ export default function Messages(): JSX.Element {
                       {data.name}
                     </p>{" "}
                     : <p>{data.message}</p>
-                    <button className="" onClick={() => deleteMessage(data.id)}>
+                    {(user === data.name) && (<button className="" onClick={() => deleteMessage(data.id)}>
                       <RiDeleteBin6Fill />
-                    </button>
+                    </button>)}
                   </span>
                 ))}
             {isAuth && (

@@ -117,6 +117,10 @@ export default function Skills() {
               <span className="text-sky-500 mr-2">—</span>
               <a>Prisma ORM</a>
             </li>
+            <li className="flex items-center">
+              <span className="text-sky-500 mr-2">—</span>
+              <a>NextAuth</a>
+            </li>
           </ul>
         </div>
       </div>

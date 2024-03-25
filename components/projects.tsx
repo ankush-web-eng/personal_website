@@ -24,9 +24,11 @@ export default function Projects() {
       <div className="flex flex-col">
         <div className="flex border-t space-x-4 items-center">
           <Image
-            src="https://img.freepik.com/premium-vector/chat-app-logo-sms-messenger-label-design-mobile-app-online-conversation-with-texting-message-ui-design-concept-vector-illustration_172533-1513.jpg?w=740"
+            src="/chat.png"
             alt="chat-app"
             className="h-10 w-10 mr-4 rounded-2xl"
+            height={25}
+            width={25}
           />
           <div className="my-4">
             A Project developed with{" "}
@@ -61,9 +63,11 @@ export default function Projects() {
         </div>{" "}
         <div className="flex border-t space-x-4 items-center">
           <Image
-            src="https://t3.ftcdn.net/jpg/02/15/61/92/360_F_215619203_9mmrDaPnSHOUBfz9XVkjBAknw5XFEK0D.jpg"
+            src="/bot.png"
             alt="bot icon"
             className="h-10 w-10 mr-4 rounded-2xl"
+            height={25}
+            width={25}
           />
           <div className="my-4">
             <span className="text-blue-500">Python</span> is becoming my new{" "}
