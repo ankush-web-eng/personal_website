@@ -54,7 +54,7 @@ export default function Form(): JSX.Element {
     >
       <input
         placeholder="Your Name"
-        name="name"
+        name="from_name"
         value={formData.name}
         onChange={handleChange}
         className="md:w-1/2 w-full rounded-full px-2 py-1 border-2 focus:bg-yellow-50 bg-white dark:bg-black text-black dark:text-white"
@@ -62,7 +62,7 @@ export default function Form(): JSX.Element {
       />
       <input
         placeholder="Your Email"
-        name="email"
+        name="from_email"
         value={formData.email}
         onChange={handleChange}
         className="md:w-1/2 w-full rounded-full px-2 py-1 border-2 focus:bg-yellow-50 bg-white dark:bg-black text-black dark:text-white"
