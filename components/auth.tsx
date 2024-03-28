@@ -6,10 +6,10 @@ import { signIn, useSession, signOut } from "next-auth/react";
 function AuthButton(){
     const {data: session} = useSession()
     if(session){
-        return <button onClick={()=>signOut()} className="hover:bg-blue-500 hover:text-white pr-2 bg-white dark:bg-black rounded-full space-x-2 px-2 py-1  p-1 flex items-center border-2 border-gray-300 dark:border-gray-800" ><span className="px-2  font-semibold">Sign Out</span></button>
+        return;
     }
     else{
-        return <button onClick={()=>signIn()} className="hover:bg-blue-500 hover:text-white pr-2 bg-white dark:bg-black rounded-full px-2 py-1 space-x-2 p-1 flex items-center border-2 border-gray-300 dark:border-gray-800" ><span className="font-semibold">Sign In</span></button>
+        return <button onClick={()=>signIn()} className="hover:bg-blue-500 hover:text-white pr-2 bg-white dark:bg-black rounded-sm px-2 py-1 space-x-2 p-1 flex items-center border-2 border-gray-300 dark:border-gray-800" ><span className="font-semibold">Sign In with google</span></button>
     }
 }
 

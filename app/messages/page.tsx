@@ -4,9 +4,10 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { RiDeleteBin6Fill } from "react-icons/ri";
 import { IoIosSend } from "react-icons/io";
-import { auth } from "@/config/firebase";
+// import { auth } from "@/config/firebase";
 import { Navbar } from "@/components/navbar";
 import { Header } from "@/components/header";
+import { Auth } from "@/components/auth";
 
 interface Message {
   name: string;
@@ -111,6 +112,7 @@ export default function Messages(): JSX.Element {
           <h1 className="text-4xl font-bold">
             Leave a <span className="text-teal-500">Comment</span>
           </h1>
+          <Auth />
           <div className="flex flex-col">
             {messages == null
               ? "Loading..."
