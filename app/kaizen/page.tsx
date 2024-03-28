@@ -76,7 +76,7 @@ export default function Kaizen() {
             <h1 className="text-3xl text-blue-500 font-bold">
               Read my Blogs on kaizen
             </h1>
-            <div className="flex justify-center text-3xl">Coming Soon</div>
+            <div className="flex justify-center text-sky-500 text-2xl"><a target="_ankush" href="https://kaizen-blogs.onrender.com">Visit my new Website for Blogs</a></div>
             <div className="pt-8 pb-20 flex space-x-6 space-y-4 flex-wrap">
               <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-teal-100 rounded-sm origin-top-left rotate-3 hover:rotate-0">
                 Want to know more about me ?
@@ -142,7 +142,7 @@ export default function Kaizen() {
             <h1 className="text-3xl text-blue-500 font-bold">
               Read my Blogs on kaizen
             </h1>
-            <div className="flex justify-center text-3xl">Coming Soon</div>
+            <div className="flex justify-center text-sky-500 text-2xl"><a target="_ankush" href="https://kaizen-blogs.onrender.com">Visit my new Website for Blogs</a></div>
             <div className="pt-8 pb-20 flex space-x-6 space-y-4 flex-wrap">
               <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-teal-100 rounded-sm origin-top-left rotate-3 hover:rotate-0">
                 Want to know more about me ?
