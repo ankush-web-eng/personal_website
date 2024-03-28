@@ -150,6 +150,7 @@ export default function Messages(): JSX.Element {
           <h1 className="text-4xl font-bold">
             Leave a <span className="text-teal-500">Comment</span>
           </h1>
+          <Auth />
           <div className="flex flex-col">
             {messages == null
               ? "Loading..."
