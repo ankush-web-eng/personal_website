@@ -26,7 +26,7 @@ export default function Messages(): JSX.Element {
   const [isTyped, setIsTyped] = useState<boolean>(false);
   const [isAuth, setIsAuth] = useState<boolean>(false);
 
-  const [user,setUser] = useState<string>("")
+  const [user, setUser] = useState<string>("");
 
   const newMessage: NewMessage = {
     name: user,
@@ -35,8 +35,9 @@ export default function Messages(): JSX.Element {
 
   const deleteMessage = async (id: string): Promise<void> => {
     try {
-      await axios.post("/api/users/deletedata", { id });
-      getMessages();
+      await axios.post("/api/users/deletechat", { id });
+      // getMessages();
+      getChats();
     } catch (error) {
       console.log("Not Deleted!");
     }
@@ -44,9 +45,11 @@ export default function Messages(): JSX.Element {
 
   const submitMessage = async (): Promise<void> => {
     try {
-      await axios.post("/api/users/postdata", newMessage);
+      await axios.post("/api/users/savechat", newMessage);
+      // console.log(newMessage)
       setChat("");
-      getMessages();
+      // getMessages();
+      getChats();
     } catch (error) {
       console.log("Unable to send Message");
     }
@@ -60,33 +63,47 @@ export default function Messages(): JSX.Element {
     }
   }, [chat, isTyped]);
 
-
   useEffect(() => {
-    if (user == "null"){
-      setIsAuth(false)
-    }else{
-      setIsAuth(true)
+    if (user == "null") {
+      setIsAuth(false);
+    } else {
+      setIsAuth(true);
     }
-  },[user])
+  }, [user]);
 
-  const getUserName =  async() => {
+  const getUserName = async () => {
     try {
-      const data = await axios.get("/api/users/getuser")
-      if (data.data.data === null){
-        setUser("null")
-      }
-      else{
-        setUser(data.data.data)
+      const data = await axios.get("/api/users/getuser");
+      if (data.data.data === null) {
+        setUser("null");
+      } else {
+        setUser(data.data.data);
       }
     } catch (error) {
       console.log("Server Side Error");
-      alert("Server Side Error")
+      alert("Server Side Error");
     }
-  }
+  };
+
+  const getChats = async () => {
+    try {
+      const data = await axios.get("/api/users/getchat");
+      setMessages(
+        data.data.map((item: any) => ({
+          name: item.name,
+          message: item.messages,
+          id: item.id,
+        }))
+      );
+    } catch (error) {
+      console.log("Unable to fetch Messages");
+    }
+  };
 
   useEffect(() => {
-    getMessages();
-    getUserName()
+    // getMessages();
+    getUserName();
+    getChats();
   }, []);
 
   const getMessages = async (): Promise<void> => {
@@ -120,9 +137,14 @@ export default function Messages(): JSX.Element {
                   <span className="flex space-x-2" key={index}>
                     <p className="text-gray-700">{data.name}</p> :{" "}
                     <p>{data.message}</p>
-                    {(user === data.name) && (<button className="" onClick={() => deleteMessage(data.id)}>
-                      <RiDeleteBin6Fill />
-                    </button>)}
+                    {user === data.name && (
+                      <button
+                        className=""
+                        onClick={() => deleteMessage(data.id)}
+                      >
+                        <RiDeleteBin6Fill />
+                      </button>
+                    )}
                   </span>
                 ))}
             {isAuth && (
@@ -132,7 +154,7 @@ export default function Messages(): JSX.Element {
                   placeholder="Comment here..."
                   value={chat}
                   onChange={(e) => setChat(e.target.value)}
-                  className="rounded-full px-2 py-1 border-2 border-slate-500 dark:border-gray-400"
+                  className="rounded-full px-2 py-1 border-2 w-full border-slate-500 dark:border-gray-400"
                 />
                 {isTyped && (
                   <button onClick={submitMessage}>
@@ -160,9 +182,14 @@ export default function Messages(): JSX.Element {
                       {data.name}
                     </p>{" "}
                     : <p>{data.message}</p>
-                    {(user === data.name) && (<button className="" onClick={() => deleteMessage(data.id)}>
-                      <RiDeleteBin6Fill />
-                    </button>)}
+                    {user === data.name && (
+                      <button
+                        className=""
+                        onClick={() => deleteMessage(data.id)}
+                      >
+                        <RiDeleteBin6Fill />
+                      </button>
+                    )}
                   </span>
                 ))}
             {isAuth && (
