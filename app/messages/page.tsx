@@ -46,7 +46,7 @@ export default function Messages(): JSX.Element {
 
   const submitMessage = async (): Promise<void> => {
     try {
-      await axios.post("/api/users/postdata", newMessage);
+      await axios.post("/api/users/savechat", newMessage);
       alert("Message Sent! Will render within a few minutes");
       // console.log(newMessage)
       setChat("");
