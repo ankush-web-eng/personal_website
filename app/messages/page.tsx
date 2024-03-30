@@ -35,9 +35,9 @@ export default function Messages(): JSX.Element {
 
   const deleteMessage = async (id: string): Promise<void> => {
     try {
-      await axios.post("/api/users/deletechat", { id });
-      // getMessages();
-      getChats();
+      await axios.post("/api/users/deletedata", { id });
+      getMessages();
+      // getChats();
     } catch (error) {
       console.log("Not Deleted!");
     }
@@ -45,11 +45,11 @@ export default function Messages(): JSX.Element {
 
   const submitMessage = async (): Promise<void> => {
     try {
-      await axios.post("/api/users/savechat", newMessage);
+      await axios.post("/api/users/postdata", newMessage);
       // console.log(newMessage)
       setChat("");
-      // getMessages();
-      getChats();
+      getMessages();
+      // getChats();
     } catch (error) {
       console.log("Unable to send Message");
     }
@@ -101,9 +101,9 @@ export default function Messages(): JSX.Element {
   };
 
   useEffect(() => {
-    // getMessages();
+    getMessages();
     getUserName();
-    getChats();
+    // getChats();
   }, []);
 
   const getMessages = async (): Promise<void> => {

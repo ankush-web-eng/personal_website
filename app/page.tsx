@@ -67,7 +67,7 @@ export default function Home() {
               </a>
             </p>
             <div className="pt-6">
-              <video controls className="rounded-xl" >
+              <video controls className="rounded-xl" poster="IMG_4613.PNG">
                 <source src="/IMG_4564.MP4" />
               </video>
             </div>
