@@ -35,9 +35,10 @@ export default function Messages(): JSX.Element {
 
   const deleteMessage = async (id: string): Promise<void> => {
     try {
-      await axios.post("/api/users/deletedata", { id });
-      getMessages();
-      // getChats();
+      await axios.post("/api/users/deletechat", { id });
+      alert("Message Deleted! Will disappear within a few minutes");
+      // getMessages();
+      getChats();
     } catch (error) {
       console.log("Not Deleted!");
     }
@@ -46,10 +47,11 @@ export default function Messages(): JSX.Element {
   const submitMessage = async (): Promise<void> => {
     try {
       await axios.post("/api/users/postdata", newMessage);
+      alert("Message Sent! Will render within a few minutes");
       // console.log(newMessage)
       setChat("");
-      getMessages();
-      // getChats();
+      // getMessages();
+      getChats();
     } catch (error) {
       console.log("Unable to send Message");
     }
@@ -101,9 +103,9 @@ export default function Messages(): JSX.Element {
   };
 
   useEffect(() => {
-    getMessages();
+    // getMessages();
     getUserName();
-    // getChats();
+    getChats();
   }, []);
 
   const getMessages = async (): Promise<void> => {
@@ -131,21 +133,19 @@ export default function Messages(): JSX.Element {
           </h1>
           <Auth />
           <div className="flex flex-col">
-            {messages == null
+            {messages === null
               ? "Loading..."
-              : messages.map((data, index) => (
-                  <span className="flex space-x-2" key={index}>
-                    <p className="text-gray-700">{data.name}</p> :{" "}
-                    <p>{data.message}</p>
-                    {user === data.name && (
-                      <button
-                        className=""
-                        onClick={() => deleteMessage(data.id)}
-                      >
+              : messages.length === 0
+              ? "No messages"
+              : messages.map(({ id, name, message }, index) => (
+                  <div className="flex space-x-2" key={id}>
+                    <p className="text-gray-700">{name}</p> : <p>{message}</p>
+                    {user === name && (
+                      <button onClick={() => deleteMessage(id)}>
                         <RiDeleteBin6Fill />
                       </button>
                     )}
-                  </span>
+                  </div>
                 ))}
             {isAuth && (
               <div className="fixed shrink-0 bottom-0 rounded-full items-center flex space-x-3 pb-4  z-50 ">
@@ -174,23 +174,19 @@ export default function Messages(): JSX.Element {
           </h1>
           <Auth />
           <div className="flex flex-col">
-            {messages == null
+            {messages === null
               ? "Loading..."
-              : messages.map((data, index) => (
-                  <span className="flex space-x-2" key={index}>
-                    <p className="text-gray-700 dark:text-gray-200 inline-flex">
-                      {data.name}
-                    </p>{" "}
-                    : <p>{data.message}</p>
-                    {user === data.name && (
-                      <button
-                        className=""
-                        onClick={() => deleteMessage(data.id)}
-                      >
+              : messages.length === 0
+              ? "No messages"
+              : messages.map(({ id, name, message }, index) => (
+                  <div className="flex space-x-2" key={id}>
+                    <p className="text-gray-700">{name}</p> : <p>{message}</p>
+                    {user === name && (
+                      <button onClick={() => deleteMessage(id)}>
                         <RiDeleteBin6Fill />
                       </button>
                     )}
-                  </span>
+                  </div>
                 ))}
             {isAuth && (
               <div className="fixed shrink-0 bottom-0 rounded-full items-center flex space-x-3 pb-16 z-50 ">
