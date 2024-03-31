@@ -110,7 +110,7 @@ function page() {
             <h1 className="text-6xl">
               Hi, I&apos;m <span className="text-blue-500 font-bold">Ankush</span>
             </h1>
-            <img
+            <Image
               src="/IMG_1705.JPG"
               alt="about image"
               className=""
