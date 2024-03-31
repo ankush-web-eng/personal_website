@@ -7,6 +7,7 @@ import Link from "next/link";
 import { RiMailCheckFill } from "react-icons/ri";
 import { FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
+import CarouselComp from "@/components/carousel";
 
 export default function Home() {
   return (
@@ -16,13 +17,14 @@ export default function Home() {
         <div className="flex h-screen w-1/2 space-y-6 flex-col pt-8 pl-6">
           <Header />
           <div className="flex flex-col space-y-5">
-            <Image
+            {/* <Image
               src="/ankush_bg_image.png"
               alt="Ankush"
               className="rounded-md"
               height={320}
               width={640}
-            />
+            /> */}
+            <CarouselComp />
             <div className="flex justify-start text-start">
               <h1 className="font-semibold text-lg">
                 Hi, I am <span className="text-blue-400">Ankush</span>
@@ -113,13 +115,14 @@ export default function Home() {
         <div className="flex h-screen w-full space-y-6 flex-col pt-8 pl-3">
           <Header />
           <div className="flex flex-col space-y-5">
-          <Image
+          {/* <Image
               src="/ankush_bg_image.png"
               alt="Ankush"
               className="rounded-md"
               height={320}
               width={640}
-            />
+            /> */}
+            <CarouselComp />
             <div className="flex justify-start text-start">
               <h1 className="font-semibold text-lg">
                 Hi, I am <span className="text-blue-400">Ankush</span>
