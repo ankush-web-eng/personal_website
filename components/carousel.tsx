@@ -7,7 +7,7 @@ export default function CarouselComp() {
   return ( 
     <>
       <div className='max-w-[1200px] mx-auto '>
-        <Carousel  autoPlay={true} interval={2000} infiniteLoop={true} showThumbs={false} useKeyboardArrows={true}>
+        <Carousel showArrows={false} autoPlay={true} interval={2000} infiniteLoop={true} showThumbs={false} useKeyboardArrows={true}>
             <div>
                 <img src="/ankush_bg_image.png" className="rounded-md" />
             </div>
