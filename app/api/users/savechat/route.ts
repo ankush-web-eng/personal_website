@@ -1,5 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import { NextRequest, NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 const prisma = new PrismaClient();
 
 export async function POST(req: NextRequest) {
@@ -14,6 +15,10 @@ export async function POST(req: NextRequest) {
         const sentData = await prisma.chat.create({
             data: newMessage
         })
+
+        const path = req.nextUrl.searchParams.get('path') || "/"
+        revalidatePath(path)
+
         // console.log(sentData);
         return NextResponse.json({ message: 'Chat saved successfully!' }, { status: 201 })
     } catch (error: any) {

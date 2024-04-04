@@ -25,6 +25,8 @@ export default function Messages(): JSX.Element {
   const [chat, setChat] = useState<string>("");
   const [isTyped, setIsTyped] = useState<boolean>(false);
   const [isAuth, setIsAuth] = useState<boolean>(false);
+  const [send, setSend] = useState<boolean>(false);
+  const [del, setDel] = useState<boolean>(false);
 
   const [user, setUser] = useState<string>("");
 
@@ -35,8 +37,10 @@ export default function Messages(): JSX.Element {
 
   const deleteMessage = async (id: string): Promise<void> => {
     try {
+      setDel(true);
       await axios.post("/api/users/deletechat", { id });
-      alert("Message Deleted! Will disappear within a few minutes");
+      alert("Message Deleted!!");
+      setDel(false);
       // getMessages();
       getChats();
     } catch (error) {
@@ -46,10 +50,12 @@ export default function Messages(): JSX.Element {
 
   const submitMessage = async (): Promise<void> => {
     try {
+      setSend(true);
       await axios.post("/api/users/savechat", newMessage);
-      alert("Message Sent! Will render within a few minutes");
+      alert("Message Sent!!");
       // console.log(newMessage)
       setChat("");
+      setSend(false);
       // getMessages();
       getChats();
     } catch (error) {
@@ -157,8 +163,11 @@ export default function Messages(): JSX.Element {
                   className="rounded-full px-2 py-1 border-2 w-full border-slate-500 dark:border-gray-400"
                 />
                 {isTyped && (
-                  <button onClick={submitMessage}>
-                    <IoIosSend size={24} />
+                  <button
+                    onClick={submitMessage}
+                    className="bg-blue-500 px-2 py-1 rounded-full "
+                  >
+                    {send ? "Sending..." : "Send"}
                   </button>
                 )}
               </div>
@@ -198,8 +207,11 @@ export default function Messages(): JSX.Element {
                   className="rounded-full px-2 py-1 border-2 border-slate-500 dark:border-gray-400"
                 />
                 {isTyped && (
-                  <button onClick={submitMessage}>
-                    <IoIosSend size={24} />
+                  <button
+                    onClick={submitMessage}
+                    className="bg-blue-500 px-2 py-1 rounded-full "
+                  >
+                    {send ? "Sending..." : "Send"}
                   </button>
                 )}
               </div>
