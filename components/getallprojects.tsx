@@ -3,6 +3,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Project from "@/components/project";
+import Loading from "@/components/loading";
 interface ProjectData {
   id: string;
   title: string;
@@ -32,7 +33,7 @@ export default function GetAllProjects() {
         {data !== null ?
           data.map((project, index) => (
             <Project key={index} project={project} />
-          )): "Loading Projects..."}
+          )): <Loading >Laoding Projects</Loading>}
       </div>
     </div>
   );

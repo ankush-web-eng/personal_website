@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 
 import { IoMdArrowRoundBack } from "react-icons/io";
+import Loading from "@/components/loading";
 
 type Params = {
     id:string
@@ -39,7 +40,7 @@ export default function Page({params}: {params: Params}) {
     return (
         <div className="h-screen md:w-1/2 flex flex-col justify-start px-4 pt-8 space-y-10">
             <Link href={`/freelance`}><IoMdArrowRoundBack color="blue" size={28}/></Link>
-            <h1 className="text-4xl font-extrabold">{data?.title || "Loading Project..."}</h1>
+            <h1 className="text-4xl font-extrabold">{data?.title || <Loading >Loading Project</Loading>}</h1>
             <p className="text-slate-400">{data?.description}</p>
         </div>
     )
