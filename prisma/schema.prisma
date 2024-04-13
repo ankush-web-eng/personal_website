@@ -13,3 +13,9 @@ model Chat {
   name     String
   messages String
 }
+
+model Project {
+  id          String @id @default(uuid())
+  title        String
+  description String
+}

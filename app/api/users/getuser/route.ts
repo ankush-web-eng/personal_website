@@ -6,14 +6,15 @@ export async function GET(req: NextRequest) {
         const session = await getServerSession()
 
         const name = session?.user?.name
+        const email = session?.user?.email
         if (name) {
             return NextResponse.json({
-                data: name
+                data: { name, email }
             })
         }
-        else{
+        else {
             return NextResponse.json({
-                data:null
+                data: null
             })
         }
     } catch (error) {

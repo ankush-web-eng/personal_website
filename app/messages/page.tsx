@@ -38,7 +38,7 @@ export default function Messages(): JSX.Element {
   const deleteMessage = async (id: string): Promise<void> => {
     try {
       setDel(true);
-      await axios.post("/api/users/deletechat", { id });
+      await axios.post("/api/messages/deletechat", { id });
       alert("Message Deleted!!");
       setDel(false);
       // getMessages();
@@ -51,7 +51,7 @@ export default function Messages(): JSX.Element {
   const submitMessage = async (): Promise<void> => {
     try {
       setSend(true);
-      await axios.post("/api/users/savechat", newMessage);
+      await axios.post("/api/messages/savechat", newMessage);
       alert("Message Sent!!");
       // console.log(newMessage)
       setChat("");
@@ -85,7 +85,7 @@ export default function Messages(): JSX.Element {
       if (data.data.data === null) {
         setUser("null");
       } else {
-        setUser(data.data.data);
+        setUser(data.data.data.name);
       }
     } catch (error) {
       console.log("Server Side Error");
@@ -95,7 +95,7 @@ export default function Messages(): JSX.Element {
 
   const getChats = async () => {
     try {
-      const data = await axios.get("/api/users/getchat");
+      const data = await axios.get("/api/messages/getchat");
       setMessages(
         data.data.map((item: any) => ({
           name: item.name,
@@ -116,7 +116,7 @@ export default function Messages(): JSX.Element {
 
   const getMessages = async (): Promise<void> => {
     try {
-      const response = await axios.get("/api/users/getdata");
+      const response = await axios.get("/api/messages/getdata");
       const filteredData: Message[] = response.data.data.map((doc: any) => ({
         name: doc.name,
         message: doc.message,

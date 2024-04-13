@@ -2,6 +2,7 @@
 
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Image from "next/image";
 
 export default function CarouselComp() {
   return ( 
@@ -9,16 +10,16 @@ export default function CarouselComp() {
       <div className='max-w-[1200px] mx-auto '>
         <Carousel showArrows={false} autoPlay={true} interval={2000} infiniteLoop={true} showThumbs={false} useKeyboardArrows={true}>
             <div>
-                <img src="/ankush_bg_image.png" className="rounded-md" />
+                <Image src="/ankush_bg_image.png" className="rounded-md"  alt="ankush"/>
             </div>
             <div>
-                <img src="/LinkedIn_cover.png" className="rounded-md"/>
+                <Image src="/LinkedIn_cover.png" className="rounded-md" alt="ankush"/>
             </div>
             <div>
-                <img src="/freelance.png" className="rounded-md"/>
+                <Image src="/freelance.png" className="rounded-md" alt="ankush"/>
             </div>
             <div>
-                <img src="/kaizen.png" className="rounded-md"/>
+                <Image src="/kaizen.png" className="rounded-md" alt="ankush"/>
             </div>
         </Carousel>
       </div>

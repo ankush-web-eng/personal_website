@@ -11,8 +11,12 @@ import { FaPython } from "react-icons/fa6";
 import { MdInsertLink } from "react-icons/md";
 import Link from "next/link";
 import Image from "next/image";
+import Project from "@/components/project";
 
 export default function Projects() {
+
+  
+
   return (
     <div className="flex flex-col">
       <h1 className="text-4xl text-blue-500 font-bold w-fit my-6">Projects</h1>
@@ -34,8 +38,8 @@ export default function Projects() {
             A Project developed with{" "}
             <span className="text-blue-500">NEXTJS</span>,{" "}
             <span className="text-blue-500">MONGODB</span> and{" "}
-            <span className="text-blue-500">WEB-SOCKETS</span>. It&quot;s Primary
-            Objective was to learn about Web-Sockets i.e.{" "}
+            <span className="text-blue-500">WEB-SOCKETS</span>. It&quot;s
+            Primary Objective was to learn about Web-Sockets i.e.{" "}
             <span className="text-blue-500">Socket.io</span>. Since I was in my
             learning phase of NEXTJS, I also used{" "}
             <span className="text-blue-500">NextAuth</span> in this. This
