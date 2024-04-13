@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { error } from "console";
 
 type Project = {
   id: string;
@@ -49,10 +48,10 @@ export default function Project({ project }: { project: Project }) {
   };
 
   return (
-    <div className="flex flex-col space-y-2 p-2 max-md:px-2 border-gray-400 border-2 rounded-md">
+    <div className="flex flex-col space-y-2 p-2 max-md:px-2 border-gray-400 rounded-md">
       <h1 className="text-2xl font-bold">{project.title}</h1>
       <p className="text-slate-400 text-sm">
-        {project.description.substring(0, 100)}...
+        {project.description.substring(0, 150)}...
       </p>
       <div className="flex flex-row space-x-4">
         <Link

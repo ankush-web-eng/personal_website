@@ -159,11 +159,11 @@ export default function Home() {
               means getting better on daily basis. You can view my content on
               Instagram{" "}
               <a
-                href="https://www.instagram.com/ankush__57s/"
+                href="https://www.instagram.com/whyankush07/"
                 target="ankush"
                 className="text-blue-500"
               >
-                @ankush__57s.
+                @whyankush07.
               </a>
             </p>
             <div className="pt-6">
@@ -180,7 +180,7 @@ export default function Home() {
                   </Link>
                 </span>
               </div>
-              <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-teal-100 rounded-sm origin-top-left rotate-3 hover:rotate-0">
+              <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-white rounded-sm">
                 Want to explore my blogs page ?
                 <span className="text-blue-500">
                   <Link href="/kaizen">
@@ -188,7 +188,7 @@ export default function Home() {
                   </Link>
                 </span>
               </div>
-              <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-teal-100 rounded-sm origin-top-left rotate-3 hover:rotate-0">
+              <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-white rounded-sm">
                 Are you a client looking for project work?
                 <span className="text-blue-500">
                   <Link href="/freelance">
@@ -196,7 +196,7 @@ export default function Home() {
                   </Link>
                 </span>
               </div>
-              <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-teal-100 rounded-sm origin-top-left rotate-3 hover:rotate-0">
+              <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-white rounded-sm">
                 Want to connect with me via Mail?
                 <span className="text-blue-500 flex space-x-2">
                   <RiMailCheckFill />
