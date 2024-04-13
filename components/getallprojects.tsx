@@ -29,11 +29,11 @@ export default function GetAllProjects() {
   return (
     <div className="pt-4 pb-8 px-4 flex space-y-6 flex-col">
       <h1 className="text-4xl text-blue-500 w-fit font-bold my-6">Projects</h1>
-      <div className="grid grid-cols-2 space-y-4 space-x-2">
+      <div className="md:grid md:grid-cols-2 flex flex-col space-y-4 space-x-2">
         {data !== null ?
           data.map((project, index) => (
             <Project key={index} project={project} />
-          )): <Loading >Laoding Projects</Loading>}
+          )): <Loading >Loading Projects</Loading>}
       </div>
     </div>
   );

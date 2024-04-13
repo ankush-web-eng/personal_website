@@ -3,8 +3,8 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url = env("POSTGRES_PRISMA_URL")
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL")
   directUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
@@ -16,6 +16,16 @@ model Chat {
 
 model Project {
   id          String @id @default(uuid())
-  title        String
+  title       String
   description String
+}
+
+model Blog {
+  id       String @id @default(uuid())
+  title    String
+  subtitle String
+  first    String
+  second   String
+  third    String
+  fourth   String
 }
