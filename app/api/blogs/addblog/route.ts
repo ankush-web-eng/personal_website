@@ -10,23 +10,25 @@ export async function POST(req: NextRequest) {
         const blogdata = {
             title: reqBody.title,
             subtitle: reqBody.subtitle,
-            first: reqBody.first,
-            second: reqBody.second,
-            third: reqBody.third,
-            fourth: reqBody.fourth,
+            para1: reqBody.para1,
+            para2: reqBody.para2,
+            para3: reqBody.para3,
+            para4: reqBody.para4,
+            para5: reqBody.para5,
         }
 
-        // const blog = await prisma.blog.create({
-        //     data: blogdata
-        //   }).catch((error) => {
+        const blog = await prisma.blog.create({
+            data: blogdata
+        })
+        // .catch((error) => {
         //     console.error(error);
         //     return NextResponse.json({ error: "Error in adding blog" }, { status: 500 });
-        //   });
+        // });
 
-        // console.log(blog);
+        console.log(blog);
 
-        // const path = req.nextUrl.searchParams.get('path') || "/addmyblog"
-        // revalidatePath(path)
+        const path = req.nextUrl.searchParams.get('path') || "/addmyblog"
+        revalidatePath(path)
 
         return NextResponse.json({ message: "Blog Added" }, { status: 201 })
 

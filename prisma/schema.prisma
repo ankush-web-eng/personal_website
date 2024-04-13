@@ -24,8 +24,9 @@ model Blog {
   id       String @id @default(uuid())
   title    String
   subtitle String
-  first    String
-  second   String
-  third    String
-  fourth   String
+  para1    String
+  para2    String
+  para3    String
+  para4    String
+  para5    String
 }
