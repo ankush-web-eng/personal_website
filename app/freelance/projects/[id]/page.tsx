@@ -14,7 +14,9 @@ type Params = {
 interface ProjectData {
     id: string;
     title: string;
-    description: string;
+    para1: string;
+    para2: string;
+    para3: string;
 }
 
 export default function Page({params}: {params: Params}) {
@@ -38,10 +40,12 @@ export default function Page({params}: {params: Params}) {
     })
 
     return (
-        <div className="h-screen md:w-1/2 flex flex-col justify-start px-4 pt-8 space-y-10">
+        <div className="h-screen md:w-1/2 flex flex-col justify-start px-4 pt-8 space-y-10 pb-6">
             <Link href={`/freelance`}><IoMdArrowRoundBack color="blue" size={28}/></Link>
             <h1 className="text-4xl font-extrabold">{data?.title || <Loading >Loading Project</Loading>}</h1>
-            <p className="text-slate-400">{data?.description}</p>
+            <p className="text-slate-400">{data?.para1}</p>
+            <p className="text-slate-400">{data?.para2}</p>
+            <p className="text-slate-400">{data?.para3}</p>
         </div>
     )
 }

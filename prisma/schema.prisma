@@ -20,6 +20,14 @@ model Project {
   description String
 }
 
+model Projects {
+  id    String @id @default(uuid())
+  title String
+  para1 String
+  para2 String
+  para3 String
+}
+
 model Blog {
   id       String @id @default(uuid())
   title    String

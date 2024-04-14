@@ -6,14 +6,16 @@ const prisma = new PrismaClient()
 export async function POST(req: NextRequest) {
     try {
         const reqBody = await req.json()
-        const { title, discription } = reqBody
+        const { title, para1, para2, para3 } = reqBody
 
         const newProject = {
             title: title,
-            description: discription
+            para1: para1,
+            para2: para2,
+            para3: para3
         }
 
-        await prisma.project.create({
+        await prisma.projects.create({
             data : newProject
         })
 

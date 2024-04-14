@@ -50,7 +50,7 @@ export default function Blog({ blog }: { blog: BlogProps }) {
   };
 
   return (
-    <div className="flex flex-col p-2 w-5/6 border-2 rounded-lg">
+    <div className="flex flex-col p-2 w-full border-b">
       <h1 className="text-3xl font-bold">{blog.title}</h1>
       <h1 className="text-2xl font-bold text-gray-700">{blog.subtitle}</h1>
       <p className="text-md font-normal text-gray-500">

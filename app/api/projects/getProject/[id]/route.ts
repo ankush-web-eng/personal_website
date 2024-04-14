@@ -14,7 +14,7 @@ export async function GET(req:NextRequest, context : Params){
         const newId = context.params.id
         // console.log(newId);
         
-        const data = await prisma.project.findFirst({
+        const data = await prisma.projects.findFirst({
             where: {
                 id: newId
             }

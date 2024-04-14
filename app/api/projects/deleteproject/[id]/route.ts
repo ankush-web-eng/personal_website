@@ -13,7 +13,7 @@ type Params = {
 export async function GET(req : NextRequest, context: Params){
     try {
         const newId = context.params.id
-        const project = await prisma.project.delete({
+        const project = await prisma.projects.delete({
             where: {
                 id: newId
             }

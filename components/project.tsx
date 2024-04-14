@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 type Project = {
   id: string;
   title: string;
-  description: string;
+  para1: string;
 };
 
 export default function Project({ project }: { project: Project }) {
@@ -37,7 +37,7 @@ export default function Project({ project }: { project: Project }) {
     try {
       setIsDeleted(true);
       await axios
-        .get(`/api/projects/deleteprojects/${id}`)
+        .get(`/api/projects/deleteproject/${id}`)
         .then(() => alert("Project deleted successfully"))
         .catch((error) => console.log(error));
       setIsDeleted(false);
@@ -48,10 +48,10 @@ export default function Project({ project }: { project: Project }) {
   };
 
   return (
-    <div className="flex flex-col space-y-2 p-2 max-md:px-2 border-gray-400 rounded-md">
+    <div className="flex flex-col space-y-2 p-2 max-md:px-2 max-md:w-full max-md:border-b">
       <h1 className="text-2xl font-bold">{project.title}</h1>
       <p className="text-slate-400 text-sm">
-        {project.description.substring(0, 150)}...
+        {project.para1.substring(0, 150)}...
       </p>
       <div className="flex flex-row space-x-4">
         <Link

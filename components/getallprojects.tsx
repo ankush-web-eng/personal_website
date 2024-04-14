@@ -7,7 +7,9 @@ import Loading from "@/components/loading";
 interface ProjectData {
   id: string;
   title: string;
-  description: string;
+  para1: string;
+  para2: string;
+  para3: string;
 }
 
 export default function GetAllProjects() {
@@ -27,7 +29,7 @@ export default function GetAllProjects() {
   });
 
   return (
-    <div className="pt-4 pb-8 flex space-y-6 flex-col">
+    <div className="pt-4 pb-8 flex space-y-6 flex-col border-b-sky-200">
       <h1 className="text-4xl text-blue-500 w-fit font-bold ">Projects</h1>
       <div className="md:grid md:grid-cols-2 flex flex-col space-y-4 space-x-2">
         {data !== null ?

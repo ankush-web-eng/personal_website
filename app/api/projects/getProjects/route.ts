@@ -5,7 +5,7 @@ const prisma = new PrismaClient()
 
 export async function GET (req: NextRequest){
     try {
-        const data = await prisma.project.findMany()
+        const data = await prisma.projects.findMany()
 
         const path = req.nextUrl.searchParams.get("path") || "/"
         revalidatePath(path)
