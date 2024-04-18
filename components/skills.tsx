@@ -11,7 +11,7 @@ export default function Skills() {
         contantly learn new things to keep up with the rapid growing tech market
         in presence of AI. Started learning HTML in September 2023, I have come
         a long way and learnt various technologies, frameworks and Libraries.
-        And now I am on my way to dive deep into AI & ML.
+        And now I am mastering Full Stack by adding Generative AI to my Projects.
       </span>
       <div className="flex flex-col md:flex-row space-y-3 md:justify-between max-md:w-screen max-md:items-center">
         <div className="bg-yellow-50 dark:bg-teal-100 flex flex-col w-5/6 mr-0 md:w-max p-3 space-y-2 rounded-md border-2">

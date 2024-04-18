@@ -51,6 +51,16 @@ export default function Freelance() {
         provide details about yourself at{" "}
         <span className="text-blue-500">bottom</span> of the page.
       </h2>
+      <span className="text-slate-500">
+        I keep sharing on my Instagram about my work and projects related to Web Development and Tech. You can contact me via Instagram as well.{" "}
+        <a
+          href="https://www.instagram.com/howankush07/"
+          target="ankush"
+          className="text-blue-500"
+        >
+          @howankush07.
+        </a>
+      </span>
       <div className="flex space-x-4 justify-start">
         <Button variant="primary" onClick={openCV}>
           Download CV

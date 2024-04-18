@@ -56,7 +56,7 @@ export default function Page() {
 
   return ( <div className="h-screen flex items-center justify-center">
       <div className="bg-white p-8 rounded shadow-md">
-        <h1 className="text-2xl font-bold mb-4">Add My Project</h1>
+        <h1 className="text-2xl font-bold mb-4">Add My Blog</h1>
         <input
           type="text"
           placeholder="Title"
