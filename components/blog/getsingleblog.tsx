@@ -12,12 +12,12 @@ interface BlogData {
 }
 
 export default function SingleBlogs() {
-  const [blogData, setBlogData] = useState<BlogData | null>(null);
+  const [blogData, setBlogData] = useState<BlogData[] | null>(null);
 
   const getBlogData = async () => {
     try {
       const response = await axios.get("/api/blogs/getblogs");
-      setBlogData(response.data.data[0]);
+      setBlogData(response.data.data.slice(0,2));
 
     } catch (error) {
       console.log(error);
@@ -32,7 +32,9 @@ export default function SingleBlogs() {
     <div className="pt-4 pb-6 flex space-y-2 flex-col border-b-sky-200">
       <h1 className="text-4xl text-blue-500 w-fit font-bold my-6">Blogs</h1>
       {blogData !== null ? (
-        <Blog blog={blogData} />
+        blogData.map((data, index) => (
+            <Blog key={index} blog={data} />
+        ))
       ) : (
         <Loading>Loading Blogs</Loading>
       )}

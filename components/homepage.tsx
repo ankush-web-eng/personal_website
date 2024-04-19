@@ -4,6 +4,8 @@ import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import { RiMailCheckFill } from "react-icons/ri";
 import SingleBlogs from "@/components/blog/getsingleblog";
+import GetSingleProjects from "@/components/projects/getsingleproject";
+import Footer from "@/components/footer/footer";
 
 export default function Homepage() {
   return (
@@ -64,6 +66,7 @@ export default function Homepage() {
         </a>
       </p>
       <SingleBlogs />
+      <GetSingleProjects />
       <div className="pt-6">
         <video controls className="rounded-xl" poster="IMG_4613.PNG">
           <source src="/IMG_4564.MP4" />
@@ -86,6 +89,7 @@ export default function Homepage() {
             </Link>
           </span>
         </div>
+        {/* <Footer link="/kaizen" text="Want to explore my Blogs Page ?" />{" "} */}
         <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-white rounded-sm ">
           Are you a client looking for project work?
           <span className="text-blue-500">
