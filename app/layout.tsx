@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "@/styles/globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import SessionProvider from "@/components/SessionProvider";
 import { getServerSession } from "next-auth";
@@ -8,7 +8,7 @@ import { getServerSession } from "next-auth";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ankush's Personal Website",
+  title: "Ankush's World",
   description: "For Personal Branding",
 };
 
