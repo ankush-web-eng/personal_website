@@ -54,6 +54,14 @@ export default function Page() {
     }
   };
 
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
   return ( <div className="h-screen flex items-center justify-center">
       <div className="bg-white p-8 rounded shadow-md">
         <h1 className="text-2xl font-bold mb-4">Add My Blog</h1>

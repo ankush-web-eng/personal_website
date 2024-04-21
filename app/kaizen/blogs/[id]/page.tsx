@@ -41,6 +41,14 @@ export default function Page({ params }: { params: Params }) {
     getProject();
   });
 
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
   return (
     <div className="h-screen w-full pb-6 flex flex-col justify-start px-4 pt-8 space-y-10">
       <Link href={`/kaizen`}>

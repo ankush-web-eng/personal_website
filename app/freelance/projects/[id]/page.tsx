@@ -39,6 +39,14 @@ export default function Page({params}: {params: Params}) {
         getProject();
     })
 
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+      setMounted(true);
+    }, []);
+  
+    if (!mounted) return null;
+
     return (
         <div className="h-screen md:w-1/2 flex flex-col justify-start px-4 pt-8 space-y-10 pb-6">
             <Link href={`/freelance`}><IoMdArrowRoundBack color="blue" size={28}/></Link>

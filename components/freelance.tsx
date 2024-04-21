@@ -6,11 +6,11 @@ import Skills from "@/components/skills";
 import CarouselComp from "@/components/carousel";
 import Form from "@/components/form";
 import { Button } from "@/components/ui/button";
-import Projects from "@/components/projects";
 import GetAllProjects from "@/components/getallprojects";
 
 import { FaArrowRight } from "react-icons/fa";
 import { RiMailCheckFill } from "react-icons/ri";
+import Footer from "./footer/footer";
 
 export default function Freelance() {
   const [user, setUser] = useState<string>("null");
@@ -39,11 +39,14 @@ export default function Freelance() {
 
   return (
     <div className="flex flex-col space-y-5">
+
       <CarouselComp />
+
       <p className="text-gray-500">
         Being a developer, I need to keep polishing my skills to keep myself
         updated.
       </p>
+
       <h2 className="text-gray-500">
         If you are a Client looking for a freelancer, you are at{" "}
         <span className="text-blue-500">right place</span>. Feel free to contact
@@ -51,6 +54,7 @@ export default function Freelance() {
         provide details about yourself at{" "}
         <span className="text-blue-500">bottom</span> of the page.
       </h2>
+
       <span className="text-slate-500">
         I keep sharing on my Instagram about my work and projects related to Web Development and Tech. You can contact me via Instagram as well.{" "}
         <a
@@ -61,6 +65,8 @@ export default function Freelance() {
           @howankush07.
         </a>
       </span>
+
+
       <div className="flex space-x-4 justify-start">
         <Button variant="primary" onClick={openCV}>
           Download CV
@@ -73,33 +79,31 @@ export default function Freelance() {
           )}
         </div>
       </div>
+
+
       <div className="p-2"></div>
-      {/* <Projects /> */}
+
       <GetAllProjects />
+
       <div className="py-4"></div>
+
       <Skills />
+
       <div className="py-4"></div>
+
       <h1 className="text-4xl font-bold ">
         Connect with <span className="text-blue-500">Me</span>
       </h1>
+
       <Form />
+
+
       <div className="pt-8 pb-20 flex space-x-6 space-y-4 flex-wrap">
-        <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-white rounded-sm">
-          Want to know more about me ?
-          <span className="text-blue-500">
-            <Link href="/about">
-              Click here <FaArrowRight />
-            </Link>
-          </span>
-        </div>
-        <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-white rounded-sm">
-          Want to explore my blogs page ?
-          <span className="text-blue-500">
-            <Link href="/kaizen">
-              Click here <FaArrowRight />
-            </Link>
-          </span>
-        </div>
+
+
+        <Footer link="/about" text="Want to know more about me ?" />
+        <Footer link="/kaizen" text="Want to explore my Blogs Page ?" />
+
 
         <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-white rounded-sm">
           Want to connect with me via Mail?

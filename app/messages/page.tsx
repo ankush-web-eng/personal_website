@@ -20,7 +20,7 @@ interface NewMessage {
   message: string;
 }
 
-export default function Messages(): JSX.Element {
+export default function Page() {
   const [messages, setMessages] = useState<Message[] | null>(null);
   const [chat, setChat] = useState<string>("");
   const [isTyped, setIsTyped] = useState<boolean>(false);
@@ -127,6 +127,14 @@ export default function Messages(): JSX.Element {
       console.log("Messages fetching Failed", error);
     }
   };
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   return (
     <div className="">

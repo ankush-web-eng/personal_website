@@ -3,8 +3,19 @@
 import { Navbar } from "@/components/navbar";
 import { Header } from "@/components/header";
 import Homepage from "@/components/homepage";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
   return (
     <div>
       <div className="hidden md:flex fixed overflow-y-auto">

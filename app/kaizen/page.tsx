@@ -1,10 +1,18 @@
 "use client";
 import { Header } from "@/components/header";
 import { Navbar } from "@/components/navbar";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Kaizen from "@/components/kaizen";
 
 export default function Page() {
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
 
   return (

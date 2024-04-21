@@ -2,11 +2,18 @@
 
 import { Header } from "@/components/header";
 import { Navbar } from "@/components/navbar";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import About from "@/components/about";
 
 export default function Page() {
 
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   return (
     <div>

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { RiMailCheckFill } from "react-icons/ri";
 import { FaArrowRight } from "react-icons/fa";
+import Footer from "./footer/footer";
 
 export default function About() {
   return (
@@ -30,25 +31,32 @@ export default function About() {
         JavaScript and Python. I am always looking to learn new technologies and
         improve my skills.
       </span>
+
       <span className="text-slate-500">
         I am currently working as a freelance developer and am open to new
         opportunities. If you have a project you would like to discuss, or just
         want to say hi, feel free to contact me at{" "}
         <span className="text-sky-500">deshwalankush23@gmail.com</span>
       </span>
+
       <span className="text-slate-500">
         I am a Content Writer and I love to write blogs on life and my
         experiences. I am a Content Creator and I love to create content on
         Self-Growth and my learnings. I own two Instagram pages. One for
         storytelling Content{" "}
-        <a className="text-sky-500" href="https://instagram.com/whyankush07">@whyankush07 </a>
-        and another for tech content {" "}
-        <a className="text-sky-500" href="https://instagram.com/howankush07">@howankush07</a>. I
-        I regularly write blogs on{" "}
+        <a className="text-sky-500" href="https://instagram.com/whyankush07">
+          @whyankush07{" "}
+        </a>
+        and another for tech content{" "}
+        <a className="text-sky-500" href="https://instagram.com/howankush07">
+          @howankush07
+        </a>
+        . I I regularly write blogs on{" "}
         <a className="text-sky-500" href="https://kaizen-blogs.onrender.com">
           kaizen-blogs.onrender.com
         </a>
       </span>
+
       <h1 className="text-2xl py-2 font-bold">Education</h1>
       <span className="text-slate-500">
         I am currently pursuing a Bachelor&quot;s degree in Computer Science
@@ -56,6 +64,7 @@ export default function About() {
         have completed my higher and secondry Education from Rajasthan Board.
       </span>
       <h1 className="text-2xl font-bold">Why Computer Science?</h1>
+
       <span className="text-gray-500">
         Initially, I was quite confused in life about deciding what to chose as
         a career so I decided to go with the flow. In India, the most followed
@@ -76,23 +85,16 @@ export default function About() {
           making this world a better place. And chaotic at the same time.😉
         </span>
       </span>
+
       <div className="pt-8 pb-20 flex space-x-6 space-y-4 flex-wrap">
-        <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-white rounded-sm">
-          Want to explore my blogs page ?
-          <span className="text-blue-500">
-            <Link href="/kaizen">
-              Click here <FaArrowRight />
-            </Link>
-          </span>
-        </div>
-        <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-white rounded-sm">
-          Are you a client looking for project work?
-          <span className="text-blue-500">
-            <Link href="/freelance">
-              Click here <FaArrowRight />
-            </Link>
-          </span>
-        </div>
+        <Footer 
+          link="/kaizen" 
+          text="Want to explore my Blogs Page ?" />
+        <Footer
+          link="/freelance"
+          text="Are you a client looking for project work?"
+        />
+
         <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-white rounded-sm">
           Want to connect with me via Mail?
           <span className="text-blue-500 flex space-x-2">

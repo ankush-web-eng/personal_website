@@ -4,9 +4,18 @@ import { Navbar } from "@/components/navbar";
 import { Header } from "@/components/header";
 import dynamic from "next/dynamic";
 import Freelance from "@/components/freelance";
+import { useEffect, useState } from "react";
 
 
-function ContactUs() {
+function Page() {
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   return (
     <div>
@@ -28,4 +37,4 @@ function ContactUs() {
   );
 }
 
-export default dynamic(() => Promise.resolve(ContactUs), { ssr: false });
+export default dynamic(() => Promise.resolve(Page), { ssr: false });
