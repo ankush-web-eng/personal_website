@@ -81,12 +81,11 @@ export default function Homepage() {
       <GetSingleProjects />
 
 
-      <div className="pt-6 rounded-md">
+      <div className="pt-6 rounded-md max-w-screen md:max-w-1/2 flex items-center justify-center">
         <iframe
-          width="560"
-          height="315"
+          className="rounded-lg"
           src="https://www.youtube.com/embed/UQ1loFxkfUE?si=CCzWqLXlv2YZhcze"
-          title="YouTube video player"
+          title="About Ankush"
           // frameborder=""
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           // referrerpolicy="strict-origin-when-cross-origin"
