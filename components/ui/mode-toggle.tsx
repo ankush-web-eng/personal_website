@@ -9,7 +9,7 @@ export function ModeToggle() {
 
   return (
     <Button
-      variant="secondary"
+      variant="tertiary"
       size="icon"
       onClick={() =>
         setTheme(theme === "light" ? "dark" : theme === "dark" ? "light" : "system")

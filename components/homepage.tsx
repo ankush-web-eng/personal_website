@@ -26,7 +26,7 @@ export default function Homepage() {
 
       <p className="text-gray-600 dark:text-gray-400">
         {" "}
-        Freelancer, Developer, Writer, Content Creator, Student tech enthusiast
+        Freelancer, Developer, Writer, Content Creator, Student, Tech Enthusiast
         with passion for <span className="text-blue-500">Code.</span>
       </p>
 
@@ -40,7 +40,7 @@ export default function Homepage() {
         <br />
         You can view my work here on LinkedIn{" "}
         <a
-          href="https://www.linkedin.com/in/ankush-singh-b0389b27b/"
+          href="www.linkedin.com/in/ankush-singh07"
           target="ankush"
           className="text-blue-500"
         >
