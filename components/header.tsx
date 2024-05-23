@@ -34,7 +34,7 @@ export const Header = () => {
       }, [])
 
     return(
-        <div className="max-sm:w-screen flex justify-end space-x-4 items-center md:mr-6 md:mt-4 md:space-x-4">
+        <div className="max-sm:w-screen flex justify-end space-x-4 items-center md:mr-6 pr-4 md:mt-4 md:space-x-4">
                 <Image width={32} height={32} alt={name} src={image} className="rounded-full w-[32px] h-[32px]" />
                 <ModeToggle />
             </div>

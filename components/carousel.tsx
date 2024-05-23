@@ -12,9 +12,9 @@ export default function CarouselComp() {
             <div>
                 <Image fetchPriority="high" src="/ankush_bg_image.png" className="rounded-md"  alt="ankush" width={750} height={200}/>
             </div>
-            <div>
+            {/* <div>
                 <Image fetchPriority="high" src="/LinkedIn_cover.png" className="rounded-md" alt="ankush" width={750} height={200}/>
-            </div>
+            </div> */}
             <div>
                 <Image fetchPriority="high" src="/freelance.png" className="rounded-md" alt="ankush" width={750} height={200}/>
             </div>

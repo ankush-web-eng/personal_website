@@ -60,7 +60,7 @@ export default function Kaizen() {
       <div className="flex space-x-4 justify-start">
         <div>
           {user == "deshwalankush23@gmail.com" && (
-            <Link href={"/addmyproject"}>
+            <Link href={"/addmyblog"}>
               <Button variant="primary">Add Blog</Button>
             </Link>
           )}
