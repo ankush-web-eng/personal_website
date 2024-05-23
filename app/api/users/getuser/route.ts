@@ -7,9 +7,10 @@ export async function GET(req: NextRequest) {
 
         const name = session?.user?.name
         const email = session?.user?.email
+        const image = session?.user?.image
         if (name) {
             return NextResponse.json({
-                data: { name, email }
+                data: { name, email, image }
             })
         }
         else {
