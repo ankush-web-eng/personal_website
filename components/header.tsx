@@ -30,7 +30,7 @@ export const Header = () => {
       };
     
       useEffect(() => {
-        // getUserName()
+        getUserName()
       }, [])
 
     return(
