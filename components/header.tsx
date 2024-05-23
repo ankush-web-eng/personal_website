@@ -9,6 +9,7 @@ import axios from "axios"
 export const Header = () => {
 
     const [image, setImage] = useState<string>("/user.png");
+    const [name, setName] = useState<string>("");
 
     const getUserName = async () => {
         try {
@@ -17,6 +18,10 @@ export const Header = () => {
             setImage("/user.png");
           } else {
             setImage(data.data.data.image);
+            setName(data.data.data.name)
+            console.log(data.data.data.image);
+            console.log(data.data.data);
+            console.log(data.data.data.name);
           }
         } catch (error) {
           console.log("Server Side Error");
@@ -30,7 +35,7 @@ export const Header = () => {
 
     return(
         <div className="max-sm:w-screen flex justify-end space-x-4 items-center md:mr-6 md:mt-4 md:space-x-4">
-                <Image width={32} height={32} alt="User" src={image} className="rounded-full w-[32px] h-[32px]" />
+                <Image width={32} height={32} alt={name} src={image} className="rounded-full w-[32px] h-[32px]" />
                 <ModeToggle />
             </div>
     )
