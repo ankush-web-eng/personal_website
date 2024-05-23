@@ -48,7 +48,7 @@ export default function Project({ project }: { project: Project }) {
   };
 
   return (
-    <div className="flex flex-col space-y-2 p-2 max-md:px-2 max-md:w-full max-md:border-b">
+    <div className="flex md:shadow-xl rounded-xl flex-col space-y-2 p-2 max-md:px-2 max-md:w-full max-md:border-b">
       <h1 className="text-2xl font-bold">{project.title}</h1>
       <p className="text-slate-400 text-sm">
         {project.para1.substring(0, 150)}...
