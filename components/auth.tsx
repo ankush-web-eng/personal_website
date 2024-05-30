@@ -52,7 +52,7 @@ function AuthButton() {
 
 export const Auth = () => {
   return (
-    <div>
+    <div >
       <AuthButton />
     </div>
   );
