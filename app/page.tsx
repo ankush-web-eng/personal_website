@@ -4,6 +4,7 @@ import { Navbar } from "@/components/navbar";
 import { Header } from "@/components/header";
 import Homepage from "@/components/homepage";
 import { useEffect, useState } from "react";
+import GetALlLinks from "@/components/projects/getalllinks";
 
 export default function Home() {
 
@@ -24,6 +25,7 @@ export default function Home() {
           <Header />
           <Homepage />
         </div>
+        {/* <GetALlLinks /> */}
       </div>
       <div className="md:hidden flex">
         <div className="flex h-screen w-full space-y-6 flex-col pt-8 pl-3">

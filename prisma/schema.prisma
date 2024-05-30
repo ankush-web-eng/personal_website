@@ -38,3 +38,10 @@ model Blog {
   para4    String
   para5    String
 }
+
+model Link {
+  id    String @id @default(uuid())
+  title String
+  url   String
+  image String
+}

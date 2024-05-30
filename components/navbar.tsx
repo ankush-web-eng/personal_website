@@ -42,6 +42,24 @@ export const Navbar = () => {
       </li>
 
       <li className="italic font-semibold md:mr-8">
+        <Link href="/freelance">
+          <svg
+            width="30px"
+            height="30px"
+            viewBox="0 0 24 24"
+            fill={
+              window.location.pathname === "/freelance" ? "blue" : "gray"
+            }
+            fillOpacity={0.32}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M1 4h18v10H1z"></path>
+            <path d="M8 3h4V2H8v1ZM6 3V0h8v3h6v12H0V3h6ZM2 5v8h16V5H2Zm14 13v-2h2v4H2v-4h2v2h12Z"></path>
+          </svg>
+        </Link>
+      </li>
+
+      <li className="italic font-semibold md:mr-8">
         <Link href="/kaizen">
           <svg
             width="30px"
@@ -60,24 +78,6 @@ export const Navbar = () => {
               fill-rule="nonzero"
               d="M2 6v12h14V6H2Zm16-2v16H0V4h18ZM2 2V0h14v2H2Z"
             ></path>
-          </svg>
-        </Link>
-      </li>
-
-      <li className="italic font-semibold md:mr-8">
-        <Link href="/freelance">
-          <svg
-            width="30px"
-            height="30px"
-            viewBox="0 0 24 24"
-            fill={
-              window.location.pathname === "/freelance" ? "blue" : "gray"
-            }
-            fillOpacity={0.32}
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M1 4h18v10H1z"></path>
-            <path d="M8 3h4V2H8v1ZM6 3V0h8v3h6v12H0V3h6ZM2 5v8h16V5H2Zm14 13v-2h2v4H2v-4h2v2h12Z"></path>
           </svg>
         </Link>
       </li>
