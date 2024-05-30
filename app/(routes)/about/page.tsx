@@ -4,6 +4,7 @@ import { Header } from "@/components/header";
 import { Navbar } from "@/components/navbar";
 import React, { useEffect, useState } from "react";
 import About from "@/components/about";
+import GetALlLinks from "@/components/projects/getalllinks";
 
 export default function Page() {
 
@@ -23,6 +24,7 @@ export default function Page() {
           <Header />
           <About />
         </div>
+        <div className="h-fit pt-28 px-6"><GetALlLinks /></div>
       </div>
       <div className="flex md:hidden">
         <div className="h-screen space-y-6 pl-6 pt-8 w-full flex flex-col">

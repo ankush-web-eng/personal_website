@@ -1,4 +1,5 @@
 import axios from "axios";
+import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -17,6 +18,9 @@ interface LinkProps {
 export default function ProjectLink({ params }: LinkProps) {
   const [send, setSend] = useState(false);
 
+  const {data:session} = useSession()
+  const email = session?.user?.email
+
   const deleteLink = async (id: string) => {
     try {
       setSend(true);
@@ -33,7 +37,7 @@ export default function ProjectLink({ params }: LinkProps) {
   };
 
   return (
-    <Link href={params.url} className="text-sky-500 flex items-center">
+    <div  className="text-sky-500 space-x-3 flex items-center">
       <Image
         src={params.image}
         alt={params.title}
@@ -41,14 +45,14 @@ export default function ProjectLink({ params }: LinkProps) {
         height={25}
         fetchPriority="high"
       />
-      {params.title}
-      <button onClick={() => deleteLink(params.id)}>
+      <Link href={params.url} target="_ankush" >{params.title}</Link>
+      {email === "deshwalankush23@gmail.com" && <button onClick={() => deleteLink(params.id)}>
         {send ? (
           <TbLoader2 className="animate-spin" />
         ) : (
           <MdDelete className="hover:bg-slate-500 rounded-md" />
         )}
-      </button>
-    </Link>
+      </button>}
+    </div>
   );
 }

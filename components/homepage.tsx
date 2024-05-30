@@ -7,6 +7,7 @@ import SingleBlogs from "@/components/blog/getsingleblog";
 import GetSingleProjects from "@/components/projects/getsingleproject";
 import Footer from "@/components/footer/footer";
 import Image from "next/image";
+import GetALlLinks from "./projects/getalllinks";
 
 export default function Homepage() {
   return (
@@ -112,6 +113,8 @@ export default function Homepage() {
           // allowfullscreen
         ></iframe>
       </div>
+
+      <div className="h-fit pt-3 px-3 md:hidden"><GetALlLinks /></div>
 
       <div className="pt-8 pb-20 flex space-x-6 space-y-4 flex-wrap">
         <Footer link="/about" text="Want to know more about me ?" />

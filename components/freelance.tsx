@@ -11,6 +11,7 @@ import GetAllProjects from "@/components/getallprojects";
 import { FaArrowRight } from "react-icons/fa";
 import { RiMailCheckFill } from "react-icons/ri";
 import Footer from "./footer/footer";
+import GetALlLinks from "./projects/getalllinks";
 
 export default function Freelance() {
   const [user, setUser] = useState<string>("null");
@@ -96,6 +97,8 @@ export default function Freelance() {
       </h1>
 
       <Form />
+
+      <div className="h-fit pt-3 px-3 md:hidden"><GetALlLinks /></div>
 
 
       <div className="pt-8 pb-20 flex space-x-6 space-y-4 flex-wrap">

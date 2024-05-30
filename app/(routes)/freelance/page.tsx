@@ -5,6 +5,7 @@ import { Header } from "@/components/header";
 import dynamic from "next/dynamic";
 import Freelance from "@/components/freelance";
 import { useEffect, useState } from "react";
+import GetALlLinks from "@/components/projects/getalllinks";
 
 
 function Page() {
@@ -25,6 +26,7 @@ function Page() {
           <Header />
           <Freelance />
         </div>
+        <div className="h-fit pt-28 px-6"><GetALlLinks /></div>
       </div>
       <div className="md:hidden flex">
         <div className="flex h-screen w-full space-y-6 flex-col pt-8 pl-2 pr-2">

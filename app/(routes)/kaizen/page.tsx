@@ -3,6 +3,7 @@ import { Header } from "@/components/header";
 import { Navbar } from "@/components/navbar";
 import React, { useEffect, useState } from "react";
 import Kaizen from "@/components/kaizen";
+import GetALlLinks from "@/components/projects/getalllinks";
 
 export default function Page() {
 
@@ -23,6 +24,7 @@ export default function Page() {
           <Header />
           <Kaizen />
         </div>
+        <div className="h-fit pt-28 px-6"><GetALlLinks /></div>
       </div>
       <div className="flex md:hidden">
         <div className="h-screen space-y-6 pl-2 pr-2 pt-8 w-full flex flex-col">
@@ -34,54 +36,3 @@ export default function Page() {
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // const [imageupload, setImageUpload] = React.useState(null);
-  // const [getImage, setGetImage] = React.useState([]);
-
-  // const getImageref = ref(storage, "images/");
-
-  // const onSubmit = async () => {
-  //   if (imageupload == null) return;
-  //   const imageRef = ref(storage, `images/${imageupload.name + v4()}`);
-  //   await uploadBytes(imageRef, imageupload).then((snapshot) => {
-  //     getDownloadURL(snapshot.ref).then((url) => {
-  //       setGetImage((prev) => [...prev, url]);
-  //     });
-  //   });
-  // };
-
-  // const getFiles = async () => {
-  //   await listAll(getImageref).then((response) => {
-  //     response.items.forEach((item) => {
-  //       getDownloadURL(item).then((url) => {
-  //         setGetImage((prevImages) => [...prevImages, url]);
-  //       });
-  //     });
-  //   });
-  // };
-  // useEffect(() => {
-  //   getFiles();
-  // }, []);

@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Footer from "./footer/footer";
+import GetALlLinks from "./projects/getalllinks";
 
 export default function Kaizen() {
   const [user, setUser] = useState<string>("null");
@@ -76,6 +77,8 @@ export default function Kaizen() {
           kaizen-blogs.onrender.com
         </a>
       </div>
+
+      <div className="h-fit pt-3 px-3 md:hidden"><GetALlLinks /></div>
 
 
       <div className="pt-8 pb-20 flex space-x-6 space-y-4 flex-wrap">

@@ -1,5 +1,6 @@
 "use client";
 
+import GetALlLinks from "@/components/projects/getalllinks";
 import { Button } from "@/components/ui/button";
 import axios from "axios";
 import { useState } from "react";
@@ -39,7 +40,7 @@ export default function Page() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex space-x-4 items-center justify-center min-h-screen bg-gray-100">
       <form
         onSubmit={handleSubmit}
         className="bg-white p-8 rounded-lg shadow-lg space-y-6"

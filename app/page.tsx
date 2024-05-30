@@ -25,7 +25,7 @@ export default function Home() {
           <Header />
           <Homepage />
         </div>
-        {/* <GetALlLinks /> */}
+        <div className="h-fit pt-28 px-6"><GetALlLinks /></div>
       </div>
       <div className="md:hidden flex">
         <div className="flex h-screen w-full space-y-6 flex-col pt-8 pl-3">

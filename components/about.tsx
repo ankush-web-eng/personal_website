@@ -3,6 +3,7 @@ import Link from "next/link";
 import { RiMailCheckFill } from "react-icons/ri";
 import { FaArrowRight } from "react-icons/fa";
 import Footer from "./footer/footer";
+import GetALlLinks from "./projects/getalllinks";
 
 export default function About() {
   return (
@@ -86,6 +87,7 @@ export default function About() {
         </span>
       </span>
 
+        <div className="h-fit pt-4 px-3 md:hidden"><GetALlLinks /></div>
       <div className="pt-8 pb-20 flex space-x-6 space-y-4 flex-wrap">
         <Footer 
           link="/kaizen" 
@@ -94,6 +96,7 @@ export default function About() {
           link="/freelance"
           text="Are you a client looking for project work?"
         />
+
 
         <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-white rounded-sm">
           Want to connect with me via Mail?
