@@ -50,7 +50,7 @@ export const Header = () => {
           src={image}
           className="rounded-full w-[32px] h-[32px]"
         />
-        {open && <div className="absolute top-8 right-2 rounded-xl">
+        {open && <div className="absolute top-8 z-50 right-2 rounded-xl">
           <Auth />
         </div>}
       </div>
