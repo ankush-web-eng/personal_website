@@ -5,6 +5,7 @@ import { Navbar } from "@/components/navbar";
 import React, { useEffect, useState } from "react";
 import About from "@/components/about";
 import GetALlLinks from "@/components/projects/getalllinks";
+import PageWrapper from "@/app/page-wrapper";
 
 export default function Page() {
 
@@ -17,6 +18,7 @@ export default function Page() {
   if (!mounted) return null;
 
   return (
+    <PageWrapper>
     <div>
       <div className="hidden md:flex overflow-y-auto">
         <Navbar />
@@ -34,6 +36,7 @@ export default function Page() {
         <Navbar />
       </div>
     </div>
+    </PageWrapper>
   );
 }
 

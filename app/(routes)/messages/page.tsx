@@ -8,6 +8,7 @@ import { IoIosSend } from "react-icons/io";
 import { Navbar } from "@/components/navbar";
 import { Header } from "@/components/header";
 import { Auth } from "@/components/auth";
+import PageWrapper from "@/app/page-wrapper";
 
 interface Message {
   name: string;
@@ -137,6 +138,7 @@ export default function Page() {
   if (!mounted) return null;
 
   return (
+    <PageWrapper>
     <div className="">
       <div className="hidden md:flex">
         <Navbar />
@@ -230,5 +232,6 @@ export default function Page() {
         <Navbar />
       </div>
     </div>
+    </PageWrapper>
   );
 }

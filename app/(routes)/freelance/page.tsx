@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 import Freelance from "@/components/freelance";
 import { useEffect, useState } from "react";
 import GetALlLinks from "@/components/projects/getalllinks";
+import PageWrapper from "@/app/page-wrapper";
 
 
 function Page() {
@@ -19,6 +20,7 @@ function Page() {
   if (!mounted) return null;
 
   return (
+    <PageWrapper >
     <div>
       <div className="hidden md:flex overflow-y-auto">
         <Navbar />
@@ -36,6 +38,7 @@ function Page() {
         <Navbar />
       </div>
     </div>
+    </PageWrapper>
   );
 }
 

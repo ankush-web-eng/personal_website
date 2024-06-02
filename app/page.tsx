@@ -5,6 +5,8 @@ import { Header } from "@/components/header";
 import Homepage from "@/components/homepage";
 import { useEffect, useState } from "react";
 import GetALlLinks from "@/components/projects/getalllinks";
+import {motion, AnimatePresence} from "framer-motion";
+import PageWrapper from "./page-wrapper";
 
 export default function Home() {
 
@@ -18,6 +20,7 @@ export default function Home() {
   if (!mounted) return null;
 
   return (
+    <PageWrapper >
     <div>
       <div className="hidden md:flex fixed overflow-y-auto">
         <Navbar />
@@ -35,5 +38,6 @@ export default function Home() {
         <Navbar />
       </div>
     </div>
+    </PageWrapper>
   );
 }
