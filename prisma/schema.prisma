@@ -45,3 +45,18 @@ model Link {
   url   String
   image String
 }
+
+enum Type {
+  Programming
+  Growth
+  Life
+}
+
+model Ghost {
+  id       String   @id @default(uuid())
+  type     Type
+  title    String
+  subtitle String
+  image    String
+  content  String[]
+}
