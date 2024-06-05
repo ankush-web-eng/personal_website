@@ -29,7 +29,7 @@ export default function AllGhosts() {
     }, [])
 
     return (
-        <div className="max-md:p-3 md:py-6 md:mx-3 grid grid-cols-1 md:grid-cols-2 md:space-x-4 space-y-3">
+        <div className="max-md:p-3 md:py-6 md:mx-3 grid grid-cols-1 md:grid-cols-2 md:space-x-4 max-md:space-y-3">
             {ghosts !== null && ghosts.map((ghost, index) => <Ghost key={index} params={ghost} />)}
         </div>
     )

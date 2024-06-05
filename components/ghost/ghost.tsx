@@ -33,11 +33,11 @@ export default function Ghost({ params }: { params: form }) {
   };
 
   return (
-    <Link href={`/kaizen/blogs/${params.id}`} className="p-3 border rounded-xl">
+    <Link href={`/kaizen/blogs/${params.id}`} className="">
       <div
-        className="border items-center justify-center relative rounded-xl text-black w-full h-52 flex flex-col space-y-3 p-2"
+        className="shadow-md border items-center justify-center relative rounded-xl text-black w-full h-52 flex flex-col space-y-3 p-2"
         >
-        <Image src={params.image} alt="Image" width={500} height={230} style={{color: 'transparent'}} className="z-[-10] min-w-full min-h-full rounded-xl object-cover bg-repeat bg-over opacity-70 backdrop-filter backdrop-blur-2 absolute right-0 top-0" />
+        <Image src={params.image} alt="Image" width={500} height={230} style={{color: 'transparent'}} className="z-[-10] max-w-full max-h-full rounded-xl object-cover bg-repeat bg-over opacity-70 backdrop-filter backdrop-blur-2 absolute right-0 top-0" />
         <strong className="text-2xl font-bold font-serif">{params.title}</strong>
         {email == "deshwalankush23@gmail.com" && (
           <Button

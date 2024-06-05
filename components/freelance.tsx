@@ -32,7 +32,7 @@ export default function Freelance() {
 
   useEffect(() => {
     getUserName();
-  }, [])
+  }, []);
 
   const openCV = () => {
     window.open("/Resume.pdf", "_blank");
@@ -40,7 +40,6 @@ export default function Freelance() {
 
   return (
     <div className="flex flex-col space-y-5">
-
       <CarouselComp />
 
       <p className="text-gray-500">
@@ -57,7 +56,8 @@ export default function Freelance() {
       </h2>
 
       <span className="text-slate-500">
-        I keep sharing on my Instagram about my work and projects related to Web Development and Tech. You can contact me via Instagram as well.{" "}
+        I keep sharing on my Instagram about my work and projects related to Web
+        Development and Tech. You can contact me via Instagram as well.{" "}
         <a
           href="https://www.instagram.com/howankush07/"
           target="ankush"
@@ -66,7 +66,6 @@ export default function Freelance() {
           @howankush07.
         </a>
       </span>
-
 
       <div className="flex space-x-4 justify-start">
         <Button variant="primary" onClick={openCV}>
@@ -80,7 +79,6 @@ export default function Freelance() {
           )}
         </div>
       </div>
-
 
       <div className="p-2"></div>
 
@@ -98,15 +96,13 @@ export default function Freelance() {
 
       <Form />
 
-      <div className="h-fit pt-3 px-3 md:hidden"><GetALlLinks /></div>
-
+      <div className="h-fit pt-3 px-3 md:hidden">
+        <GetALlLinks />
+      </div>
 
       <div className="pt-8 pb-20 flex space-x-6 space-y-4 flex-wrap">
-
-
         <Footer link="/about" text="Want to know more about me ?" />
         <Footer link="/kaizen" text="Want to explore my Blogs Page ?" />
-
 
         <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-white rounded-sm">
           Want to connect with me via Mail?

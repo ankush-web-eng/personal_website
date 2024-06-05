@@ -11,9 +11,10 @@ export default function Skills() {
         contantly learn new things to keep up with the rapid growing tech market
         in presence of AI. Started learning HTML in September 2023, I have come
         a long way and learnt various technologies, frameworks and Libraries.
-        And now I am mastering Full Stack by adding Generative AI to my Projects.
+        And now I am mastering Full Stack by adding Generative AI to my
+        Projects.
       </span>
-      <div className="flex flex-col md:flex-row space-y-3 md:justify-between max-md:w-screen max-md:items-center">
+      <div className="grid grid-cols-1 md:grid-cols-3 max-md:space-y-3">
         <div className="bg-yellow-50 dark:bg-teal-100 flex flex-col w-5/6 mr-0 md:w-max p-3 space-y-2 rounded-md border-2">
           <h1 className="text-2xl text-blue-500 ml-4 font-semibold">
             Technical Skills
@@ -42,10 +43,6 @@ export default function Skills() {
             </li>
             <li className="flex items-center">
               <span className="text-sky-500 mr-2">—</span>
-              <a>Java</a>
-            </li>
-            <li className="flex items-center">
-              <span className="text-sky-500 mr-2">—</span>
               <a>Golang</a>
             </li>
             <li className="flex items-center">
@@ -61,11 +58,15 @@ export default function Skills() {
           <ul className="space-y-3 ml-2 text-slate-500">
             <li className="flex items-center">
               <span className="text-sky-500 mr-2">—</span>
-              <a>NEXTJS</a>
+              <a>Next.js</a>
             </li>
             <li className="flex items-center">
               <span className="text-sky-500 mr-2">—</span>
-              <a>FLASK</a>
+              <a>Django</a>
+            </li>
+            <li className="flex items-center">
+              <span className="text-sky-500 mr-2">—</span>
+              <a>Flask</a>
             </li>
             <li className="flex items-center">
               <span className="text-sky-500 mr-2">—</span>
@@ -79,10 +80,6 @@ export default function Skills() {
             <li className="flex items-center">
               <span className="text-sky-500 mr-2">—</span>
               <a>NodeJS</a>
-            </li>
-            <li className="flex items-center">
-              <span className="text-sky-500 mr-2">—</span>
-              <a>Selenium</a>
             </li>
             <li className="flex items-center">
               <span className="text-sky-500 mr-2">—</span>

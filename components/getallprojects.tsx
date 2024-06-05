@@ -29,9 +29,9 @@ export default function GetAllProjects() {
   });
 
   return (
-    <div className="pt-4 pb-8 flex space-y-6 flex-col border-b-sky-200">
-      <h1 className="text-4xl text-blue-500 w-fit font-bold ">Projects</h1>
-      <div className="md:grid md:grid-cols-2 flex flex-col space-y-4 space-x-2">
+    <div className="py-6 flex flex-col border-b-sky-200">
+      <h1 className="text-4xl text-blue-500 py-4 w-fit font-bold ">Projects</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 max-md:space-y-4 md:space-x-8 md:space-y-4">
         {data !== null ?
           data.map((project, index) => (
             <Project key={index} project={project} />

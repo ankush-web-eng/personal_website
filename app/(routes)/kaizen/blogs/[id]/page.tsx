@@ -6,36 +6,39 @@ import Link from "next/link";
 
 import { IoMdArrowRoundBack } from "react-icons/io";
 import Loading from "@/components/loading";
+import { useRouter } from "next/navigation";
 
 type Params = {
   id: string;
 };
 
-interface ProjectData {
+interface form {
   id: string;
   title: string;
   subtitle: string;
-  para1: string;
-  para2: string;
-  para3: string;
-  para4: string;
-  para5: string;
+  image: string;
+  content: string[];
+  type: string;
 }
 
 export default function Page({ params }: { params: Params }) {
   const id = params.id;
 
-  const [data, setData] = useState<ProjectData | null>(null);
+  const [data, setData] = useState<form | null>(null);
 
   const getProject = async () => {
     try {
-      const response = await axios.get(`/api/blogs/getblog/${id}`);
+      const response = await axios.get(`/api/ghost/getghost/${id}`);
       console.log(response.data.data);
       setData(response.data.data);
     } catch (error) {
       console.log(error);
     }
   };
+
+  const router = useRouter()
+
+  const len = data?.content?.length
 
   useEffect(() => {
     getProject();
@@ -50,19 +53,17 @@ export default function Page({ params }: { params: Params }) {
   if (!mounted) return null;
 
   return (
-    <div className="h-screen w-full pb-6 flex flex-col justify-start px-4 pt-8 space-y-10">
-      <Link href={`/kaizen`}>
+    <div className="h-screen w-full pb-6 md:px-20 flex flex-col justify-start px-3 pt-8 space-y-10">
+      <span onClick={() => router.back()}>
         <IoMdArrowRoundBack color="blue" size={28} />
-      </Link>
+      </span>
       <h1 className="text-4xl font-extrabold">
         {data?.title || <Loading>Loading Blog</Loading>}
       </h1>
       <p className="text-slate-700 text-2xl">{data?.subtitle}</p>
-      <p className="text-slate-500 ">{data?.para1}</p>
-      <p className="text-slate-500 ">{data?.para2}</p>
-      <p className="text-slate-500 ">{data?.para3}</p>
-      <p className="text-slate-500 ">{data?.para4}</p>
-      <p className="text-slate-500 ">{data?.para5}</p>
+      {data && data.content.map((index, data) => (
+        <p className="text-slate-700 text-2xl" key={index}>{data}</p>
+      ))}
     </div>
   );
 }

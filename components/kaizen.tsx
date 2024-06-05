@@ -8,6 +8,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Footer from "./footer/footer";
 import GetALlLinks from "./projects/getalllinks";
+import AllGhosts from "./ghost/getallghosts";
 
 export default function Kaizen() {
   const [user, setUser] = useState<string>("null");
@@ -69,7 +70,8 @@ export default function Kaizen() {
       </div>
 
 
-      <AllBlogs />
+      {/* <AllBlogs /> */}
+      <AllGhosts />
 
 
       <div className="flex justify-center text-sky-500 text-1xl">

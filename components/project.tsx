@@ -48,24 +48,18 @@ export default function Project({ project }: { project: Project }) {
   };
 
   return (
-    <div className="flex rounded-xl flex-col space-y-2 p-2 max-md:px-2 max-md:w-full max-md:border-b">
+    <Link href={`/freelance/projects/${project.id}`} className="flex shadow-md rounded-xl flex-col space-y-2 p-2 max-md:px-2 max-md:w-full border">
       <h1 className="text-2xl font-bold">{project.title}</h1>
       <p className="text-slate-400 text-sm">
         {project.para1.substring(0, 150)}...
       </p>
       <div className="flex flex-row space-x-4">
-        <Link
-          href={`/freelance/projects/${project.id}`}
-          className="text-blue-500 italic"
-        >
-          Read More...
-        </Link>
         {user == "deshwalankush23@gmail.com" && (
           <Button onClick={() => deleteProject(project.id)} variant="primary">
             {isdeleted ? "Deleting" : "Delete"}
           </Button>
         )}
       </div>
-    </div>
+    </Link>
   );
 }

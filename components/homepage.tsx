@@ -8,6 +8,7 @@ import GetSingleProjects from "@/components/projects/getsingleproject";
 import Footer from "@/components/footer/footer";
 import Image from "next/image";
 import GetALlLinks from "./projects/getalllinks";
+import TwoGhosts from "./ghost/twoghosts";
 
 export default function Homepage() {
   return (
@@ -99,7 +100,8 @@ export default function Homepage() {
         </a>
       </p>
 
-      <SingleBlogs />
+      {/* <SingleBlogs /> */}
+      <TwoGhosts />
       <GetSingleProjects />
 
       <div className="pt-6 rounded-md max-w-screen md:max-w-1/2 flex items-center justify-center">
