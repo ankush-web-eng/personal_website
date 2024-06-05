@@ -4,15 +4,19 @@ import { revalidatePath } from "next/cache";
 
 const prisma = new PrismaClient()
 
-export async function POST(req: NextRequest) {
+type Params = {
+    params : {
+        id:string
+    }
+}
+
+export async function GET(req: NextRequest , context: Params) {
     try {
 
-        const reqBoy = await req.json()
-        const { id } = reqBoy.id
-
+        const newId = context.params.id
         const data = await prisma.ghost.delete({
             where: {
-                id: id
+                id: newId
             }
         })
 

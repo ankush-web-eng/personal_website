@@ -23,7 +23,7 @@ export default function Ghost({ params }: { params: form }) {
   const deleteghost = async (id: any) => {
     setSend(true);
     try {
-        const res = await axios.post(`/api/ghost/deleteghost/`, {id});
+        const res = await axios.get(`/api/ghost/deleteghost/${id}`);
         setSend(false);
         alert("Deleted Successfully");
     } catch (error) {
