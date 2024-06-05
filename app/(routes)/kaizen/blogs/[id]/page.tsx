@@ -25,7 +25,7 @@ export default function Page({ params }: { params: Params }) {
   const id = params.id;
 
   const [data, setData] = useState<form | null>(null);
-
+  
   const getProject = async () => {
     try {
       const response = await axios.get(`/api/ghost/getghost/${id}`);
@@ -35,10 +35,10 @@ export default function Page({ params }: { params: Params }) {
       console.log(error);
     }
   };
-
+  
+  console.log(data);
   const router = useRouter()
 
-  const len = data?.content?.length
 
   useEffect(() => {
     getProject();
@@ -49,6 +49,15 @@ export default function Page({ params }: { params: Params }) {
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  let sym = '",'
+  let newData = data?.content.toString() || ""
+  let sarray = newData.split(sym) 
+  let array = new Array()
+  for (let i of sarray){
+    array.push(i.replace(/["[]/g, ""))
+  }
+  // console.log(array);
 
   if (!mounted) return null;
 
@@ -61,8 +70,10 @@ export default function Page({ params }: { params: Params }) {
         {data?.title || <Loading>Loading Blog</Loading>}
       </h1>
       <p className="text-slate-700 text-2xl">{data?.subtitle}</p>
-      {data && data.content.map((index, data) => (
-        <p className="text-slate-700 text-2xl" key={index}>{data}</p>
+      {/* <p className="text-slate-700 text-2xl">{data?.content}</p> */}
+
+      {data && array.map( (data, index) => (
+        <p className="text-slate-700 text-2xl" key={index} >{data}</p>
       ))}
     </div>
   );

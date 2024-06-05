@@ -4,18 +4,20 @@ import { revalidatePath } from "next/cache";
 
 const prisma = new PrismaClient()
 
-interface params {
-    id: string;
+type Params = {
+    params : {
+        id:string
+    }
 }
 
-export async function GET(req: NextRequest, context: params) {
+export async function GET(req: NextRequest, context: Params) {
     try {
 
-        const id = context.id
+        const newId = context.params.id
         
-        const data = await prisma.ghost.findUnique({
+        const data = await prisma.ghost.findFirst({
             where: {
-                id: id
+                id: newId
             }
         })
 
@@ -27,10 +29,10 @@ export async function GET(req: NextRequest, context: params) {
         }
 
         // Fix the caching for the path
-        const path = req.nextUrl.searchParams.get('path') || `/kaizen/${id}`        
+        const path = req.nextUrl.searchParams.get('path') || `/kaizen/${newId}`        
         revalidatePath(path)
 
-        return NextResponse.json({data:data }, { status: 200 })
+        return NextResponse.json({data}, { status: 200 })
 
     } catch (error) {
         return NextResponse.json({ success: false, message: "Error in backend" }, { status: 500 })
