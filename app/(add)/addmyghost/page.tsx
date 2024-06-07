@@ -152,7 +152,7 @@ export default function Page() {
 
         <Button className="px-3 py-2" type="submit">
           {send ? (
-            <span className="flex space-x-2">
+            <span className="flex space-x-2 items-center">
               Submitting <TbLoader2 className="animate-spin" />
             </span>
           ) : (
