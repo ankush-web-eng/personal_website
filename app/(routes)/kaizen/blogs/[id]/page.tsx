@@ -69,11 +69,11 @@ export default function Page({ params }: { params: Params }) {
       <h1 className="text-4xl font-extrabold">
         {data?.title || <Loading>Loading Blog</Loading>}
       </h1>
-      <p className="text-slate-700 text-2xl">{data?.subtitle}</p>
+      <p className="text-slate-700 font-semibold text-2xl">{data?.subtitle}</p>
       {/* <p className="text-slate-700 text-2xl">{data?.content}</p> */}
 
       {data && array.map( (data, index) => (
-        <p className="text-slate-700 text-2xl" key={index} >{data}</p>
+        <p className="text-slate-500 text-sm" key={index} >{data}</p>
       ))}
     </div>
   );
