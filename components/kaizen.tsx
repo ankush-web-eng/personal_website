@@ -70,7 +70,7 @@ export default function Kaizen() {
       </div>
 
 
-      <AllBlogs />
+      {/* <AllBlogs /> */}
       <AllGhosts />
 
 
