@@ -56,7 +56,7 @@ export default function Blog({ blog }: { blog: BlogProps }) {
       <p className="text-md font-normal text-gray-500">
         {blog.para1.substring(0, 250)}...
       </p>
-      <Link href={`/kaizen/blogs/${blog.id}`} className="text-blue-500">
+      <Link href={`/kaizen/blog/${blog.id}`} className="text-blue-500">
         Read more...
       </Link>
       {user == "deshwalankush23@gmail.com" && (
