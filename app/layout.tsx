@@ -8,7 +8,10 @@ import { getServerSession } from "next-auth";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ankush's World",
+  title: {
+    default : "Ankush's World",
+    template : "%s | Ankush's World"
+  },
   description: "For Personal Branding",
 };
 
