@@ -81,16 +81,16 @@ export default function Skills() {
                           className="rounded-full"
                         />
                         <p>{data.name}</p>
-                        {session?.user?.email === "deshwalankush23@gmail.com" &&
-                          (send ? (
-                            <TbLoader2 className="animate-spin" />
-                          ) : (
-                            <MdDelete
-                              className="cursor-pointer"
-                              size={20}
-                              onClick={() => deleteSkill(data.id)}
-                            />
-                          ))}
+                        {session?.user?.email ===
+                          "deshwalankush23@gmail.com" && (
+                          <button onClick={() => deleteSkill(data.id)}>
+                            {send ? (
+                              <TbLoader2 className="animate-spin" />
+                            ) : (
+                              <MdDelete className="cursor-pointer" size={20} />
+                            )}{" "}
+                          </button>
+                        )}
                       </li>
                     </div>
                   )
@@ -121,16 +121,16 @@ export default function Skills() {
                           className="rounded-full"
                         />
                         <p>{data.name}</p>
-                        {session?.user?.email === "deshwalankush23@gmail.com" &&
-                          (send ? (
-                            <TbLoader2 className="animate-spin" />
-                          ) : (
-                            <MdDelete
-                              className="cursor-pointer"
-                              size={20}
-                              onClick={() => deleteSkill(data.id)}
-                            />
-                          ))}
+                        {session?.user?.email ===
+                          "deshwalankush23@gmail.com" && (
+                          <button onClick={() => deleteSkill(data.id)}>
+                            {send ? (
+                              <TbLoader2 className="animate-spin" />
+                            ) : (
+                              <MdDelete className="cursor-pointer" size={20} />
+                            )}{" "}
+                          </button>
+                        )}
                       </li>
                     </div>
                   )
@@ -162,16 +162,16 @@ export default function Skills() {
                           className="rounded-full"
                         />
                         <p>{data.name}</p>
-                        {session?.user?.email === "deshwalankush23@gmail.com" &&
-                          (send ? (
-                            <TbLoader2 className="animate-spin" />
-                          ) : (
-                            <MdDelete
-                              className="cursor-pointer"
-                              size={20}
-                              onClick={() => deleteSkill(data.id)}
-                            />
-                          ))}
+                        {session?.user?.email ===
+                          "deshwalankush23@gmail.com" && (
+                          <button onClick={() => deleteSkill(data.id)}>
+                            {send ? (
+                              <TbLoader2 className="animate-spin" />
+                            ) : (
+                              <MdDelete className="cursor-pointer" size={20} />
+                            )}{" "}
+                          </button>
+                        )}
                       </li>
                     </div>
                   )
