@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { MdDelete } from "react-icons/md";
 import Loading from "./loading";
+import { TbLoader2 } from "react-icons/tb";
 
 interface Skill {
   id: string;
@@ -17,6 +18,7 @@ interface Skill {
 export default function Skills() {
   const [skills, setSkills] = useState<Skill[] | null>([]);
   const { data: session } = useSession();
+  const [send, setSend] = useState(false);
 
   const getSkills = async () => {
     try {
@@ -24,6 +26,17 @@ export default function Skills() {
       setSkills(res.data.data);
     } catch (error) {
       console.log(error);
+    }
+  };
+
+  const deleteSkill = async (id: string) => {
+    setSend(true);
+    try {
+      const res = await axios.get(`api/skill/deleteskill/${id}`);
+      setSend(false);
+    } catch (error) {
+      console.log(error);
+      setSend(false);
     }
   };
 
@@ -47,11 +60,14 @@ export default function Skills() {
       <div className="grid grid-cols-1 md:grid-cols-3 max-md:space-y-3">
         <div className="bg-yellow-50 dark:bg-teal-100 flex flex-col w-5/6 mr-0 md:w-max p-3 space-y-2 rounded-md border-2">
           <h1 className="text-2xl text-blue-500 ml-4 font-semibold">
-          Technologies & <br /> Languages
+            Technologies & <br /> Languages
           </h1>
 
           <ul className="space-y-3 ml-2 text-slate-500">
-            {skills == null ? <Loading>Loading</Loading> : skills &&
+            {skills == null ? (
+              <Loading>Loading</Loading>
+            ) : (
+              skills &&
               skills.map(
                 (data, index) =>
                   data.type === "Technology" && (
@@ -65,13 +81,21 @@ export default function Skills() {
                           className="rounded-full"
                         />
                         <p>{data.name}</p>
-                        {session?.user?.email === 'deshwalankush23@gmail.com' && (
-                          <MdDelete size={20} />
-                        )}
+                        {session?.user?.email === "deshwalankush23@gmail.com" &&
+                          (send ? (
+                            <TbLoader2 className="animate-spin" />
+                          ) : (
+                            <MdDelete
+                              className="cursor-pointer"
+                              size={20}
+                              onClick={() => deleteSkill(data.id)}
+                            />
+                          ))}
                       </li>
                     </div>
                   )
-              )}
+              )
+            )}
           </ul>
         </div>
         <div className="bg-yellow-50 dark:bg-teal-100 flex flex-col w-5/6 ml-0 md:w-max p-3 space-y-2 rounded-md border-2">
@@ -80,7 +104,10 @@ export default function Skills() {
           </h1>
 
           <ul className="space-y-3 ml-2 text-slate-500">
-            {skills == null ? <Loading>Loading</Loading> : skills &&
+            {skills == null ? (
+              <Loading>Loading</Loading>
+            ) : (
+              skills &&
               skills.map(
                 (data, index) =>
                   data.type === "Framework" && (
@@ -94,13 +121,21 @@ export default function Skills() {
                           className="rounded-full"
                         />
                         <p>{data.name}</p>
-                        {session?.user?.email === 'deshwalankush23@gmail.com' && (
-                          <MdDelete size={20} />
-                        )}
+                        {session?.user?.email === "deshwalankush23@gmail.com" &&
+                          (send ? (
+                            <TbLoader2 className="animate-spin" />
+                          ) : (
+                            <MdDelete
+                              className="cursor-pointer"
+                              size={20}
+                              onClick={() => deleteSkill(data.id)}
+                            />
+                          ))}
                       </li>
                     </div>
                   )
-              )}
+              )
+            )}
           </ul>
         </div>
         <div className="bg-yellow-50 dark:bg-teal-100 flex flex-col w-5/6 mr-0 md:w-max p-3 space-y-2 rounded-md border-2">
@@ -110,7 +145,10 @@ export default function Skills() {
           </h1>
 
           <ul className="space-y-3 ml-2 text-slate-500">
-            {skills == null ? <Loading>Loading</Loading> : skills &&
+            {skills == null ? (
+              <Loading>Loading</Loading>
+            ) : (
+              skills &&
               skills.map(
                 (data, index) =>
                   data.type === "Database" && (
@@ -124,13 +162,21 @@ export default function Skills() {
                           className="rounded-full"
                         />
                         <p>{data.name}</p>
-                        {session?.user?.email === 'deshwalankush23@gmail.com' && (
-                          <MdDelete size={20} />
-                        )}
+                        {session?.user?.email === "deshwalankush23@gmail.com" &&
+                          (send ? (
+                            <TbLoader2 className="animate-spin" />
+                          ) : (
+                            <MdDelete
+                              className="cursor-pointer"
+                              size={20}
+                              onClick={() => deleteSkill(data.id)}
+                            />
+                          ))}
                       </li>
                     </div>
                   )
-              )}
+              )
+            )}
           </ul>
         </div>
       </div>
