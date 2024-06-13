@@ -10,7 +10,7 @@ export default async function middleware(request: NextRequest) {
 
     const token = await getToken({ req: request })
     
-    if (token?.email === process.env.ADMIN_EMAIL) {
+    if (token?.email === 'deshwalankush23@gmail.com') {
         return NextResponse.next();
     }
 
