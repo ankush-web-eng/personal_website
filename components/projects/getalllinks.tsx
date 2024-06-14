@@ -17,7 +17,7 @@ export default function GetALlLinks() {
     try {
       const res = await axios.get("/api/projects/getlinks");
       setData(res.data.data);
-      console.log(res.data.data);
+      // console.log(res.data.data);
     } catch (error) {
       console.log(error);
     }
@@ -28,7 +28,7 @@ export default function GetALlLinks() {
   });
 
   return (
-    <div className="bg-gray-200 rounded-xl space-y-2 flex flex-col p-3">
+    <div className="bg-gray-200 rounded-xl fixed space-y-2 flex flex-col p-3">
       <h1 className="text-gray-500">Access all my Projects here:</h1>
       {data == null ? <Loading >Loading Links</Loading> :
         data.map((link, index) => <ProjectLink key={index} params={link} />)}

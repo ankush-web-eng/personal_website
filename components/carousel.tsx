@@ -7,11 +7,12 @@ import Image from "next/image";
 export default function CarouselComp() {
   return (
     <>
-      <div className="max-w-[1200px] mx-auto ">
+      <div className="w-full h-auto mx-auto ">
         <Image
           fetchPriority="high"
-          src="/ankush_bg_image.png"
-          className="rounded-md"
+          // src="/ankush_bg_image.png"
+          src='/anime.jpeg'
+          className="rounded-md shadow-xl"
           alt="ankush"
           width={750}
           height={200}

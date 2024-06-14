@@ -40,7 +40,7 @@ export default function Freelance() {
 
   return (
     <div className="flex flex-col space-y-5">
-      <CarouselComp />
+      {/* <CarouselComp /> */}
 
       <p className="text-gray-500">
         Being a developer, I need to keep polishing my skills to keep myself

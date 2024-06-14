@@ -34,7 +34,7 @@ export default function Kaizen() {
   return (
     <div className="flex flex-col space-y-5">
 
-      <CarouselComp />
+      {/* <CarouselComp /> */}
 
       <h1 className="text-5xl text-blue-500 font-bold">
         <span className="text-black dark:text-white">Hey</span> Kaizenist
