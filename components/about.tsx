@@ -8,9 +8,11 @@ import GetALlLinks from "./projects/getalllinks";
 export default function About() {
   return (
     <div className="flex flex-col space-y-5">
-      <h1 className="text-7xl">
+
+      <h1 className="text-7xl font-bold">
         Hi, I&apos;m <span className="text-blue-500 font-bold">Ankush</span>
       </h1>
+
       <Image
         src="/IMG_1705.JPG"
         alt="about image"
@@ -20,9 +22,11 @@ export default function About() {
         loading="eager"
         fetchPriority="high"
       />
+
       <h1 className="text-5xl text-blue-500 font-bold">
         <span className="text-black dark:text-white">About</span> Me
       </h1>
+
       <h2 className="text-2xl font-bold">Short Bio</h2>
       <span className="text-gray-400">
         I am a full stack developer with a passion for creating beautiful and
@@ -88,7 +92,7 @@ export default function About() {
       </span>
 
         <div className="h-fit pt-4 px-3 md:hidden"><GetALlLinks /></div>
-      <div className="pt-8 pb-20 flex space-x-6 space-y-4 flex-wrap">
+      <div className="pt-6 w-full flex space-x-6 space-y-4 flex-wrap">
         <Footer 
           link="/kaizen" 
           text="Want to explore my Blogs Page ?" />
@@ -103,7 +107,7 @@ export default function About() {
           <span className="text-blue-500 flex space-x-2">
             <RiMailCheckFill />
             <Link href="https://mail.google.com/">
-              deshwalankush23@gmail.com
+              ankushsingh.dev@gmail.com
             </Link>{" "}
           </span>
         </div>

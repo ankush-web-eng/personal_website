@@ -41,6 +41,7 @@ export default function Freelance() {
   return (
     <div className="flex flex-col space-y-5">
       {/* <CarouselComp /> */}
+      <h1 className="text-blue-500 text-6xl font-bold">Resume</h1>
 
       <p className="text-gray-500">
         Being a developer, I need to keep polishing my skills to keep myself
@@ -56,15 +57,9 @@ export default function Freelance() {
       </h2>
 
       <span className="text-slate-500">
-        I keep sharing on my Instagram about my work and projects related to Web
-        Development and Tech. You can contact me via Instagram as well.{" "}
-        <a
-          href="https://www.instagram.com/howankush07/"
-          target="ankush"
-          className="text-blue-500"
-        >
-          @howankush07.
-        </a>
+        I keep sharing on my my work and projects related to Full Stack 
+        and Tech.Drop me a high on <Link href={'https://x.com/Ankush__57s'} className="text-sky-500">Twitter</Link>{" "}as well as 
+        <Link href={'www.linkedin.com/in/ankush-singh07'} className="text-sky-500">LinkedIn</Link>
       </span>
 
       <div className="flex space-x-4 justify-start">
@@ -80,25 +75,17 @@ export default function Freelance() {
         </div>
       </div>
 
-      <div className="p-2"></div>
-
       <GetAllProjects />
-
-      <div className="py-4"></div>
-
       <Skills />
-
-      <div className="py-4"></div>
-
-      <h1 className="text-4xl font-bold ">
-        Connect with <span className="text-blue-500">Me</span>
-      </h1>
-
-      <Form />
 
       <div className="h-fit pt-3 px-3 md:hidden">
         <GetALlLinks />
       </div>
+
+      <h1 className="text-4xl font-bold py-3">
+        Connect with <span className="text-blue-500">Me</span>
+      </h1>
+      <Form />
 
       <div className="pt-8 pb-20 flex space-x-6 space-y-4 flex-wrap">
         <Footer link="/about" text="Want to know more about me ?" />
@@ -109,7 +96,7 @@ export default function Freelance() {
           <span className="text-blue-500 flex space-x-2">
             <RiMailCheckFill />
             <Link href="https://mail.google.com/">
-              deshwalankush23@gmail.com
+              ankushsingh.dev@gmail.com
             </Link>{" "}
           </span>
         </div>

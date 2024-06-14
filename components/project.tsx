@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { FaArrowRight } from "react-icons/fa";
+
 
 type Project = {
   id: string;
@@ -53,6 +55,7 @@ export default function Project({ project }: { project: Project }) {
       <p className="text-slate-400 text-sm">
         {project.para1.substring(0, 150)}...
       </p>
+      <div className="flex justify-end"><FaArrowRight color="blue" /></div>
       <div className="flex flex-row space-x-4">
         {user == "deshwalankush23@gmail.com" && (
           <Button onClick={() => deleteProject(project.id)} variant="primary">

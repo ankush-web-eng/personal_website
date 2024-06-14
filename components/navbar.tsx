@@ -82,21 +82,7 @@ export const Navbar = () => {
         </Link>
       </li>
 
-      <li className="italic font-semibold md:mr-8">
-        <Link href="/messages">
-          <svg
-            width="30px"
-            height="30px"
-            viewBox="0 0 24 24"
-            fill={window.location.pathname === "/messages" ? "blue" : "gray"}
-            fillOpacity={0.32}
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="m13.4 18-3-7.4-7.4-3L19 2z"></path>
-            <path d="M13.331 15.169 17.37 3.63 5.831 7.669l5.337 2.163 2.163 5.337Zm-3.699-3.801L.17 7.53 20.63.37l-7.161 20.461-3.837-9.463Z"></path>
-          </svg>
-        </Link>
-      </li>
+      
 
       {/* <li className="md:mr-8"><ModeToggle /></li> */}
     </ul>

@@ -131,7 +131,7 @@ export default function Homepage() {
           <span className="text-blue-500 flex space-x-2">
             <RiMailCheckFill />
             <Link href="https://mail.google.com/">
-              deshwalankush23@gmail.com
+              ankushsingh.dev@gmail.com
             </Link>{" "}
           </span>
         </div>
