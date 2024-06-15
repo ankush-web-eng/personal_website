@@ -1,14 +1,13 @@
-import CarouselComp from "./carousel";
 import Link from "next/link";
 import { RiMailCheckFill } from "react-icons/ri";
-import { FaArrowRight } from "react-icons/fa";
+
 import AllBlogs from "@/components/blog/getallblogs";
 import { Button } from "@/components/ui/button";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import Footer from "./footer/footer";
-import GetALlLinks from "./projects/getalllinks";
-import AllGhosts from "./ghost/getallghosts";
+import Footer from "../footer/footer";
+import GetALlLinks from "../projects/getalllinks";
+import AllGhosts from "../ghost/getallghosts";
 
 export default function Kaizen() {
   const [user, setUser] = useState<string>("null");
@@ -87,16 +86,16 @@ export default function Kaizen() {
         <GetALlLinks />
       </div>
 
-      <div className="pt-8 pb-20 flex space-x-6 space-y-4 flex-wrap">
-        <Footer link="/about" text="Want to know more about me ?" />
+      <div className="py-6 flex space-x-6 space-y-4 flex-wrap">
+        {/* <Footer link="/about" text="Want to know more about me ?" />
         <Footer
           link="/freelance"
           text="Are you a client looking for project work?"
-        />
+        /> */}
 
         <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-white rounded-sm ">
-          Want to connect with me via Mail?
-          <span className="text-blue-500 flex space-x-2">
+          Let&apos;s connect via Mail?
+          <span className="text-sky-500 flex space-x-2">
             <RiMailCheckFill />
             <Link href="https://mail.google.com/">
               ankushsingh.dev@gmail.com

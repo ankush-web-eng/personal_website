@@ -6,19 +6,18 @@ import Image from "next/image";
 
 export default function CarouselComp() {
   return (
-    <>
-      <div className="w-full h-auto mx-auto ">
+
+      <div className="w-full h-auto rounded-lg mx-auto ">
         <Image
           fetchPriority="high"
           // src="/ankush_bg_image.png"
           src='/anime.jpeg'
-          className="rounded-md shadow-xl"
+          className="rounded-lg shadow-xl"
           alt="ankush"
           width={750}
           height={200}
         />
       </div>
-    </>
   );
 }
 

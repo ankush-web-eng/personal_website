@@ -3,7 +3,7 @@
 import { Navbar } from "@/components/navbar";
 import { Header } from "@/components/header";
 import dynamic from "next/dynamic";
-import Freelance from "@/components/freelance";
+import Freelance from "@/components/pages/freelance";
 import { useEffect, useState } from "react";
 import GetALlLinks from "@/components/projects/getalllinks";
 import PageWrapper from "@/app/page-wrapper";

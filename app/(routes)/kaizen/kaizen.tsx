@@ -2,7 +2,7 @@
 import { Header } from "@/components/header";
 import { Navbar } from "@/components/navbar";
 import React, { useEffect, useState } from "react";
-import Kaizen from "@/components/kaizen";
+import Kaizen from "@/components/pages/kaizen"
 import GetALlLinks from "@/components/projects/getalllinks";
 import PageWrapper from "@/app/page-wrapper";
 import { TbLoader2 } from "react-icons/tb";

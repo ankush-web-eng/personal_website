@@ -10,8 +10,8 @@ import GetAllProjects from "@/components/getallprojects";
 
 import { FaArrowRight } from "react-icons/fa";
 import { RiMailCheckFill } from "react-icons/ri";
-import Footer from "./footer/footer";
-import GetALlLinks from "./projects/getalllinks";
+import Footer from "../footer/footer";
+import GetALlLinks from "../projects/getalllinks";
 
 export default function Freelance() {
   const [user, setUser] = useState<string>("null");
@@ -87,9 +87,9 @@ export default function Freelance() {
       </h1>
       <Form />
 
-      <div className="pt-8 pb-20 flex space-x-6 space-y-4 flex-wrap">
-        <Footer link="/about" text="Want to know more about me ?" />
-        <Footer link="/kaizen" text="Want to explore my Blogs Page ?" />
+      <div className="py-6 flex space-x-6 space-y-4 flex-wrap">
+        {/* <Footer link="/about" text="Want to know more about me ?" />
+        <Footer link="/kaizen" text="Want to explore my Blogs Page ?" /> */}
 
         <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-white rounded-sm">
           Want to connect with me via Mail?
