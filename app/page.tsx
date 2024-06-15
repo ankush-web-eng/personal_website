@@ -26,7 +26,7 @@ export default function Home() {
 
   return (
     <PageWrapper >
-    <div>
+    <div className="">
       <div className="hidden md:flex fixed overflow-y-auto">
         <Navbar />
         <div className="flex h-screen w-1/2 space-y-6 flex-col pt-8 pl-6">
