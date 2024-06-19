@@ -2,7 +2,7 @@
 
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import Project from "@/components/project";
+import Project from "@/components/projects/project";
 import Loading from "@/components/loading";
 import Link from "next/link";
 interface ProjectData {
@@ -31,7 +31,7 @@ export default function GetSingleProjects() {
 
   return (
     <div className="pt-4 pb-8 flex space-y-6 flex-col border-b-sky-200">
-      <h1 className="text-4xl text-blue-500 w-fit font-bold ">Projects</h1>
+      <h1 className="text-4xl text-sky-500 w-fit font-bold ">Projects</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 max-md:space-y-4 md:space-x-2">
         {data !== null ?
           data.map((project, index) => (

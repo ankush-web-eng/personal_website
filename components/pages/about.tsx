@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+
 import { RiMailCheckFill } from "react-icons/ri";
-import { FaArrowRight } from "react-icons/fa";
-import Footer from "../footer/footer";
-import GetALlLinks from "../projects/getalllinks";
+
+import Footer from "@/components/footer/footer";
+import GetALlLinks from "@/components/projects/getalllinks";
 
 export default function About() {
   return (
@@ -95,7 +96,7 @@ export default function About() {
       <div className="h-fit pt-4 px-3 md:hidden">
         <GetALlLinks />
       </div>
-      <div className="py-6 w-full flex space-x-6 space-y-4 flex-wrap">
+      <div className="py-6 grid grid-cols-1 md:grid-cols-2 md:space-y-4">
         <Footer link="/kaizen" text="Want to explore my Blogs Page ?" />
         <Footer
           link="/freelance"

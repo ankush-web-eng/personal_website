@@ -29,7 +29,7 @@ export default function AllBlogs() {
 
   return (
     <div className="pt-4 pb-8 flex space-y-6 flex-col border-b-sky-200">
-      <h1 className="text-4xl text-blue-500 w-fit font-bold my-6">Blogs</h1>
+      <h1 className="text-4xl text-sky-500 w-fit font-bold my-6">Blogs</h1>
       {blogData !== null ? (
         blogData.map((data, index) => (
             <Blog key={index} blog={data} />

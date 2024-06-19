@@ -5,7 +5,7 @@ import { useSession } from "next-auth/react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { MdDelete } from "react-icons/md";
-import Loading from "./loading";
+import Loading from "@/components/loading";
 import { TbLoader2 } from "react-icons/tb";
 
 interface Skill {

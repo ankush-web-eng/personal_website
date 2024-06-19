@@ -1,14 +1,16 @@
-import CarouselComp from "@/components/carousel";
-import { Sociallinks } from "@/components/social";
-import Link from "next/link";
-import { FaArrowRight } from "react-icons/fa";
-import { RiMailCheckFill } from "react-icons/ri";
-import SingleBlogs from "@/components/blog/getsingleblog";
-import GetSingleProjects from "@/components/projects/getsingleproject";
-import Footer from "@/components/footer/footer";
 import Image from "next/image";
-import GetALlLinks from "../projects/getalllinks";
-import TwoGhosts from "../ghost/twoghosts";
+import Link from "next/link";
+
+import { RiMailCheckFill } from "react-icons/ri";
+
+import CarouselComp from "@/components/includes/carousel";
+import { Sociallinks } from "@/components/includes/social";
+import GetSingleProjects from "@/components/projects/getsingleproject";
+import GetALlLinks from "@/components/projects/getalllinks"
+import TwoGhosts from "@/components/ghost/twoghosts";
+
+// import Footer from "@/components/footer/footer";
+// import SingleBlogs from "@/components/blog/getsingleblog";
 
 export default function Homepage() {
   return (
@@ -28,15 +30,15 @@ export default function Homepage() {
       </div>
 
       <div className="pt-8">
-      <div className="flex justify-start text-start pt-8">
-        <h1 className="font-semibold text-lg">
-          Hi, I am <span className="text-sky-500">Ankush</span>
+        <div className="flex justify-start text-start pt-8">
+          <h1 className="font-semibold text-lg">
+            Hi, I am <span className="text-sky-500">Ankush</span>
+          </h1>
+        </div>
+        <h1 className="text-5xl font-bold">
+          I make <span className="text-teal-500">Full Stack</span> Web
+          Applications
         </h1>
-      </div>
-      <h1 className="text-5xl font-bold">
-        I make <span className="text-teal-500">Full Stack</span> Web
-        Applications
-      </h1>
       </div>
 
       <p className="text-gray-600 dark:text-gray-300">
@@ -45,9 +47,16 @@ export default function Homepage() {
         with passion for <span className="text-sky-500">Code.</span>
       </p>
 
-      <div className="pt-8">
+      <p className="text-gray-600 dark:text-gray-300">
+        Quite <span className="text-sky-500">passionate</span> about Technology,
+        I decided to do Computer Science and Content Creation in this life. I
+        like to Code, Write, Create Content, Workout, Travel solo and meet new
+        people.
+      </p>
+      <div className="py-4">
         <Sociallinks />
       </div>
+
       <p className="text-gray-600 dark:text-gray-300">
         I am constantly learning new technologies and sharing my achievements on
         LinkedIn.
@@ -75,31 +84,6 @@ export default function Homepage() {
         </a>
       </p>
 
-      <p className="text-gray-600 dark:text-gray-300">
-        I also creates content on Instagram on where I show my tech work. I have
-        specialized it for my freelancing work. Visit it for professional
-        purpose.{" "}
-        <a
-          href="https://www.instagram.com/howankush07/"
-          target="ankush"
-          className="text-sky-500"
-        >
-          @howankush07
-        </a>
-      </p>
-
-      <p className="text-gray-600 dark:text-gray-300">
-        I am building a <span className="text-sky-500">Freelancing</span> Agency with 5 high caliber freelancers from multiple domains 
-        where we are determined to deliver quality products at great pace. View our page here at{" "}
-        <a
-          href="https://www.instagram.com/skillsphere07/"
-          target="ankush"
-          className="text-sky-500"
-        >
-          @skillsphere07
-        </a>
-      </p>
-
       {/* <SingleBlogs /> */}
       <TwoGhosts />
       <GetSingleProjects />
@@ -116,7 +100,9 @@ export default function Homepage() {
         ></iframe>
       </div>
 
-      <div className="h-fit pt-3 px-3 md:hidden"><GetALlLinks /></div>
+      <div className="h-fit pt-3 px-3 md:hidden">
+        <GetALlLinks />
+      </div>
 
       <div className="py-6 flex space-x-6 space-y-4 flex-wrap">
         {/* <Footer link="/about" text="Want to know more about me ?" />
@@ -128,7 +114,7 @@ export default function Homepage() {
 
         <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-white rounded-sm ">
           Let&apos;s connect via Mail?
-          <span className="text-blue-500 flex space-x-2">
+          <span className="text-sky-500 flex space-x-2">
             <RiMailCheckFill />
             <Link href="https://mail.google.com/">
               ankushsingh.dev@gmail.com

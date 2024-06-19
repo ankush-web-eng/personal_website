@@ -1,13 +1,14 @@
-import Link from "next/link";
-import { RiMailCheckFill } from "react-icons/ri";
-
-import AllBlogs from "@/components/blog/getallblogs";
-import { Button } from "@/components/ui/button";
 import axios from "axios";
+import Link from "next/link";
 import { useEffect, useState } from "react";
-import Footer from "../footer/footer";
-import GetALlLinks from "../projects/getalllinks";
-import AllGhosts from "../ghost/getallghosts";
+
+import { RiMailCheckFill } from "react-icons/ri";
+import { Button } from "@/components/ui/button";
+
+import GetALlLinks from "@/components/projects/getalllinks";
+import AllGhosts from "@/components/ghost/getallghosts";
+
+// import Footer from "../footer/footer";
 
 export default function Kaizen() {
   const [user, setUser] = useState<string>("null");
@@ -34,7 +35,7 @@ export default function Kaizen() {
     <div className="flex flex-col space-y-5">
       {/* <CarouselComp /> */}
 
-      <h1 className="text-5xl text-blue-500 font-bold">
+      <h1 className="text-5xl text-sky-500 font-bold">
         <span className="text-black dark:text-white italic">Hey</span> There! 👋🏼
       </h1>
 
