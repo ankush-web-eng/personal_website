@@ -14,7 +14,7 @@ import TwoGhosts from "@/components/ghost/twoghosts";
 
 export default function Homepage() {
   return (
-    <div className="flex flex-col space-y-5 max-md:px-2">
+    <div className="flex flex-col space-y-5">
       <div className="relative">
         <CarouselComp />
         <div className="absolute -bottom-[60px] left-2">
