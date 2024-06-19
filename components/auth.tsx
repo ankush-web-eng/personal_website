@@ -1,24 +1,28 @@
 "use client";
 import Link from "next/link";
 import { signIn, useSession, signOut } from "next-auth/react";
+import { Button } from "@/components/ui/button";
 
 function AuthButton() {
   const { data: session } = useSession();
   if (session) {
     return (
-      <button
+      <Button
+        variant={'default'}
         onClick={() => signOut()}
-        className="hover:bg-blue-500 hover:text-white font-mono pr-2 bg-white dark:bg-black rounded-sm px-2 py-1 space-x-2 p-1 flex items-center border-2 border-gray-300 dark:border-gray-800"
+        // className="hover:bg-blue-500 hover:text-white font-mono pr-2 bg-white dark:bg-black rounded-sm px-2 py-1 space-x-2 p-1 flex items-center border-2 border-gray-300 dark:border-gray-800"
       >
         
         <span className="font-semibold italic">Sign Out</span>
-      </button>
+      </Button>
     );
   } else {
     return (
-      <button
+      <Button
+        variant={'default'}
         onClick={() => signIn()}
-        className="hover:bg-blue-600 hover:text-white font-mono pr-2 bg-white dark:bg-black rounded-sm px-2 py-1 space-x-2 p-1 flex items-center border-2 border-gray-300 dark:border-gray-800"
+        className="space-x-2"
+        // className="hover:bg-blue-600 hover:text-white font-mono pr-2 bg-white dark:bg-black rounded-sm px-2 py-1 space-x-2 p-1 flex items-center border-2 border-gray-300 dark:border-gray-800"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +49,7 @@ function AuthButton() {
           <path d="M1 1h22v22H1z" fill="none" />
         </svg>
         <span className="font-semibold italic">Sign In</span>
-      </button>
+      </Button>
     );
   }
 }
