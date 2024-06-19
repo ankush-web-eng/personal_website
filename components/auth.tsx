@@ -20,7 +20,7 @@ function AuthButton() {
     return (
       <Button
         variant={'default'}
-        onClick={() => signIn()}
+        onClick={() => signIn('google')}
         className="space-x-2"
         // className="hover:bg-blue-600 hover:text-white font-mono pr-2 bg-white dark:bg-black rounded-sm px-2 py-1 space-x-2 p-1 flex items-center border-2 border-gray-300 dark:border-gray-800"
       >
