@@ -109,12 +109,6 @@ export default function About() {
         <GetALlLinks />
       </div>
       <div className="py-6 grid grid-cols-1 md:grid-cols-2 md:space-y-4">
-        <Footer link="/kaizen" text="Want to explore my Blogs Page ?" />
-        <Footer
-          link="/freelance"
-          text="Are you a client looking for project work?"
-        />
-
         <div className="w-fit px-4 py-4 dark:text-slate-300 text-slate-500 dark:bg-inherit flex flex-col border-2 border-sky-400 bg-white rounded-sm">
           Want to connect with me via Mail?
           <span className="text-sky-400 flex space-x-2">
