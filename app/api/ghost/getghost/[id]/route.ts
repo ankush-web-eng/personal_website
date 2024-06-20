@@ -29,8 +29,8 @@ export async function GET(req: NextRequest, context: Params) {
         }
 
         // Fix the caching for the path
-        // const path = req.nextUrl.searchParams.get('path') || `/kaizen/${newId}`        
-        // revalidatePath(path)
+        const path = req.nextUrl.searchParams.get('path') || `/kaizen/${newId}`        
+        revalidatePath(path)
 
         return NextResponse.json({data}, { status: 200 })
 

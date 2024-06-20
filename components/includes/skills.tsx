@@ -10,7 +10,7 @@ import { TbLoader2 } from "react-icons/tb";
 import Skill from "../projects/skill";
 
 interface Skill {
-  id: string;
+  _id: string;
   name: string;
   type: string;
   icon: string;

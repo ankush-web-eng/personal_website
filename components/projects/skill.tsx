@@ -7,7 +7,7 @@ import { MdDelete } from "react-icons/md";
 import { TbLoader2 } from "react-icons/tb";
 
 interface Skill {
-  id: string;
+  _id: string;
   name: string;
   type: string;
   icon: string;
@@ -19,6 +19,7 @@ export default function Skill({ props }: { props: Skill }) {
 
   const deleteSkill = async (id: string) => {
     setSend(true);
+    
     try {
       const res = await axios.get(`api/skill/deleteskill/${id}`);
       setSend(false);
@@ -39,7 +40,7 @@ export default function Skill({ props }: { props: Skill }) {
       />
       <p>{props.name}</p>
       {session?.user?.email === "deshwalankush23@gmail.com" && (
-        <button onClick={() => deleteSkill(props.id)}>
+        <button onClick={() => deleteSkill(props._id)}>
           {send ? (
             <TbLoader2 className="animate-spin" />
           ) : (

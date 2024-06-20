@@ -21,8 +21,8 @@ export async function GET(req:NextRequest, context : Params){
         })
         // console.log(data);
 
-        // const path = req.nextUrl.searchParams.get("path") || "/"
-        // revalidatePath(path)
+        const path = req.nextUrl.searchParams.get("path") || "/"
+        revalidatePath(path)
 
         return NextResponse.json({data}, {status: 201})
     } catch (error) {

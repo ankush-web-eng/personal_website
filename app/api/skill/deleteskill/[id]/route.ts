@@ -1,5 +1,6 @@
 import { Connect } from "@/lib/db";
 import { SkillModel } from "@/models/skillModel";
+import mongoose from "mongoose";
 import { revalidatePath } from "next/cache";
 import { NextRequest, NextResponse } from "next/server";
 
@@ -14,9 +15,11 @@ export async function GET(req: NextRequest, context: Params) {
     const id = context.params.id
 
     try {
-
-        const isDeleted = await SkillModel.findByIdAndDelete(id)
-
+        // console.log(id);
+        // console.log(new mongoose.Types.ObjectId(id));
+        
+        const isDeleted = await SkillModel.deleteOne({ _id: new mongoose.Types.ObjectId(id) })
+        console.log(isDeleted);
         if (!isDeleted) {
             return NextResponse.json(
                 { success: false, message: "Error in deleting Skill" },
