@@ -103,9 +103,9 @@ export default function About() {
           text="Are you a client looking for project work?"
         />
 
-        <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-white rounded-sm">
+        <div className="w-fit px-4 py-4 dark:text-slate-300 text-slate-500 dark:bg-inherit flex flex-col border-2 border-sky-400 bg-white rounded-sm">
           Want to connect with me via Mail?
-          <span className="text-sky-500 flex space-x-2">
+          <span className="text-sky-400 flex space-x-2">
             <RiMailCheckFill />
             <Link href="https://mail.google.com/">
               ankushsingh.dev@gmail.com
@@ -113,7 +113,7 @@ export default function About() {
           </span>
         </div>
       </div>
-      <div className="pb-6 pt-3"></div>
+      <div className="py-3"></div>
     </div>
   );
 }

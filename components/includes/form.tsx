@@ -62,14 +62,14 @@ export default function Form(): JSX.Element {
       onSubmit={sendEmail}
       id="form"
       ref={form}
-      className="rounded-lg p-4 border-2 bg-yellow-50 dark:bg-teal-200 flex-col flex space-y-4"
+      className="rounded-lg p-4 border-2 bg-yellow-50 dark:bg-inherit dark:border border-sky-400 flex-col flex space-y-4"
     >
       <input
         placeholder="Your Name"
         name="name"
         value={formData.name}
         onChange={handleChange}
-        className="md:w-1/2 w-full rounded-full px-2 py-1 border-2 focus:bg-yellow-50 bg-white dark:bg-black text-black dark:text-white"
+        className="md:w-1/2 w-full rounded-full px-2 py-1 border-2 focus:bg-yellow-50 bg-white dark:bg-inherit text-black dark:text-white"
         type="text"
       />
       <input
@@ -77,7 +77,7 @@ export default function Form(): JSX.Element {
         name="email"
         value={formData.email}
         onChange={handleChange}
-        className="md:w-1/2 w-full rounded-full px-2 py-1 border-2 focus:bg-yellow-50 bg-white dark:bg-black text-black dark:text-white"
+        className="md:w-1/2 w-full rounded-full px-2 py-1 border-2 focus:bg-yellow-50 bg-white dark:bg-inherit text-black dark:text-white"
         type="email"
       />
       <input
@@ -85,7 +85,7 @@ export default function Form(): JSX.Element {
         name="message"
         value={formData.message}
         onChange={handleChange}
-        className="md:w-1/2 w-full h-28 rounded-xl px-2 py-1 border-2 focus:bg-yellow-50 bg-white dark:bg-black text-black dark:text-white"
+        className="md:w-1/2 w-full h-28 rounded-xl px-2 py-1 border-2 focus:bg-yellow-50 bg-white dark:bg-inherit text-black dark:text-white"
         type="text"
       />
       {send && <button

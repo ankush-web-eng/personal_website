@@ -8,9 +8,9 @@ interface FooterProps {
 
 export default function Footer({ link, text }: FooterProps) {
   return (
-    <div className="w-fit p-4 dark:text-slate-800 flex flex-col border-2 border-gray-300 bg-white rounded-sm ">
+    <div className="w-fit p-4 text-slate-800 dark:bg-slate-300 flex flex-col border- border-sky-400 bg-white dark:bg-inherit rounded-sm ">
       {text}
-      <span className="text-blue-500">
+      <span className="text-sky-500">
         <Link href={link}>
           Click here <FaArrowRight />
         </Link>

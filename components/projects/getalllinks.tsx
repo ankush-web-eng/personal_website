@@ -28,7 +28,7 @@ export default function GetALlLinks() {
   });
 
   return (
-    <div className="bg-gray-200 rounded-xl space-y-2 flex flex-col p-3">
+    <div className="bg-gray-200 dark:bg-inherit dark:border border-sky-400 rounded-xl space-y-2 flex flex-col p-3">
       <h1 className="text-gray-500">Access all my Projects here:</h1>
       {data == null ? <Loading >Loading Links</Loading> :
         data.map((link, index) => <ProjectLink key={index} params={link} />)}

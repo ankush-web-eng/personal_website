@@ -10,7 +10,6 @@ import Form from "@/components/includes/form";
 import GetAllProjects from "@/components/projects/getallprojects";
 import GetALlLinks from "@/components/projects/getalllinks";
 
-// import Footer from "../footer/footer";
 
 export default function Freelance() {
   const [user, setUser] = useState<string>("null");
@@ -42,12 +41,12 @@ export default function Freelance() {
       {/* <CarouselComp /> */}
       <h1 className="text-sky-500 text-6xl font-bold">Resume</h1>
 
-      <p className="text-gray-500">
+      <p className="text-gray-500 dark:text-slate-300">
         Being a developer, I need to keep polishing my skills to keep myself
         updated.
       </p>
 
-      <h2 className="text-gray-500">
+      <h2 className="text-gray-500 dark:text-slate-300">
         If you are a Client looking for a freelancer, you are at{" "}
         <span className="text-sky-500">right place</span>. Feel free to contact
         me through my Social media handles or by mailing me. You can direct
@@ -55,7 +54,7 @@ export default function Freelance() {
         <span className="text-sky-500">bottom</span> of the page.
       </h2>
 
-      <span className="text-slate-500">
+      <span className="text-slate-500 dark:text-slate-300">
         I keep sharing on my my work and projects related to Full Stack 
         and Tech.Drop me a high on <Link href={'https://x.com/Ankush__57s'} className="text-sky-500">Twitter</Link>{" "}as well as 
         <Link href={'www.linkedin.com/in/ankush-singh07'} className="text-sky-500">LinkedIn</Link>
@@ -87,12 +86,9 @@ export default function Freelance() {
       <Form />
 
       <div className="py-6 flex space-x-6 space-y-4 flex-wrap">
-        {/* <Footer link="/about" text="Want to know more about me ?" />
-        <Footer link="/kaizen" text="Want to explore my Blogs Page ?" /> */}
-
-        <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-white rounded-sm">
+        <div className="w-fit px-4 py-4 dark:text-slate-300 text-slate-500 dark:bg-inherit flex flex-col border-2 border-sky-400 bg-white rounded-sm">
           Want to connect with me via Mail?
-          <span className="text-sky-500 flex space-x-2">
+          <span className="text-sky-400 flex space-x-2">
             <RiMailCheckFill />
             <Link href="https://mail.google.com/">
               ankushsingh.dev@gmail.com

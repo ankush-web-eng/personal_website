@@ -9,8 +9,8 @@ export async function GET(req:NextRequest){
         const data = await prisma.blog.findMany()
         // console.log(data[0]);
         
-        const path = req.nextUrl.searchParams.get('path') || "/kaizen"
-        revalidatePath(path)
+        // const path = req.nextUrl.searchParams.get('path') || "/kaizen"
+        // revalidatePath(path)
 
         return NextResponse.json({data}, {status: 201})
 

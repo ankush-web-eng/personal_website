@@ -7,8 +7,8 @@ export async function GET (req: NextRequest){
     try {
         const data = await prisma.projects.findMany()
 
-        const path = req.nextUrl.searchParams.get("path") || "/"
-        revalidatePath(path)
+        // const path = req.nextUrl.searchParams.get("path") || "/"
+        // revalidatePath(path)
         // console.log(data);
 
         return NextResponse.json({data}, {status:201})

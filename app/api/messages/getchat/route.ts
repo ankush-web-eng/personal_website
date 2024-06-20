@@ -7,8 +7,8 @@ export async function GET(req:NextRequest){
     try {
         const data = await prisma.chat.findMany()
 
-        const path = req.nextUrl.searchParams.get('path') || "/"
-        revalidatePath(path)
+        // const path = req.nextUrl.searchParams.get('path') || "/"
+        // revalidatePath(path)
 
         return NextResponse.json(data)
         // console.log(data);

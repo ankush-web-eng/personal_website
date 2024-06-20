@@ -15,8 +15,8 @@ export async function GET(req: NextRequest) {
             )
         }
 
-        const path = req.nextUrl.searchParams.get('path') || "/freelance"
-        revalidatePath(path)
+        // const path = req.nextUrl.searchParams.get('path') || "/freelance"
+        // revalidatePath(path)
 
         return NextResponse.json(
             { success: true, data },

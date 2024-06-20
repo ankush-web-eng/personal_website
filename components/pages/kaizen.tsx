@@ -5,10 +5,8 @@ import { useEffect, useState } from "react";
 import { RiMailCheckFill } from "react-icons/ri";
 import { Button } from "@/components/ui/button";
 
-import GetALlLinks from "@/components/projects/getalllinks";
 import AllGhosts from "@/components/ghost/getallghosts";
 
-// import Footer from "../footer/footer";
 
 export default function Kaizen() {
   const [user, setUser] = useState<string>("null");
@@ -79,24 +77,13 @@ export default function Kaizen() {
         </div>
       </div>
 
-      {/* <AllBlogs /> */}
       <AllGhosts />
 
 
-      <div className="h-fit pt-3 px-3 md:hidden">
-        <GetALlLinks />
-      </div>
-
       <div className="py-6 flex space-x-6 space-y-4 flex-wrap">
-        {/* <Footer link="/about" text="Want to know more about me ?" />
-        <Footer
-          link="/freelance"
-          text="Are you a client looking for project work?"
-        /> */}
-
-        <div className="w-fit px-4 py-4 dark:text-slate-800  flex flex-col border-2 border-gray-300 bg-white rounded-sm ">
-          Let&apos;s connect via Mail?
-          <span className="text-sky-500 flex space-x-2">
+        <div className="w-fit px-4 py-4 dark:text-slate-300 text-slate-500 dark:bg-inherit flex flex-col border-2 border-sky-400 bg-white rounded-sm">
+          Want to connect with me via Mail?
+          <span className="text-sky-400 flex space-x-2">
             <RiMailCheckFill />
             <Link href="https://mail.google.com/">
               ankushsingh.dev@gmail.com
@@ -104,7 +91,7 @@ export default function Kaizen() {
           </span>
         </div>
       </div>
-      <div className="pb-2 pt-3"></div>
+      <div className="py-3"></div>
     </div>
   );
 }
