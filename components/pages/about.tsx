@@ -14,7 +14,7 @@ export default function About() {
       </h1>
 
       <Image
-        src="/IMG_1705.JPG"
+        src="/ank-bar.JPG"
         alt="about image"
         className=""
         height={520}
@@ -60,6 +60,18 @@ export default function About() {
           @howankush07
         </a>
       </span>
+
+      <div className="flex justify-center">
+      <Image
+        src="/alm.JPG"
+        alt="about image"
+        className="rounded-xl"
+        height={320}
+        width={280}
+        loading="eager"
+        fetchPriority="high"
+      />
+      </div>
 
       <h1 className="text-2xl pt-2 pb-1 font-bold">Education</h1>
       <span className="text-slate-500 dark:text-gray-300">
