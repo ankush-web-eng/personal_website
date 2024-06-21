@@ -9,6 +9,7 @@ import GetSingleProjects from "@/components/projects/getsingleproject";
 import GetALlLinks from "@/components/projects/getalllinks"
 import TwoGhosts from "@/components/ghost/twoghosts";
 import { TypewriterMain } from "@/components/library/type";
+import { Lamp } from "../library/lampview";
 
 
 export default function Homepage() {
@@ -34,7 +35,10 @@ export default function Homepage() {
             Hi, I am <span className="text-sky-500">Ankush</span>
           </h1>
         </div>
-        <div className="hidden md:flex"><TypewriterMain /></div>
+        <div className="max-md:hidden"><TypewriterMain /></div>
+        {/* <div className="md:hidden">
+          <Lamp />
+        </div> */}
 
         <h1 className="text-5xl font-bold md:hidden">
           I make <span className="text-teal-500">Full Stack</span> Web
