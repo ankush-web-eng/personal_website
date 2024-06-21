@@ -8,6 +8,7 @@ import { Sociallinks } from "@/components/includes/social";
 import GetSingleProjects from "@/components/projects/getsingleproject";
 import GetALlLinks from "@/components/projects/getalllinks"
 import TwoGhosts from "@/components/ghost/twoghosts";
+import { TypewriterMain } from "@/components/library/type";
 
 
 export default function Homepage() {
@@ -33,10 +34,13 @@ export default function Homepage() {
             Hi, I am <span className="text-sky-500">Ankush</span>
           </h1>
         </div>
-        <h1 className="text-5xl font-bold">
+        <div className="hidden md:visible"><TypewriterMain /></div>
+
+        <h1 className="text-5xl font-bold md:hidden">
           I make <span className="text-teal-500">Full Stack</span> Web
           Applications
         </h1>
+        
       </div>
 
       <p className="text-gray-600 dark:text-gray-300">
