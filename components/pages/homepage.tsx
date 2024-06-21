@@ -34,7 +34,7 @@ export default function Homepage() {
             Hi, I am <span className="text-sky-500">Ankush</span>
           </h1>
         </div>
-        <div className="hidden md:visible"><TypewriterMain /></div>
+        <div className="hidden md:flex"><TypewriterMain /></div>
 
         <h1 className="text-5xl font-bold md:hidden">
           I make <span className="text-teal-500">Full Stack</span> Web
