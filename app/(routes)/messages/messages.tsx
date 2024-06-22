@@ -160,7 +160,7 @@ export default function MessagesPage() {
               ? "No messages"
               : messages.map(({ id, name, message }, index) => (
                   <div className="flex space-x-2" key={id}>
-                    <p className="text-gray-700">{name}</p> : <p>{message}</p>
+                    <p className="text-slate-600 dark:text-slate-300">{name}</p> : <p className="text-slate-500 dark:text-slate-400">{message}</p>
                     {user === name && (
                       <button onClick={() => deleteMessage(id)}>
                         <RiDeleteBin6Fill />
@@ -204,7 +204,7 @@ export default function MessagesPage() {
               ? "No messages"
               : messages.map(({ id, name, message }, index) => (
                   <div className="flex space-x-2" key={id}>
-                    <p className="text-gray-700">{name}</p> : <p>{message}</p>
+                    <p className="text-slate-600 dark:text-slate-300">{name}</p> : <p className="text-slate-500 dark:text-slate-400">{message}</p>
                     {user === name && (
                       <button onClick={() => deleteMessage(id)}>
                         <RiDeleteBin6Fill />

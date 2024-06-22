@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .dark body {
-  @apply bg-[#162443];
+  @apply bg-[#0f1729];
 }
 
 @layer base {
