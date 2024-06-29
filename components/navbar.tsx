@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const Navbar = () => {
   return (
-    <ul className="flex justify-evenly md:justify-center items-end fixed md:sticky md:top-0 bottom-0 md:flex-col py-3 md:space-y-10 md:h-screen md:w-1/5 max-sm:space-x-7 w-full md:border-r md:border-r-sky-200 md:dark:border-r-sky-100 dark:border-slate-800 z-50 backdrop-filter backdrop-blur-lg">
+    <ul className="flex justify-evenly md:justify-center items-end fixed md:sticky md:top-0 md:left-0 bottom-0 md:flex-col py-3 md:space-y-10 md:h-screen md:w-1/5 max-sm:space-x-7 w-full md:border-r md:border-r-sky-200 md:dark:border-r-sky-100 dark:border-slate-800 z-50 backdrop-filter backdrop-blur-lg">
       <li className="italic font-semibold md:pr-8">
         <Link href="/">
           <svg
@@ -76,9 +76,6 @@ export const Navbar = () => {
         </Link>
       </li>
 
-      {/* <li className="md:mr-8"><ModeToggle /></li> */}
     </ul>
   );
 };
-
-//

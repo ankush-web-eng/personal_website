@@ -1,18 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 
+import { useEffect, useState } from "react";
 import { RiMailCheckFill } from "react-icons/ri";
 
+import { TypewriterMain } from "@/components/library/type";
 import CarouselComp from "@/components/includes/carousel";
 import { Sociallinks } from "@/components/includes/social";
-import GetSingleProjects from "@/components/projects/getsingleproject";
-import GetALlLinks from "@/components/projects/getalllinks"
-import TwoGhosts from "@/components/ghost/twoghosts";
-import { TypewriterMain } from "@/components/library/type";
-import { Lamp } from "../library/lampview";
+const GetSingleProjects = dynamic(() => import('@/components/projects/getsingleproject'), { ssr: false });
+const TwoGhosts = dynamic(() => import('@/components/ghost/twoghosts'), { ssr: false });
 
 
 export default function Homepage() {
+
   return (
     <div className="flex flex-col space-y-5">
       <div className="relative">
@@ -36,15 +37,12 @@ export default function Homepage() {
           </h1>
         </div>
         <div className="max-md:hidden"><TypewriterMain /></div>
-        {/* <div className="md:hidden">
-          <Lamp />
-        </div> */}
 
         <h1 className="text-5xl font-bold md:hidden">
           I make <span className="text-teal-500">Full Stack</span> Web
           Applications
         </h1>
-        
+
       </div>
 
       <p className="text-gray-600 dark:text-gray-300">
@@ -90,7 +88,6 @@ export default function Homepage() {
         </a>
       </p>
 
-      {/* <SingleBlogs /> */}
       <TwoGhosts />
       <GetSingleProjects />
 
@@ -101,13 +98,9 @@ export default function Homepage() {
           title="About Ankush"
           // frameborder=""
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          // referrerpolicy="strict-origin-when-cross-origin"
-          // allowfullscreen
+        // referrerpolicy="strict-origin-when-cross-origin"
+        // allowfullscreen
         ></iframe>
-      </div>
-
-      <div className="h-fit pt-3 px-3 md:hidden">
-        <GetALlLinks />
       </div>
 
       <div className="py-6 flex space-x-6 space-y-4 flex-wrap">

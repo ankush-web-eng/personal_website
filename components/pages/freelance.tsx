@@ -1,14 +1,14 @@
 import axios from "axios";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { RiMailCheckFill } from "react-icons/ri";
-
-import Skills from "@/components/includes/skills";
 import Form from "@/components/includes/form";
-import GetAllProjects from "@/components/projects/getallprojects";
-import GetALlLinks from "@/components/projects/getalllinks";
+
+const Skills = dynamic(() => import('@/components/includes/skills'), { ssr: false });
+const GetAllProjects = dynamic(() => import('@/components/projects/getallprojects'), { ssr: false });
 
 
 export default function Freelance() {
@@ -75,10 +75,6 @@ export default function Freelance() {
 
       <GetAllProjects />
       <Skills />
-
-      <div className="h-fit pt-3 px-3 md:hidden">
-        <GetALlLinks />
-      </div>
 
       <h1 className="text-4xl font-bold py-3">
         Connect with <span className="text-sky-500">Me</span>

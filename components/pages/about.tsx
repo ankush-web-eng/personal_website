@@ -105,9 +105,6 @@ export default function About() {
         </span>
       </span>
 
-      <div className="h-fit pt-4 px-3 md:hidden">
-        <GetALlLinks />
-      </div>
       <div className="py-6 grid grid-cols-1 md:grid-cols-2 md:space-y-4">
         <div className="w-fit px-4 py-4 dark:text-slate-300 text-slate-500 dark:bg-inherit flex flex-col border-2 border-sky-400 bg-white rounded-sm">
           Want to connect with me via Mail?

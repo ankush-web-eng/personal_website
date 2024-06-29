@@ -1,14 +1,7 @@
 "use client";
-// import { Homepage } from "@/components/home";
-import { Navbar } from "@/components/navbar";
-import { Header } from "@/components/header";
 import Homepage from "@/components/pages/homepage"
 import { useEffect, useState } from "react";
-import GetALlLinks from "@/components/projects/getalllinks";
-import {motion, AnimatePresence} from "framer-motion";
-import PageWrapper from "./page-wrapper";
 import { TbLoader2 } from "react-icons/tb";
-import Insta from "@/components/footer/insta";
 
 export default function Home() {
 
@@ -26,27 +19,6 @@ export default function Home() {
     );
 
   return (
-    <PageWrapper >
-    <div className="">
-      <div className="hidden md:flex fixed overflow-y-auto">
-        <Navbar />
-        <div className="flex h-screen w-1/2 space-y-6 flex-col pt-8 pl-6">
-          <Header />
-          <Homepage />
-        </div>
-        <div className="h-fit pt-28 flex flex-col px-6 space-y-4">
-          <GetALlLinks />
-          <Insta />
-          </div>
-      </div>
-      <div className="md:hidden flex">
-        <div className="flex h-screen w-full space-y-6 flex-col pt-8 pl-3">
-          <Header />
-          <Homepage />
-        </div>
-        <Navbar />
-      </div>
-    </div>
-    </PageWrapper>
+    <Homepage />
   );
 }

@@ -1,11 +1,12 @@
 import axios from "axios";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 
 import { RiMailCheckFill } from "react-icons/ri";
 import { Button } from "@/components/ui/button";
 
-import AllGhosts from "@/components/ghost/getallghosts";
+const AllGhosts = dynamic(() => import('@/components/ghost/getallghosts'), { ssr: false });
 
 
 export default function Kaizen() {
