@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useRef, useState, ChangeEvent, FormEvent, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import { Button } from '@/components/ui/button';

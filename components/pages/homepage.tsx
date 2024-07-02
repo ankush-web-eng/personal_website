@@ -1,22 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 
 import { RiMailCheckFill } from "react-icons/ri";
 
-import CarouselComp from "@/components/includes/carousel";
-import { Sociallinks } from "@/components/includes/social";
-import GetSingleProjects from "@/components/projects/getsingleproject";
-import GetALlLinks from "@/components/projects/getalllinks"
-import TwoGhosts from "@/components/ghost/twoghosts";
-import { TypewriterMain } from "@/components/library/type";
-import { Lamp } from "../library/lampview";
+import Sociallinks from "@/components/includes/social";
+import TypewriterMain from "@/components/library/type";
 
+const GetSingleProjects = dynamic(() => import("@/components/projects/getsingleproject"));
+const TwoGhosts = dynamic(() => import("@/components/ghost/twoghosts"));
 
 export default function Homepage() {
   return (
     <div className="flex flex-col space-y-5">
       <div className="relative">
-        <CarouselComp />
+      <Image
+          fetchPriority="high"
+          src='/anime.jpeg'
+          className="rounded-lg shadow-xl"
+          alt="ankush"
+          width={750}
+          height={200}
+        />
         <div className="absolute -bottom-[60px] left-2">
           <Image
             width={100}
@@ -104,10 +109,6 @@ export default function Homepage() {
           // referrerpolicy="strict-origin-when-cross-origin"
           // allowfullscreen
         ></iframe>
-      </div>
-
-      <div className="h-fit pt-3 px-3 md:hidden">
-        <GetALlLinks />
       </div>
 
       <div className="py-6 flex space-x-6 space-y-4 flex-wrap">

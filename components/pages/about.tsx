@@ -1,12 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-
 import { RiMailCheckFill } from "react-icons/ri";
 
-import Footer from "@/components/footer/footer";
-import GetALlLinks from "@/components/projects/getalllinks";
 
 export default function About() {
+
   return (
     <div className="flex flex-col space-y-5">
       <h1 className="md:text-7xl text-3xl font-bold">
@@ -62,15 +60,15 @@ export default function About() {
       </span>
 
       <div className="flex justify-center">
-      <Image
-        src="/alm.JPG"
-        alt="about image"
-        className="rounded-xl"
-        height={320}
-        width={280}
-        loading="eager"
-        fetchPriority="high"
-      />
+        <Image
+          src="/alm.JPG"
+          alt="about image"
+          className="rounded-xl"
+          height={320}
+          width={280}
+          loading="eager"
+          fetchPriority="high"
+        />
       </div>
 
       <h1 className="text-2xl pt-2 pb-1 font-bold">Education</h1>
@@ -105,9 +103,6 @@ export default function About() {
         </span>
       </span>
 
-      <div className="h-fit pt-4 px-3 md:hidden">
-        <GetALlLinks />
-      </div>
       <div className="py-6 grid grid-cols-1 md:grid-cols-2 md:space-y-4">
         <div className="w-fit px-4 py-4 dark:text-slate-300 text-slate-500 dark:bg-inherit flex flex-col border-2 border-sky-400 bg-white rounded-sm">
           Want to connect with me via Mail?

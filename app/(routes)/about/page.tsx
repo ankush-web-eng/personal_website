@@ -1,10 +1,10 @@
 import { Metadata } from "next";
-import AboutPage from "./about";
+import About from "@/components/pages/about";
 
 export const metadata : Metadata = {
   title : "Know Me Better"
 }
 
 export default function Page(){
-  return <AboutPage />
+  return <About />
 }

@@ -1,44 +1,22 @@
-import axios from "axios";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 
 import { Button } from "@/components/ui/button";
 import { RiMailCheckFill } from "react-icons/ri";
+import { getServerSession } from "next-auth";
+import CV from "@/components/includes/cv"
 
-import Skills from "@/components/includes/skills";
-import Form from "@/components/includes/form";
-import GetAllProjects from "@/components/projects/getallprojects";
-import GetALlLinks from "@/components/projects/getalllinks";
+const Skills = dynamic(() => import("@/components/includes/skills"))
+const Form = dynamic(() => import("@/components/includes/form"))
+const GetAllProjects = dynamic(() => import("@/components/projects/getallprojects"))
 
+export default async function Freelance() {
 
-export default function Freelance() {
-  const [user, setUser] = useState<string>("null");
-
-  const getUserName = async () => {
-    try {
-      const data = await axios.get("/api/users/getuser");
-      if (data.data.data === null) {
-        setUser("null");
-      } else {
-        setUser(data.data.data.email);
-      }
-    } catch (error) {
-      console.log("Server Side Error");
-      alert("Server Side Error");
-    }
-  };
-
-  useEffect(() => {
-    getUserName();
-  }, []);
-
-  const openCV = () => {
-    window.open("/Resume.pdf", "_blank");
-  };
+  const session = await getServerSession()
+  const user = session?.user
 
   return (
     <div className="flex flex-col space-y-5">
-      {/* <CarouselComp /> */}
       <h1 className="text-sky-500 text-6xl font-bold">Resume</h1>
 
       <p className="text-gray-500 dark:text-slate-300">
@@ -61,11 +39,9 @@ export default function Freelance() {
       </span>
 
       <div className="flex space-x-4 justify-start">
-        <Button variant="primary" onClick={openCV}>
-          Download CV
-        </Button>
+        <CV />
         <div>
-          {user == "deshwalankush23@gmail.com" && (
+          {user?.email == "deshwalankush23@gmail.com" && (
             <Link href={"/addmyproject"}>
               <Button variant="primary">Add Project</Button>
             </Link>
@@ -75,10 +51,6 @@ export default function Freelance() {
 
       <GetAllProjects />
       <Skills />
-
-      <div className="h-fit pt-3 px-3 md:hidden">
-        <GetALlLinks />
-      </div>
 
       <h1 className="text-4xl font-bold py-3">
         Connect with <span className="text-sky-500">Me</span>

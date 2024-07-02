@@ -1,33 +1,16 @@
-import axios from "axios";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
+import { getServerSession } from "next-auth";
 
 import { RiMailCheckFill } from "react-icons/ri";
 import { Button } from "@/components/ui/button";
 
-import AllGhosts from "@/components/ghost/getallghosts";
+const AllGhosts = dynamic(() =>import("@/components/ghost/getallghosts"))
 
+export default async function Kaizen() {
 
-export default function Kaizen() {
-  const [user, setUser] = useState<string>("null");
-
-  const getUserName = async () => {
-    try {
-      const data = await axios.get("/api/users/getuser");
-      if (data.data.data === null) {
-        setUser("null");
-      } else {
-        setUser(data.data.data.email);
-      }
-    } catch (error) {
-      console.log("Server Side Error");
-      alert("Server Side Error");
-    }
-  };
-
-  useEffect(() => {
-    getUserName();
-  }, []);
+  const session = await getServerSession()
+  const user = session?.user
 
   return (
     <div className="flex flex-col space-y-5">
@@ -69,7 +52,7 @@ export default function Kaizen() {
 
       <div className="flex space-x-4 justify-start">
         <div>
-          {user == "deshwalankush23@gmail.com" && (
+          {user?.email == "deshwalankush23@gmail.com" && (
             <Link href={"/addmyblog"}>
               <Button variant="primary">Add Blog</Button>
             </Link>
@@ -78,7 +61,6 @@ export default function Kaizen() {
       </div>
 
       <AllGhosts />
-
 
       <div className="py-6 flex space-x-6 space-y-4 flex-wrap">
         <div className="w-fit px-4 py-4 dark:text-slate-300 text-slate-500 dark:bg-inherit flex flex-col border-2 border-sky-400 bg-white rounded-sm">

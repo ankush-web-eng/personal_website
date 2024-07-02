@@ -1,10 +1,10 @@
 import { Metadata } from "next";
-import KaizenPage from "./kaizen";
+import Kaizen from "@/components/pages/kaizen";
 
 export const metadata: Metadata = {
   title : "Blogs"
 }
 
 export default function Page(){
-  return <KaizenPage />
+  return <Kaizen />
 }

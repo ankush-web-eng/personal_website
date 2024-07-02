@@ -4,6 +4,7 @@ import "@/styles/globals.css";
 import { ThemeProvider } from "@/config/theme-provider";
 import SessionProvider from "@/config/SessionProvider";
 import { getServerSession } from "next-auth";
+import Provider from "./provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -63,7 +64,9 @@ export default async function RootLayout({
             defaultTheme="light"
             disableTransitionOnChange
           >
-            {children}
+            <Provider>
+              {children}
+            </Provider>
           </ThemeProvider>
         </SessionProvider>
       </body>
