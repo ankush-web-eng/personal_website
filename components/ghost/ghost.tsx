@@ -27,7 +27,6 @@ export default function Ghost({ params }: { params: form }) {
         setSend(false);
         alert("Deleted Successfully");
     } catch (error) {
-      console.log(error);
       alert("Something went wrong");
     }
   };

@@ -41,7 +41,6 @@ export default function MessagesPage() {
       // getMessages();
       getChats();
     } catch (error) {
-      console.log("Not Deleted!");
     }
   };
 
@@ -50,13 +49,11 @@ export default function MessagesPage() {
       setSend(true);
       await axios.post("/api/messages/savechat", newMessage);
       alert("Message Sent!!");
-      // console.log(newMessage)
       setChat("");
       setSend(false);
       // getMessages();
       getChats();
     } catch (error) {
-      console.log("Unable to send Message");
     }
   };
 
@@ -85,7 +82,6 @@ export default function MessagesPage() {
         setUser(data.data.data.name);
       }
     } catch (error) {
-      console.log("Server Side Error");
       alert("Server Side Error");
     }
   };
@@ -101,7 +97,6 @@ export default function MessagesPage() {
         }))
       );
     } catch (error) {
-      console.log("Unable to fetch Messages");
     }
   };
 
@@ -121,7 +116,6 @@ export default function MessagesPage() {
       }));
       setMessages(filteredData);
     } catch (error) {
-      console.log("Messages fetching Failed", error);
     }
   };
 

@@ -25,7 +25,6 @@ export async function POST(req: NextRequest) {
         //     return NextResponse.json({ error: "Error in adding blog" }, { status: 500 });
         // });
 
-        console.log(blog);
 
         const path = req.nextUrl.searchParams.get('path') || "/addmyblog"
         revalidatePath(path)
@@ -33,7 +32,6 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ message: "Blog Added" }, { status: 201 })
 
     } catch (error) {
-        console.log(error);
         return NextResponse.json({ error: "Error in adding blog" }, { status: 500 })
     }
 }

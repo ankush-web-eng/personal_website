@@ -28,8 +28,6 @@ export async function POST(req: NextRequest) {
             );
         }
 
-        console.log(name, type, favicon);
-
         // Convert image into a Cloudinary readable format
         const arrayBuffer = await favicon.arrayBuffer()
         const buffer = new Uint8Array(arrayBuffer)
@@ -54,7 +52,6 @@ export async function POST(req: NextRequest) {
         }
 
         const url = (uploadResponse as { secure_url: string }).secure_url;
-        console.log(url);
 
         if (!url) {
             return NextResponse.json(
@@ -84,7 +81,6 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ success: true, message: 'Success in uploading Skill' }, { status: 201 })
 
     } catch (error) {
-        console.log(error);
         return NextResponse.json({ message: error }, { status: 500 })
     }
 }

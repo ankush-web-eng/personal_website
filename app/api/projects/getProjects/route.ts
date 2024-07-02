@@ -9,7 +9,6 @@ export async function GET (req: NextRequest){
 
         const path = req.nextUrl.searchParams.get("path") || "/"
         revalidatePath(path)
-        // console.log(data);
 
         return NextResponse.json({data}, {status:201})
 

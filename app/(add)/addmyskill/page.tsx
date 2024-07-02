@@ -18,20 +18,17 @@ export default function Page() {
       formdata.append("name", name);
       formdata.append("type", type);
       formdata.append("favicon", file as File);
-      console.log(formdata);
       const response = await axios.post("/api/skill/addskill", formdata, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
       });
       alert("Link added successfully");
-        console.log(response.data);
         setName("");
         setType("");
         setFile(null);
         setSend(false);
     } catch (error) {
-      console.log(error);
       setSend(false);
     }
   };

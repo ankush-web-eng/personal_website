@@ -5,7 +5,6 @@ import { deleteDoc, doc } from "firebase/firestore";
 export async function POST(req: NextRequest){
     try {
         const { id } = await req.json(); // Extract id from request body
-        console.log(id);
 
         const chatDoc = doc(db, 'chats', id);
         await deleteDoc(chatDoc);
@@ -15,6 +14,6 @@ export async function POST(req: NextRequest){
             message: "Message Deleted Successfully"
         }, {status: 201});
     } catch (error) {
-        console.log("Couldn't delete message!!", error);
+        return NextResponse.json({message:"Something went wrong!"},{status:500})
     }
 }

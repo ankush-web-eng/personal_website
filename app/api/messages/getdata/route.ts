@@ -14,6 +14,6 @@ export async function GET(req: NextRequest) {
         }));
         return NextResponse.json({ data: formattedData });
     } catch (error) {
-        console.log("Error in Fetching Chats:", error);
+        return NextResponse.json({ message: "Something went wrong!" }, { status: 500})
     }
 }

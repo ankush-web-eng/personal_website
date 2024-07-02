@@ -23,7 +23,6 @@ export async function GET(req: NextRequest) {
             { status: 201 }
         )
     } catch (error) {
-        console.log(error);
         return NextResponse.json(
             { success: false, message: "Error in API request" },
             { status: 500 }

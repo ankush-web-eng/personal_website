@@ -70,8 +70,6 @@ export async function POST(req: NextRequest) {
         const path = req.nextUrl.searchParams.get('path') || "/addmyghost"
         revalidatePath(path)
 
-        console.log(res);
-
         return NextResponse.json({ success: true, message: "Success" }, { status: 200 })
 
     } catch (error) {

@@ -31,14 +31,11 @@ export default function Page({ params }: { params: Params }) {
   const getProject = async () => {
     try {
       const response = await axios.get(`/api/blogs/getblog/${id}`);
-      console.log(response.data.data);
       setData(response.data.data);
     } catch (error) {
-      console.log(error);
     }
   };
   
-  console.log(data);
   const router = useRouter()
 
 

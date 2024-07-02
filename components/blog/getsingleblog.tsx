@@ -20,7 +20,6 @@ export default function SingleBlogs() {
       setBlogData(response.data.data.slice(0,2));
 
     } catch (error) {
-      console.log(error);
     }
   };
 

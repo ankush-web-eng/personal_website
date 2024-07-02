@@ -38,7 +38,6 @@ export default function Form(): JSX.Element {
         },
         (error) => {
           alert("FAILED...");
-          console.log("Error",error)
         }
       );
   };

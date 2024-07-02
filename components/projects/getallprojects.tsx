@@ -20,7 +20,6 @@ export default function GetAllProjects() {
       const response = await axios.get("/api/projects/getProjects");
       setData(response.data.data);
     } catch (error) {
-      console.log(error);
     }
   };
 

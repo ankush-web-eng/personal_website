@@ -31,7 +31,6 @@ export default function ProjectLink({ params }: LinkProps) {
       }
     } catch (error) {
       alert("Unable to delete");
-      console.log(error);
       setSend(false);
     }
   };

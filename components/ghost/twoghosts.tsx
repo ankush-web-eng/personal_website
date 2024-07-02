@@ -23,7 +23,6 @@ export default function TwoGhosts() {
       const res = await axios.get("/api/ghost/getallghosts");
       setGhosts(res.data.data.slice(0, 4));
     } catch (error) {
-      console.log(error);
     }
   };
 

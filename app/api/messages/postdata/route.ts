@@ -16,8 +16,10 @@ export async function POST(req: NextRequest) {
 
         const issaved = await addDoc(chatRefrence, newMessage)
         if (issaved) {
-            console.log("Message Saved Successfully");
-            console.log(newMessage);
+            return NextResponse.json({
+                success: false,
+                message: "Message Not Saved"
+            }, {status: 500})
         }
 
         return NextResponse.json({
@@ -26,6 +28,6 @@ export async function POST(req: NextRequest) {
         }, {status: 201})
 
     } catch (error) {
-        console.log("Error Posting the Message: ", error)
+        return NextResponse.json({message: "Something went wrong!"}, {status: 500})
     }
 }

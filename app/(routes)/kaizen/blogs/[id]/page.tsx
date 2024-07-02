@@ -29,14 +29,10 @@ export default function Page({ params }: { params: Params }) {
   const getProject = async () => {
     try {
       const response = await axios.get(`/api/ghost/getghost/${id}`);
-      console.log(response.data.data);
       setData(response.data.data);
     } catch (error) {
-      console.log(error);
     }
   };
-  
-  console.log(data);
   const router = useRouter()
 
 
@@ -57,7 +53,6 @@ export default function Page({ params }: { params: Params }) {
   for (let i of sarray){
     array.push(i.replace(/["[]/g, ""))
   }
-  // console.log(array);
 
   if (!mounted) return null;
 

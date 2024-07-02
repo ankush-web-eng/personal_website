@@ -23,7 +23,6 @@ export default function AllGhosts() {
             const res = await axios.get('/api/ghost/getallghosts')
             setGhosts(res.data.data)
         } catch (error) {
-            console.log(error);
         }
     }
 

@@ -12,14 +12,12 @@ type Params = {
 export async function GET(req:NextRequest, context : Params){
     try {
         const newId = context.params.id
-        // console.log(newId);
         
         const data = await prisma.projects.findFirst({
             where: {
                 id: newId
             }
         })
-        // console.log(data);
 
         const path = req.nextUrl.searchParams.get("path") || "/"
         revalidatePath(path)

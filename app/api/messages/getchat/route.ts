@@ -11,7 +11,6 @@ export async function GET(req:NextRequest){
         revalidatePath(path)
 
         return NextResponse.json(data)
-        // console.log(data);
     } catch (error: any) {
         return NextResponse.json({error: error.message}, {status:500})
     }

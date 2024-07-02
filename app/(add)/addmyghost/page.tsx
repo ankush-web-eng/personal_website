@@ -79,7 +79,6 @@ export default function Page() {
       setNumber(1);
     } catch (error) {
       alert("Error in Uploading Image");
-      console.log(error);
     }
   };
 

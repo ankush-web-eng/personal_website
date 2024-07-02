@@ -49,7 +49,6 @@ export default function Page() {
       setPara4("");
       setPara5("")
     } catch (error) {
-      console.log(error);
       alert("Errror in sending Blog");
     }
   };

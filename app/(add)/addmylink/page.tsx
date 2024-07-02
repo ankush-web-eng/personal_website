@@ -19,14 +19,12 @@ export default function Page() {
       formdata.append("name", input1);
       formdata.append("link", input2);
       formdata.append("favicon", file as File);
-      console.log(formdata);
       const response = await axios.post("api/projects/addlink", formdata, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
       });
       if (response) {
-        console.log(response.data);
         setInput1("");
         setInput2("");
         setFile(null);
@@ -34,7 +32,6 @@ export default function Page() {
         setSend(false);
       }
     } catch (error) {
-      console.log(error);
       setSend(false);
     }
   };

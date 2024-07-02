@@ -19,7 +19,6 @@ export async function GET(req : NextRequest, context: Params){
             }
         })
 
-        console.log(project);
 
         const path = req.nextUrl.searchParams.get('path') || "/kaizen"
         revalidatePath(path)

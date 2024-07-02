@@ -24,7 +24,6 @@ export default function Project({ project }: { project: Project }) {
         setUser(data.data.data.email);
       }
     } catch (error) {
-      console.log("Server Side Error");
       alert("Server Side Error");
     }
   };
@@ -41,11 +40,9 @@ export default function Project({ project }: { project: Project }) {
       await axios
         .get(`/api/projects/deleteproject/${id}`)
         .then(() => alert("Project deleted successfully"))
-        .catch((error) => console.log(error));
       setIsDeleted(false);
     } catch (error) {
       alert("Error deleting project");
-      console.log(error);
     }
   };
 

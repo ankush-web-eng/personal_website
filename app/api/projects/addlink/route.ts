@@ -25,8 +25,6 @@ export async function POST(req: NextRequest) {
             );
         }
 
-        console.log(name, link, favicon);
-
         // Convert image into a Cloudinary readable format
         const arrayBuffer = await favicon.arrayBuffer()
         const buffer = new Uint8Array(arrayBuffer)
@@ -51,8 +49,6 @@ export async function POST(req: NextRequest) {
         }
 
         const url = (uploadResponse as { secure_url: string }).secure_url;
-        console.log(url);
-
 
         const user = await prisma.link.create({
             data: {
@@ -64,7 +60,6 @@ export async function POST(req: NextRequest) {
         })
 
         if (!user) {
-            console.log('Error in adding link');
             return NextResponse.json({ success: true, message: 'Link added successfully' })
         }
 
@@ -74,7 +69,6 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ success: true, message: 'Success in uploading link' }, { status: 201 })
 
     } catch (error) {
-        console.log(error);
         return NextResponse.json({ message: error }, { status: 500 })
     }
 }

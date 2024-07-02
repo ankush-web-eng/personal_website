@@ -38,7 +38,6 @@ export default function Page() {
       setTitle("");
     } catch (error) {
       alert("Error in sendProject (Frontend)");
-      console.log(error);
     }
   };
 

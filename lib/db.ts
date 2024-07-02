@@ -8,7 +8,6 @@ const connection : ConnectionProps = {}
 
 export async function Connect () : Promise <void> {
     if (connection.isConnected) {
-        console.log('Using existing connection');
         return;
     }
 
@@ -16,8 +15,5 @@ export async function Connect () : Promise <void> {
         const db  = await mongoose.connect(process.env.MONGO_URI || "", {})
         connection.isConnected = db.connections[0].readyState;
 
-        console.log('MongoDB database is connected Successfully');
-    } catch (error) {
-        console.log("MongoDB Database Connection Error: ",error);
-    }
+    } catch (error) {}
 }

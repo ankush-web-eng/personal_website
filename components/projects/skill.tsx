@@ -24,7 +24,6 @@ export default function Skill({ props }: { props: Skill }) {
       const res = await axios.get(`api/skill/deleteskill/${id}`);
       setSend(false);
     } catch (error) {
-      console.log(error);
       setSend(false);
     }
   };

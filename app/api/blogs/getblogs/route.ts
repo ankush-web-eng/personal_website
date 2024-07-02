@@ -7,7 +7,6 @@ const prisma = new PrismaClient()
 export async function GET(req:NextRequest){
     try {
         const data = await prisma.blog.findMany()
-        // console.log(data[0]);
         
         const path = req.nextUrl.searchParams.get('path') || "/kaizen"
         revalidatePath(path)
@@ -15,7 +14,6 @@ export async function GET(req:NextRequest){
         return NextResponse.json({data}, {status: 201})
 
     } catch (error) {
-        console.log(error);
         return NextResponse.json({message: error}, {status: 500})
     }
 }

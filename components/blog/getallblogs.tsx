@@ -19,7 +19,6 @@ export default function AllBlogs() {
       setBlogData(response.data.data);
 
     } catch (error) {
-      console.log(error);
     }
   };
 

@@ -22,6 +22,6 @@ export async function POST(req: NextRequest) {
             body: { message: "Chat Deleted Successfully!" }
         })
     } catch (error) {
-        console.log("Error Getting the Message: ", error);
+        return NextResponse.json({message:"Something went wrong!"},{status:500})
     }
 }

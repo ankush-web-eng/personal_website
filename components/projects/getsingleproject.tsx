@@ -21,7 +21,6 @@ export default function GetSingleProjects() {
       const response = await axios.get("/api/projects/getProjects");
       setData(response.data.data.slice(0,2));
     } catch (error) {
-      console.log(error);
     }
   };
 

@@ -17,9 +17,7 @@ export default function GetALlLinks() {
     try {
       const res = await axios.get("/api/projects/getlinks");
       setData(res.data.data);
-      // console.log(res.data.data);
     } catch (error) {
-      console.log(error);
     }
   };
 

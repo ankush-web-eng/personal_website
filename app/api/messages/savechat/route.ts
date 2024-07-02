@@ -19,9 +19,8 @@ export async function POST(req: NextRequest) {
         const path = req.nextUrl.searchParams.get('path') || "/"
         revalidatePath(path)
 
-        // console.log(sentData);
         return NextResponse.json({ message: 'Chat saved successfully!' }, { status: 201 })
     } catch (error: any) {
-        console.log("Error Posting the Message: ", error)
+        return NextResponse.json({ message: error.message }, { status: 500})
     }
 }

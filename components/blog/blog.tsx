@@ -25,7 +25,6 @@ export default function Blog({ blog }: { blog: BlogProps }) {
         setUser(data.data.data.email);
       }
     } catch (error) {
-      console.log("Server Side Error");
       alert("Server Side Error");
     }
   };
@@ -41,11 +40,9 @@ export default function Blog({ blog }: { blog: BlogProps }) {
         .get(`/api/blogs/deleteblog/${id}`)
         .then(() => alert("Blog deleted successfully"))
         .then(() => window.location.reload())
-        .catch((e) => console.log(e));
       setIsDeleted(false);
     } catch (error) {
       alert("Error deleting Blog");
-      console.log(error);
     }
   };
 

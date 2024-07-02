@@ -20,7 +20,6 @@ export default function Skills() {
       const res = await axios.get("/api/skill/getskills");
       setSkills(res.data.data);
     } catch (error) {
-      console.log(error);
     }
   };
 

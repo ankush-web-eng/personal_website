@@ -15,11 +15,8 @@ export async function GET(req: NextRequest, context: Params) {
     const id = context.params.id
 
     try {
-        // console.log(id);
-        // console.log(new mongoose.Types.ObjectId(id));
         
         const isDeleted = await SkillModel.deleteOne({ _id: new mongoose.Types.ObjectId(id) })
-        console.log(isDeleted);
         if (!isDeleted) {
             return NextResponse.json(
                 { success: false, message: "Error in deleting Skill" },
@@ -35,7 +32,6 @@ export async function GET(req: NextRequest, context: Params) {
             { status: 201 }
         )
     } catch (error) {
-        console.log(error);
         return NextResponse.json(
             { success: false, message: "Error in API request" },
             { status: 500 }
