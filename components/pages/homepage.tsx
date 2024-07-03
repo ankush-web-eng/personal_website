@@ -15,14 +15,6 @@ export default function Homepage() {
   return (
     <div className="flex flex-col space-y-5">
       <div className="relative">
-      <Image
-          fetchPriority="high"
-          src='/anime.jpeg'
-          className="rounded-lg shadow-xl"
-          alt="ankush"
-          width={750}
-          height={200}
-        />
         <div className="absolute -bottom-[60px] left-2">
           <Image
             width={100}
@@ -42,15 +34,12 @@ export default function Homepage() {
           </h1>
         </div>
         <div className="max-md:hidden"><TypewriterMain /></div>
-        {/* <div className="md:hidden">
-          <Lamp />
-        </div> */}
 
         <h1 className="text-5xl font-bold md:hidden">
           I make <span className="text-teal-500">Full Stack</span> Web
           Applications
         </h1>
-        
+
       </div>
 
       <p className="text-gray-600 dark:text-gray-300">
@@ -65,9 +54,8 @@ export default function Homepage() {
         like to Code, Write, Create Content, Workout, Travel solo and meet new
         people.
       </p>
-      <div className="py-4">
-        <Sociallinks />
-      </div>
+
+      <Sociallinks />
 
       <p className="text-gray-600 dark:text-gray-300">
         I am constantly learning new technologies and sharing my achievements on
@@ -96,7 +84,6 @@ export default function Homepage() {
         </a>
       </p>
 
-      {/* <SingleBlogs /> */}
       <TwoGhosts />
       <GetSingleProjects />
 

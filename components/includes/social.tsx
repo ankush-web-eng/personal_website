@@ -4,7 +4,7 @@ import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 export default function Sociallinks() {
     return (
-        <div className="flex justify-evenly md:space-x-4 md:w-max w-screen">
+        <div className="flex justify-evenly md:space-x-4 py-4 md:w-max w-screen">
             <div className="rounded-xl pl-10 pb-10 pt-2 pr-2 border bg-sky-200 border-sky-500 dark:bg-inherit">
                 <span className="sr-only">GitHub</span>
                 <Link target="_ankush" href="https://github.com/ankush-web-eng/"><FaGithub size={30} color="green" /></Link>
