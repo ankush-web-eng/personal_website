@@ -62,13 +62,14 @@ export default function Homepage() {
         LinkedIn.
         <br />
         You can view my work here on LinkedIn{" "}
-        <a
+        <Link
           href="www.linkedin.com/in/ankush-singh07"
           target="ankush"
           className="text-sky-500"
+          aria-label="Ankush Singh LinkedIn"
         >
           @Ankush Singh
-        </a>
+        </Link>
       </p>
 
       <p className="text-gray-600 dark:text-gray-300">
@@ -79,6 +80,7 @@ export default function Homepage() {
           href="https://www.instagram.com/whyankush07/"
           target="ankush"
           className="text-sky-500"
+          aria-label="Ankush Singh Instagram"
         >
           @whyankush07
         </a>
