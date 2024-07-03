@@ -37,10 +37,10 @@ export default function Page() {
   };
 
   return (
-    <div className="flex space-x-4 items-center justify-center min-h-screen bg-gray-100">
+    <div className="h-screen flex px-6 justify-start">
       <form
         onSubmit={handleSubmit}
-        className="bg-white p-8 rounded-lg shadow-lg space-y-6"
+        className="bg-white p-8 flex flex-col rounded-lg shadow-lg space-y-6"
       >
         <div className="space-y-2">
           <label

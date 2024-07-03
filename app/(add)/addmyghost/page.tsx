@@ -83,7 +83,7 @@ export default function Page() {
   };
 
   return (
-    <div className="min-h-screen w-screen flex items-center justify-center">
+    <div className="h-screen flex px-6 justify-start">
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-3xl bg-white p-8 space-y-3 rounded-lg shadow-lg"
