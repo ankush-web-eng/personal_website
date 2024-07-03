@@ -9,6 +9,7 @@ import TypewriterMain from "@/components/library/type";
 
 const GetSingleProjects = dynamic(() => import("@/components/projects/getsingleproject"));
 const TwoGhosts = dynamic(() => import("@/components/ghost/twoghosts"));
+const LazyIframe = dynamic(() => import("@/components/includes/youtubeIntro"));
 
 export default function Homepage() {
   return (
@@ -100,15 +101,7 @@ export default function Homepage() {
       <GetSingleProjects />
 
       <div className="pt-4 rounded-md max-w-screen md:max-w-1/2 flex items-center justify-center">
-        <iframe
-          className="rounded-lg"
-          src="https://www.youtube.com/embed/UQ1loFxkfUE?si=CCzWqLXlv2YZhcze"
-          title="About Ankush"
-          // frameborder=""
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          // referrerpolicy="strict-origin-when-cross-origin"
-          // allowfullscreen
-        ></iframe>
+        <LazyIframe />
       </div>
 
       <div className="py-6 flex space-x-6 space-y-4 flex-wrap">
