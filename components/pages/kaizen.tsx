@@ -53,7 +53,7 @@ export default async function Kaizen() {
       <div className="flex space-x-4 justify-start">
         <div>
           {user?.email == "deshwalankush23@gmail.com" && (
-            <Link href={"/addmyblog"}>
+            <Link href={"/addmyghost"}>
               <Button variant="primary">Add Blog</Button>
             </Link>
           )}

@@ -5,6 +5,8 @@ import { Auth } from "@/components/auth";
 
 import { RiDeleteBin6Fill } from "react-icons/ri";
 import { TbLoader2 } from "react-icons/tb";
+import { toast } from "react-toastify";
+import { useSession } from "next-auth/react";
 
 interface Message {
   name: string;
@@ -36,11 +38,12 @@ export default function MessagesPage() {
     try {
       setDel(true);
       await axios.post("/api/messages/deletechat", { id });
-      alert("Message Deleted!!");
+      toast.success("Message Deleted!!");
       setDel(false);
       // getMessages();
       getChats();
     } catch (error) {
+      toast.error("Error Deleting Message!!");
     }
   };
 
@@ -48,12 +51,13 @@ export default function MessagesPage() {
     try {
       setSend(true);
       await axios.post("/api/messages/savechat", newMessage);
-      alert("Message Sent!!");
+      toast.success("Message Sent!!");
       setChat("");
       setSend(false);
       // getMessages();
       getChats();
     } catch (error) {
+      toast.error("Error Sending Message!!");
     }
   };
 
@@ -82,7 +86,7 @@ export default function MessagesPage() {
         setUser(data.data.data.name);
       }
     } catch (error) {
-      alert("Server Side Error");
+      toast.error("Error Fetching User!!");
     }
   };
 
