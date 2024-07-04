@@ -5,8 +5,8 @@ import { ThemeProvider } from "@/config/theme-provider";
 import SessionProvider from "@/config/SessionProvider";
 import { getServerSession } from "next-auth";
 import Provider from "./provider";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { Toaster } from '@/components/ui/toaster';
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -67,7 +67,7 @@ export default async function RootLayout({
             disableTransitionOnChange
           >
             <Provider>
-            <ToastContainer />
+              <Toaster />
               {children}
             </Provider>
           </ThemeProvider>

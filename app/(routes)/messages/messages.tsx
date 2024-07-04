@@ -5,8 +5,7 @@ import { Auth } from "@/components/auth";
 
 import { RiDeleteBin6Fill } from "react-icons/ri";
 import { TbLoader2 } from "react-icons/tb";
-import { toast } from "react-toastify";
-import { useSession } from "next-auth/react";
+import { useToast } from "@/components/ui/use-toast";
 
 interface Message {
   name: string;
@@ -28,6 +27,7 @@ export default function MessagesPage() {
   const [del, setDel] = useState<boolean>(false);
 
   const [user, setUser] = useState<string>("");
+  const { toast } = useToast()
 
   const newMessage: NewMessage = {
     name: user,
@@ -38,12 +38,20 @@ export default function MessagesPage() {
     try {
       setDel(true);
       await axios.post("/api/messages/deletechat", { id });
-      toast.success("Message Deleted!!");
+      toast({
+        title: "Success",
+        description: "Message Deleted",
+        variant: "default"
+      })
       setDel(false);
       // getMessages();
       getChats();
     } catch (error) {
-      toast.error("Error Deleting Message!!");
+      toast({
+        title: "Failed",
+        description: "failed to delete message",
+        variant: "destructive"
+      });
     }
   };
 
@@ -51,13 +59,21 @@ export default function MessagesPage() {
     try {
       setSend(true);
       await axios.post("/api/messages/savechat", newMessage);
-      toast.success("Message Sent!!");
+      toast({
+        title: "Success",
+        description: "Message Sent",
+        variant: "default"
+      })
       setChat("");
       setSend(false);
       // getMessages();
       getChats();
     } catch (error) {
-      toast.error("Error Sending Message!!");
+      toast({
+        title: "Failed",
+        description: "Failed to send message",
+        variant: "destructive"
+      });
     }
   };
 
@@ -85,9 +101,7 @@ export default function MessagesPage() {
       } else {
         setUser(data.data.data.name);
       }
-    } catch (error) {
-      toast.error("Error Fetching User!!");
-    }
+    } catch (error) {}
   };
 
   const getChats = async () => {
@@ -142,28 +156,28 @@ export default function MessagesPage() {
       </h1>
       <Auth />
       <div className="flex flex-col">
-      {messages === null ? (
-        "Loading..."
-      ) : messages.length === 0 ? (
-        "No messages"
-      ) : (
-        messages.map(({ id, name, message }, index) => (
-          <div className="flex items-center" key={index}>
-            <p className="text-slate-600 dark:text-slate-300 min-w-[100px] max-w-[100px] truncate mr-2">
-              {name}
-            </p>
-            :
-            <p className="text-slate-500 dark:text-slate-400 flex-1 truncate">
-              {message}
-            </p>
-            {user === name && (
-              <button onClick={() => deleteMessage(id)} className="ml-2">
-                <RiDeleteBin6Fill />
-              </button>
-            )}
-          </div>
-        ))
-      )}
+        {messages === null ? (
+          "Loading..."
+        ) : messages.length === 0 ? (
+          "No messages"
+        ) : (
+          messages.map(({ id, name, message }, index) => (
+            <div className="flex items-center" key={index}>
+              <p className="text-slate-600 dark:text-slate-300 min-w-[100px] max-w-[100px] truncate mr-2">
+                {name}
+              </p>
+              :
+              <p className="text-slate-500 dark:text-slate-400 flex-1 truncate">
+                {message}
+              </p>
+              {user === name && (
+                <button onClick={() => deleteMessage(id)} className="ml-2">
+                  <RiDeleteBin6Fill />
+                </button>
+              )}
+            </div>
+          ))
+        )}
         {isAuth && (
           <div className="fixed shrink-0 bottom-0 rounded-full items-center flex space-x-3 pb-4 z-50 ">
             <input
