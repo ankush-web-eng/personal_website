@@ -1,20 +1,15 @@
-import Link from "next/link";
-import { FaArrowRight } from "react-icons/fa";
 
-interface FooterProps {
-  link: string;
-  text: string;
-}
 
-export default function Footer({ link, text }: FooterProps) {
+import GetALlLinks from "@/components/projects/getalllinks"
+import Insta from "./insta";
+
+export default function Footer() {
   return (
-    <div className="w-fit p-4 text-slate-800 dark:bg-slate-300 flex flex-col border- border-sky-400 bg-white dark:bg-inherit rounded-sm ">
-      {text}
-      <span className="text-sky-500">
-        <Link href={link}>
-          Click here <FaArrowRight />
-        </Link>
-      </span>
+    <div className="w-full md:w-1/4 md:h-screen md:py-20 py-3 max-md:hidden">
+      <div className="h-full w-full flex flex-col space-y-3 items-center">
+        <GetALlLinks />
+        <Insta />
+      </div>
     </div>
   );
 }
