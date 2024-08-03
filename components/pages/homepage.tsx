@@ -7,6 +7,7 @@ import { RiMailCheckFill } from "react-icons/ri";
 import Sociallinks from "@/components/includes/social";
 import TypewriterMain from "@/components/library/type";
 
+const GetALlLinks = dynamic(() => import("@/components/projects/getalllinks"));
 const GetSingleProjects = dynamic(() => import("@/components/projects/getsingleproject"));
 const TwoGhosts = dynamic(() => import("@/components/ghost/twoghosts"));
 const LazyIframe = dynamic(() => import("@/components/includes/youtubeIntro"));
@@ -85,7 +86,7 @@ export default function Homepage() {
           @whyankush07
         </a>
       </p>
-
+      <div className="md:hidden"><GetALlLinks /></div>
       <TwoGhosts />
       <GetSingleProjects />
 

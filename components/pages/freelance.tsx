@@ -6,6 +6,7 @@ import { RiMailCheckFill } from "react-icons/ri";
 import { getServerSession } from "next-auth";
 import CV from "@/components/includes/cv"
 
+const GetALlLinks = dynamic(() => import("@/components/projects/getalllinks"))
 const Skills = dynamic(() => import("@/components/includes/skills"))
 const Form = dynamic(() => import("@/components/includes/form"))
 const GetAllProjects = dynamic(() => import("@/components/projects/getallprojects"))
@@ -33,8 +34,8 @@ export default async function Freelance() {
       </h2>
 
       <span className="text-slate-500 dark:text-slate-300">
-        I keep sharing on my my work and projects related to Full Stack 
-        and Tech.Drop me a high on <Link href={'https://x.com/Ankush__57s'} className="text-sky-500">Twitter</Link>{" "}as well as 
+        I keep sharing on my my work and projects related to Full Stack
+        and Tech.Drop me a high on <Link href={'https://x.com/Ankush__57s'} className="text-sky-500">Twitter</Link>{" "}as well as
         <Link href={'www.linkedin.com/in/ankush-singh07'} className="text-sky-500">LinkedIn</Link>
       </span>
 
@@ -48,7 +49,7 @@ export default async function Freelance() {
           )}
         </div>
       </div>
-
+      <div className="md:hidden"><GetALlLinks /></div>
       <GetAllProjects />
       <Skills />
 

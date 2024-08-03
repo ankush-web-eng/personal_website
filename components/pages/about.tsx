@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { RiMailCheckFill } from "react-icons/ri";
 
-
 export default function About() {
 
   return (
