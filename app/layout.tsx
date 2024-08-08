@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/globals.css";
-import { ThemeProvider } from "@/config/theme-provider";
-import SessionProvider from "@/config/SessionProvider";
+import { ThemeProvider } from "@/context/theme-provider";
+import SessionProvider from "@/context/SessionProvider";
 import { getServerSession } from "next-auth";
 import Provider from "./provider";
 import { Toaster } from '@/components/ui/toaster';
