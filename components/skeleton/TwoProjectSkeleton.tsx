@@ -3,7 +3,9 @@ import { Skeleton } from "@/components/ui/skeleton";
 export function GetSingleProjectsSkeleton() {
   return (
     <div className="pt-4 pb-8 flex space-y-6 flex-col border-b-sky-200">
-      <Skeleton className="h-10 w-40 mb-2" />
+      <div className="h-10 w-32 my-6" >
+        <h1 className="text-4xl text-sky-500 w-fit font-bold ">Blogs</h1>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {[...Array(2)].map((_, index) => (
           <div key={index} className="space-y-4">

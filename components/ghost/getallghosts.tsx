@@ -34,7 +34,7 @@ export default function AllGhosts() {
     }, [])
 
     if (loading) {
-        <TwoGhostsSkeleton />
+       return <TwoGhostsSkeleton />
     }
 
     return (

@@ -43,7 +43,7 @@ export default function GetSingleProjects() {
   }, [getProjects]);
 
   if (isLoading) {
-    <GetSingleProjectsSkeleton />;
+    return <GetSingleProjectsSkeleton />;
   }
 
   return (

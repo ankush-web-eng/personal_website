@@ -3,7 +3,9 @@ import { Skeleton } from "@/components/ui/skeleton";
 export function TwoGhostsSkeleton() {
   return (
     <div className="pt-4 pb-6 flex space-y-2 flex-col">
-      <Skeleton className="h-10 w-32 my-6" />
+      <div className="h-10 w-32 my-6" >
+        <h1 className="text-4xl text-sky-500 w-fit font-bold ">Projects</h1>
+      </div>
       <div className="rounded-xl w-full h-auto md:grid grid-cols-1 md:grid-cols-2 gap-4">
         {[...Array(4)].map((_, index) => (
           <div key={index} className="space-y-4">

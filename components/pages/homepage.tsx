@@ -47,14 +47,14 @@ export default function Homepage() {
 
       <p className="text-gray-600 dark:text-gray-300">
         {" "}
-        Freelancer, Developer, Writer, Content Creator, Student, Tech Enthusiast
+        Developer, Freelancer, Blog Writer, Student, Tech Enthusiast
         with passion for <span className="text-sky-500">Code.</span>
       </p>
 
       <p className="text-gray-600 dark:text-gray-300">
         Quite <span className="text-sky-500">passionate</span> about Technology,
         I decided to do Computer Science and Content Creation in this life. I
-        like to Code, Write, Create Content, Workout, Travel solo and meet new
+        like to Code, Write, Create Content, Workout, Travel solo and network with
         people.
       </p>
 
@@ -75,7 +75,7 @@ export default function Homepage() {
         </Link>
       </p>
 
-      <p className="text-gray-600 dark:text-gray-300">
+      {/* <p className="text-gray-600 dark:text-gray-300">
         I creates content on Instagram on Self-Growth and share my learnings on
         priciple of Kaizen. Kaizen is Japanese Priciple which means getting
         better on daily basis. You can view my content on Instagram{" "}
@@ -87,7 +87,7 @@ export default function Homepage() {
         >
           @whyankush07
         </a>
-      </p>
+      </p> */}
       <div className="md:hidden"><GetALlLinks /></div>
       <TwoGhosts />
       <GetSingleProjects />

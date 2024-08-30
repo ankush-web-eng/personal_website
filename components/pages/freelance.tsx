@@ -5,11 +5,12 @@ import { Button } from "@/components/ui/button";
 import { RiMailCheckFill } from "react-icons/ri";
 import { getServerSession } from "next-auth";
 import CV from "@/components/includes/cv"
+import GetSingleProjectsSkeleton from "@/components/skeleton/TwoProjectSkeleton";
 
 const GetALlLinks = dynamic(() => import("@/components/projects/getalllinks"))
 const Skills = dynamic(() => import("@/components/includes/skills"))
 const Form = dynamic(() => import("@/components/includes/form"))
-const GetAllProjects = dynamic(() => import("@/components/projects/getallprojects"))
+const GetAllProjects = dynamic(() => import("@/components/projects/getallprojects"), {ssr: false, loading : () => <GetSingleProjectsSkeleton />})
 
 export default async function Freelance() {
 

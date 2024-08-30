@@ -37,8 +37,7 @@ export default function TwoGhosts() {
     } catch (error) {
       console.error("Failed to fetch ghosts:", error);
     }
-  }, []
-  );
+  }, []);
 
   useEffect(() => {
     getGhosts();
