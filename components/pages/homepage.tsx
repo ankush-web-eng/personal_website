@@ -6,10 +6,12 @@ import { RiMailCheckFill } from "react-icons/ri";
 
 import Sociallinks from "@/components/includes/social";
 import TypewriterMain from "@/components/library/type";
+import GetSingleProjectsSkeleton from "@/components/skeleton/TwoProjectSkeleton";
+import TwoGhostsSkeleton from "@/components/skeleton/TwoGhostsSkeleton";
 
 const GetALlLinks = dynamic(() => import("@/components/projects/getalllinks"));
-const GetSingleProjects = dynamic(() => import("@/components/projects/getsingleproject"));
-const TwoGhosts = dynamic(() => import("@/components/ghost/twoghosts"));
+const GetSingleProjects = dynamic(() => import("@/components/projects/getsingleproject"), { ssr: false, loading: () => <GetSingleProjectsSkeleton /> });
+const TwoGhosts = dynamic(() => import("@/components/ghost/twoghosts"), { ssr: false, loading: () => <TwoGhostsSkeleton /> });
 const LazyIframe = dynamic(() => import("@/components/includes/youtubeIntro"));
 
 export default function Homepage() {

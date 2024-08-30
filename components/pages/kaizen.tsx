@@ -4,8 +4,9 @@ import { getServerSession } from "next-auth";
 
 import { RiMailCheckFill } from "react-icons/ri";
 import { Button } from "@/components/ui/button";
+import TwoGhostsSkeleton from "../skeleton/TwoGhostsSkeleton";
 
-const AllGhosts = dynamic(() =>import("@/components/ghost/getallghosts"))
+const AllGhosts = dynamic(() => import("@/components/ghost/getallghosts"), { ssr: false, loading: () => <TwoGhostsSkeleton /> })
 
 export default async function Kaizen() {
 
@@ -14,7 +15,6 @@ export default async function Kaizen() {
 
   return (
     <div className="flex flex-col space-y-5">
-      {/* <CarouselComp /> */}
 
       <h1 className="text-5xl text-sky-500 font-bold">
         <span className="text-black dark:text-white italic">Hey</span> There! 👋🏼

@@ -1,12 +1,13 @@
-"use client"
+"use client";
 
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Ghost from "./ghost";
 import Loading from "../loading";
 import Link from "next/link";
+import TwoGhostsSkeleton from "@/components/skeleton/TwoGhostsSkeleton";
 
-interface form {
+interface Form {
   id: string;
   title: string;
   subtitle: string;
@@ -16,25 +17,42 @@ interface form {
 }
 
 export default function TwoGhosts() {
-  const [ghosts, setGhosts] = useState<form[] | null>([]);
+  const [ghosts, setGhosts] = useState<Form[] | null>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-  const getGhosts = async () => {
+  const shuffleArray = <T,>(array: T[]): T[] => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  };
+
+  const getGhosts = useCallback(async () => {
     try {
       const res = await axios.get("/api/ghost/getallghosts");
-      setGhosts(res.data.data.slice(0, 4));
+      const shuffledGhosts = shuffleArray(res.data.data) as Form[];
+      setGhosts(shuffledGhosts.slice(0, 4));
+      setIsLoading(false);
     } catch (error) {
+      console.error("Failed to fetch ghosts:", error);
     }
-  };
+  }, []
+  );
 
   useEffect(() => {
     getGhosts();
-  }, []);
+  }, [getGhosts]);
+
+  if (isLoading) {
+    return <TwoGhostsSkeleton />;
+  }
 
   return (
     <div className="pt-4 pb-6 flex space-y-2 flex-col">
       <h1 className="text-4xl text-sky-500 w-fit font-bold my-6">Blogs</h1>
       <div className="rounded-xl text-black w-full h-auto md:grid grid-cols-1 md:grid-cols-2 max-md:space-y-4 ">
-        {ghosts !== null ? (
+        {ghosts !== null && ghosts.length > 0 ? (
           ghosts.map((ghost, index) => <Ghost key={index} params={ghost} />)
         ) : (
           <Loading>Loading Blogs</Loading>
