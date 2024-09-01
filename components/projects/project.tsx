@@ -47,7 +47,7 @@ export default function Project({ project }: { project: Project }) {
   };
 
   return (
-    <Link href={`/freelance/projects/${project.id}`} className="flex shadow-md rounded-xl border-sky-400 flex-col space-y-2 p-2 max-md:px-2 max-md:w-full border">
+    <Link href={`/freelance/projects/${project.id}`} className="flex shadow-md rounded-xl flex-col space-y-2 p-2 max-md:px-2 max-md:w-full dark:shadow-blue-950">
       <h1 className="text-2xl font-bold">{project.title}</h1>
       <p className="text-slate-500 dark:text-slate-300 text-sm">
         {project.para1.substring(0, 150)}...

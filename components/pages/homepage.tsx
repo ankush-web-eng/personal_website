@@ -97,7 +97,7 @@ export default function Homepage() {
       </div>
 
       <div className="py-6 flex space-x-6 space-y-4 flex-wrap">
-        <div className="w-fit px-4 py-4 dark:text-slate-300 text-slate-500 dark:bg-inherit flex flex-col border-2 border-sky-400 bg-white rounded-sm">
+        <div className="w-fit px-4 py-4 dark:text-slate-300 text-slate-500 dark:bg-inherit flex flex-col shadow-md dark:shadow-blue-950 bg-white rounded-sm">
           Want to connect with me via Mail?
           <span className="text-sky-400 flex space-x-2">
             <RiMailCheckFill />

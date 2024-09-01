@@ -36,7 +36,7 @@ export default function ProjectLink({ params }: LinkProps) {
   };
 
   return (
-    <div  className="text-sky-500 space-x-3 flex items-center">
+    <div  className="text-sky-500 space-x-3 flex items-center dark:text-gray-200">
       <Image
         src={params.image}
         alt={params.title}
