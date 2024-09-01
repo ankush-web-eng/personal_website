@@ -38,24 +38,24 @@ export default async function RootLayout({
         <meta property="og:type" content="website" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image" content="https://ankushsingh.tech/Ankush_pro.png" />
+        <meta property="og:image" content="https://ankushsingh.tech/Ankush.png" />
         <meta property="og:image:alt" content="Ankush's Professional Profile" />
 
         <meta name="twitter:title" content="Ankush" />
         <meta name="twitter:description" content="Welcome to Ankush's Professional Space!" />
 
-        <meta name="twitter:image" content="https://ankushsingh.tech/Ankush_pro.png" />
+        <meta name="twitter:image" content="https://ankushsingh.tech/Ankush.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="whyankush07" />
 
         <meta name="linkedin:title" content="Ankush's World" />
         <meta name="linkedin:description" content="Welcome to Ankush's Professional Space!" />
-        <meta name="linkedin:image" content="https://ankushsingh.tech/Ankush_pro.png" />
+        <meta name="linkedin:image" content="https://ankushsingh.tech/Ankush.png" />
 
         <meta property="instapp:hashtags" content="#personalbranding #professionalprofile" />
         <meta property="instagram:author" content="@whyankush07" />
 
-        <link rel="icon" type="image/png" href="https://ankushsingh.tech/Ankush_pro.png" />
+        <link rel="icon" type="image/png" href="https://ankushsingh.tech/Ankush.png" />
         <link rel="manifest" href="https://ankushsingh.tech/manifest.json" />
         <meta name="theme-color" content="#33F9FF" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
