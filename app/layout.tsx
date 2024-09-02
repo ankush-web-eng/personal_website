@@ -58,9 +58,9 @@ export default async function RootLayout({
         <link rel="icon" type="image/png" href="https://ankushsingh.tech/Ankush.png" />
         <link rel="manifest" href="https://ankushsingh.tech/manifest.json" />
         <meta name="theme-color" content="#33F9FF" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Ankush"></meta>
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-status-bar-style" content="default" />
+        <meta name="mobile-web-app-title" content="Ankush's World"></meta>
       </head>
 
       <body className={inter.className}>
