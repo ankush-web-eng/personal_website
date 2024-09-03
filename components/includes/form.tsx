@@ -63,7 +63,7 @@ export default function Form(): JSX.Element {
       onSubmit={sendEmail}
       id="form"
       ref={form}
-      className="rounded-lg p-4 border-2 bg-yellow-50 dark:bg-inherit dark:border border-sky-400 flex-col flex space-y-4"
+      className="rounded-lg p-4 border-2 bg-yellow-50 dark:bg-blue-950/20 shadow-md dark:shadow-blue-300 border-sky-400 flex-col flex space-y-4"
     >
       <input
         placeholder="Your Name"

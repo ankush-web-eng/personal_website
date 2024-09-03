@@ -41,7 +41,7 @@ export default function Skills() {
         Projects.
       </span>
       <div className="grid grid-cols-1 md:grid-cols-3 max-md:space-y-3">
-        <div className="bg-yellow-50 dark:bg-inherit flex flex-col w-5/6 md:w-max p-3 space-y-2 rounded-md border border-sky-400">
+        <div className="bg-yellow-50 dark:bg-blue-950/20 flex flex-col w-5/6 md:w-max p-3 space-y-2 rounded-md shadow-md dark:shadow-blue-950 drop-shadow-md">
           <h1 className="text-2xl text-sky-500 pl-2 font-semibold">
             Technologies & <br /> Languages
           </h1>
@@ -60,7 +60,7 @@ export default function Skills() {
             )}
           </ul>
         </div>
-        <div className="bg-yellow-50 dark:bg-inherit flex flex-col w-5/6 md:w-max p-3 space-y-2 rounded-md border border-sky-400">
+        <div className="bg-yellow-50 dark:bg-blue-950/20 flex flex-col w-5/6 md:w-max p-3 space-y-2 rounded-md shadow-md dark:shadow-blue-950 drop-shadow-md">
           <h1 className="text-2xl text-sky-500 pl-2 font-semibold">
             Frameworks & <br /> Libraries
           </h1>
@@ -79,7 +79,7 @@ export default function Skills() {
             )}
           </ul>
         </div>
-        <div className="bg-yellow-50 dark:bg-inherit flex flex-col w-5/6 md:w-max p-3 space-y-2 rounded-md border border-sky-400">
+        <div className="bg-yellow-50 dark:bg-blue-950/20 flex flex-col w-5/6 md:w-max p-3 space-y-2 rounded-md shadow-md dark:shadow-blue-950 drop-shadow-md">
           <h1 className="text-2xl text-sky-500 pl-2 font-semibold">
             Databases & <br />
             Others
