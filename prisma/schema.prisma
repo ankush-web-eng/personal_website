@@ -14,10 +14,12 @@ model Chat {
   messages String
 }
 
-model Project {
+model Application {
   id          String @id @default(uuid())
   title       String
+  image       String
   description String
+  github      String
 }
 
 model Projects {

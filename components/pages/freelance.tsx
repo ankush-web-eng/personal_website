@@ -7,9 +7,10 @@ import { getServerSession } from "next-auth";
 import CV from "@/components/includes/cv"
 import GetSingleProjectsSkeleton from "@/components/skeleton/TwoProjectSkeleton";
 
-const GetALlLinks = dynamic(() => import("@/components/projects/getalllinks"))
-const Skills = dynamic(() => import("@/components/includes/skills"))
-const Form = dynamic(() => import("@/components/includes/form"))
+const GetALlLinks = dynamic(() => import("@/components/projects/getalllinks"), {ssr: false})
+const Skills = dynamic(() => import("@/components/includes/skills"), {ssr: false})
+const Form = dynamic(() => import("@/components/includes/form"), {ssr: false})
+const ApplicationGrid = dynamic(() => import("@/components/applications/applicationGrid"), {ssr: false})
 const GetAllProjects = dynamic(() => import("@/components/projects/getallprojects"), {ssr: false, loading : () => <GetSingleProjectsSkeleton />})
 
 export default async function Freelance() {
@@ -52,6 +53,7 @@ export default async function Freelance() {
       </div>
       <div className="md:hidden"><GetALlLinks /></div>
       <GetAllProjects />
+      <ApplicationGrid />
       <Skills />
 
       <h1 className="text-4xl font-bold py-3">
