@@ -1,23 +1,23 @@
 // import { getAnalytics } from "firebase/analytics";
 import { initializeApp } from "firebase/app";
-import { GoogleAuthProvider, getAuth} from "firebase/auth"
-import { getFirestore} from "firebase/firestore"
-import {getStorage} from "firebase/storage"
+import { GoogleAuthProvider, getAuth } from "firebase/auth"
+import { getFirestore } from "firebase/firestore"
+import { getStorage } from "firebase/storage"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD-9tSrZQ7Q3Q6v6ZzvQ9z1J9z9z1J9z9z",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: "personal-website-a9585.firebaseapp.com",
-  projectId: "personal-website-a9585",
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
   storageBucket: "personal-website-a9585.appspot.com",
-  messagingSenderId: "193087107317",
-  appId: "1:193087107317:web:6abc8af08e73f72fdc15bc",
-  measurementId: "G-MGLJTKYNZK"
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGEING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASURMENT_ID
 };
 
 
 // const analytics = getAnalytics(app);
 const app = initializeApp(firebaseConfig);
 export const googleProvier = new GoogleAuthProvider()
-export const auth  = getAuth(app)
+export const auth = getAuth(app)
 export const db = getFirestore(app)
 export const storage = getStorage(app)

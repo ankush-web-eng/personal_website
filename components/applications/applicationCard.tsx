@@ -5,9 +5,15 @@ import Link from "next/link";
 
 const ApplicationCard = ({ application }: { application: Application }) => {
     return (
-        <Link href={application.github} target="_blank" className="flex shadow-md drop-shadow-md rounded-xl flex-col space-y-2 p-2 max-md:px-2 max-md:w-full dark:shadow-blue-950">
-            <div className="p-4">
-                <Image className="w-16 h-16 rounded-full mb-4" src={application.image} alt={application.title + "icon"} height={16} width={16} unoptimized />
+        <Link href={application.github} target="_blank" className="flex border rounded-xl flex-col space-y-2 p-2 max-md:px-2 max-md:w-full">
+            <div className="p-2">
+                <Image
+                    className="w-10 h-10 rounded-full mb-4"
+                    src={application.image}
+                    alt={application.title + "icon"}
+                    height={16}
+                    width={16}
+                    unoptimized />
                 <div className="font-bold text-xl mb-2">{application.title}</div>
                 <p className="text-neutral-500 dark:text-neutral-200 text-sm pb-4">{application.description.substring(0, 100)}...</p>
                 <div className="flex justify-end">
