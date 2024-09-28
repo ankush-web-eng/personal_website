@@ -8,11 +8,13 @@ import Sociallinks from "@/components/includes/social";
 import TypewriterMain from "@/components/library/type";
 import GetSingleProjectsSkeleton from "@/components/skeleton/TwoProjectSkeleton";
 import TwoGhostsSkeleton from "@/components/skeleton/TwoGhostsSkeleton";
+import ApplicationGridSkeleton from "@/components/skeleton/ApplicationGridSkeleton";
 
 const GetALlLinks = dynamic(() => import("@/components/projects/getalllinks"));
 const GetSingleProjects = dynamic(() => import("@/components/projects/getsingleproject"), { ssr: false, loading: () => <GetSingleProjectsSkeleton /> });
 const TwoGhosts = dynamic(() => import("@/components/ghost/twoghosts"), { ssr: false, loading: () => <TwoGhostsSkeleton /> });
-const LazyIframe = dynamic(() => import("@/components/includes/youtubeIntro"));
+const LazyIframe = dynamic(() => import("@/components/includes/youtubeIntro"), { ssr: false });
+const ApplicationPreview = dynamic(() => import("@/components/applications/applicationPreview"), { ssr: false, loading: () => <ApplicationGridSkeleton /> });
 
 export default function Homepage() {
   return (
@@ -91,6 +93,7 @@ export default function Homepage() {
       <div className="md:hidden"><GetALlLinks /></div>
       <TwoGhosts />
       <GetSingleProjects />
+      <ApplicationPreview />
 
       <div className="pt-4 rounded-md max-w-screen md:max-w-1/2 flex items-center justify-center">
         <LazyIframe />
