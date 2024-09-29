@@ -50,6 +50,6 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({
             success: false,
             message: "An error occurred while saving the application",
-        })
+        });
     }
 }

@@ -7,20 +7,19 @@ const prisma = new PrismaClient();
 export async function GET(req: NextRequest) {
     try {
         const applications = await prisma.application.findMany();
+
         if (!applications) {
-            return NextResponse.json({
-                status: "error",
-                message: "No applications found",
-            })
+            return NextResponse.json(
+                { success: false, message: 'Error in getting Ghosts' },
+                { status: 400 }
+            );
         }
 
-        // const path = req.nextUrl.searchParams.get('path') || "/freelance"
-        // revalidatePath(path)
+        // const path = req.nextUrl.searchParams.get('path') || "/freelance";
+        // revalidatePath(path);
 
-        return NextResponse.json({
-            status: "success",
-            data: applications,
-        });
+        return NextResponse.json({ data: applications }, { status: 200 });
+
     } catch (error) {
         console.error(error);
         return NextResponse.json({

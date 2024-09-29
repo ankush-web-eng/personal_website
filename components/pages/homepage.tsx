@@ -92,7 +92,7 @@ export default function Homepage() {
       </p> */}
       <div className="md:hidden"><GetALlLinks /></div>
       <TwoGhosts />
-      <GetSingleProjects />
+      {/* <GetSingleProjects /> */}
       <ApplicationPreview />
 
       <div className="pt-4 rounded-md max-w-screen md:max-w-1/2 flex items-center justify-center">
