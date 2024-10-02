@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ankushsingh.tech
+
+# Sitemaps
+Sitemap: https://ankushsingh.tech/sitemap.xml
