@@ -9,28 +9,23 @@ import TypewriterMain from "@/components/library/type";
 import GetSingleProjectsSkeleton from "@/components/skeleton/TwoProjectSkeleton";
 import TwoGhostsSkeleton from "@/components/skeleton/TwoGhostsSkeleton";
 import ApplicationGridSkeleton from "@/components/skeleton/ApplicationGridSkeleton";
+import ProfileCover from "../includes/profileCover";
 
 const GetALlLinks = dynamic(() => import("@/components/projects/getalllinks"));
-const GetSingleProjects = dynamic(() => import("@/components/projects/getsingleproject"), { ssr: false, loading: () => <GetSingleProjectsSkeleton /> });
 const TwoGhosts = dynamic(() => import("@/components/ghost/twoghosts"), { ssr: false, loading: () => <TwoGhostsSkeleton /> });
 const LazyIframe = dynamic(() => import("@/components/includes/youtubeIntro"), { ssr: false });
 const ApplicationPreview = dynamic(() => import("@/components/applications/applicationPreview"), { ssr: false, loading: () => <ApplicationGridSkeleton /> });
+// const GetSingleProjects = dynamic(() => import("@/components/projects/getsingleproject"), { ssr: false, loading: () => <GetSingleProjectsSkeleton /> });
 
 export default function Homepage() {
   return (
     <div className="flex flex-col space-y-5">
-      <div className="relative">
-        <div className="absolute -bottom-[60px] left-2">
-          <Image
-            width={100}
-            height={100}
-            src={"/Ankush_pro.png"}
-            className="rounded-full z-50"
-            alt="Ankush"
-            fetchPriority="high"
-          />
-        </div>
-      </div>
+      <ProfileCover
+        coverImageSrc="/ankush_bg_image.png"
+        profileImageSrc="/Ankush.png"
+        altCover="Cover image"
+        altProfile="Profile picture"
+      />
 
       <div className="pt-8">
         <div className="flex justify-start text-start pt-8">

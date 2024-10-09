@@ -3,12 +3,12 @@ import Image from "next/image";
 
 import { useState } from "react";
 import { useSession } from "next-auth/react";
-import { Auth } from "@/components/auth"
+import { Auth } from "@/components/auth";
 
 export default function Profile() {
 
-    const [open, setOpen] = useState<boolean>(false)
-    const { data: session } = useSession()
+    const [open, setOpen] = useState<boolean>(false);
+    const { data: session } = useSession();
 
     return (
         <div className="relative cursor-pointer">
