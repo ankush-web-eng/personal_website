@@ -38,7 +38,7 @@ export default function AllGhosts() {
     }
 
     return (
-        <div className="rounded-xl text-black w-full h-auto md:grid grid-cols-1 md:grid-cols-2 max-md:space-y-4 ">
+        <div className="rounded-xl text-black w-full h-auto md:grid grid-cols-1 md:grid-cols-2 max-md:space-y-4 gap-3 px-3 md:px-6">
             {ghosts !== null ?
                 ghosts.map((ghost, index) => <Ghost key={index} params={ghost} />) :
                 <Loading >Loading Projects</Loading>}

@@ -48,9 +48,9 @@ export default function TwoGhosts() {
   }
 
   return (
-    <div className="pt-4 pb-6 flex space-y-2 flex-col">
+    <div className="pt-4 pb-6 flex space-y-2 flex-col px-3 md:px-6">
       <h1 className="text-4xl text-sky-500 w-fit font-bold my-6">Blogs</h1>
-      <div className="rounded-xl text-black w-full h-auto md:grid grid-cols-1 md:grid-cols-2 max-md:space-y-4 ">
+      <div className="rounded-xl text-black w-full h-auto md:grid grid-cols-1 md:grid-cols-2 max-md:space-y-4 gap-2">
         {ghosts !== null && ghosts.length > 0 ? (
           ghosts.map((ghost, index) => <Ghost key={index} params={ghost} />)
         ) : (

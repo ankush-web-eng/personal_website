@@ -10,9 +10,14 @@ import { Toaster } from '@/components/ui/toaster';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ankush's World - Ankush's professional space!",
+  title: {
+    default: "Ankush's World - Ankush's professional space!",
+    template: "%s - Ankush's World",
+  },
   description:
     "Ankush's professional space where you can find his professional profile, testimonials, blogs, and projects.",
+  keywords: ["Ankush Singh Tech", "Ankush", "Software Developer", "Developer", "Ankush's World"],
+
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -22,7 +27,7 @@ export const metadata: Metadata = {
       "Ankush's professional space where you can find his professional profile, testimonials, blogs, and projects.",
     images: [
       {
-        url: "https://ankushsingh.tech/Ankush.png",
+        url: "https://ankushsingh.tech/ankush_bg_image.png",
         width: 1200,
         height: 627,
         alt: "Ankush's World",
@@ -30,22 +35,23 @@ export const metadata: Metadata = {
     ],
     siteName: "Ankush's World",
   },
+
   twitter: {
     card: "summary_large_image",
-    site: "https://ankushsingh.tech",
     creator: "@whyankush07",
     title: "Ankush's World - Ankush's professional space!",
     description:
       "Ankush's professional space where you can find his professional profile, testimonials, blogs, and projects.",
     images: [
       {
-        url: "https://ankushsingh.tech/Ankush.png",
+        url: "https://ankushsingh.tech/ankush_bg_image.png",
         width: 1200,
         height: 627,
         alt: "Ankush's World",
       },
     ],
   },
+
   manifest: "/manifest.webmanifest",
   metadataBase: new URL("https://ankushsingh.tech"),
 };

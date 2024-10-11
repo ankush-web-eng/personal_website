@@ -6,10 +6,10 @@ import { RiMailCheckFill } from "react-icons/ri";
 
 import Sociallinks from "@/components/includes/social";
 import TypewriterMain from "@/components/library/type";
-import GetSingleProjectsSkeleton from "@/components/skeleton/TwoProjectSkeleton";
 import TwoGhostsSkeleton from "@/components/skeleton/TwoGhostsSkeleton";
 import ApplicationGridSkeleton from "@/components/skeleton/ApplicationGridSkeleton";
-import ProfileCover from "../includes/profileCover";
+import ProfileCover from "@/components/includes/profileCover";
+// import GetSingleProjectsSkeleton from "@/components/skeleton/TwoProjectSkeleton";
 
 const GetALlLinks = dynamic(() => import("@/components/projects/getalllinks"));
 const TwoGhosts = dynamic(() => import("@/components/ghost/twoghosts"), { ssr: false, loading: () => <TwoGhostsSkeleton /> });

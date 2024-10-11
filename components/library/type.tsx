@@ -20,7 +20,7 @@ export default function TypewriterMain() {
       text: "Web",
     },
     {
-      text: "Apps",
+      text: "Applications",
     },
   ];
   return (
