@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getToken } from 'next-auth/jwt';
 
 export const config = {
-    matcher: ['/addmylink', '/addmyblog', '/addmyghost', '/addmyproject', '/addmyskill', '/addmywork', '/addmyapplication'],
+    matcher: ['/add/:path*'],
 };
 
 export default async function middleware(request: NextRequest) {
@@ -15,5 +15,4 @@ export default async function middleware(request: NextRequest) {
     }
 
     return NextResponse.redirect(new URL('/', request.url))
-
 }

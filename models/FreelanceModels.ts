@@ -11,7 +11,7 @@ const FreelanceSchema: Schema = new Schema({
     name: { type: String, required: true },
     link: { type: String, required: false },
     icon: { type: String, required: false },
-    shopify: { type: String, required: false }
+    shopify: { type: Boolean, required: false }
 });
 
 export const FreelanceModel = mongoose.models.Freelance || mongoose.model<Freelance>('Freelance', FreelanceSchema);

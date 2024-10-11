@@ -15,6 +15,7 @@ const GetALlLinks = dynamic(() => import("@/components/projects/getalllinks"));
 const TwoGhosts = dynamic(() => import("@/components/ghost/twoghosts"), { ssr: false, loading: () => <TwoGhostsSkeleton /> });
 const LazyIframe = dynamic(() => import("@/components/includes/youtubeIntro"), { ssr: false });
 const ApplicationPreview = dynamic(() => import("@/components/applications/applicationPreview"), { ssr: false, loading: () => <ApplicationGridSkeleton /> });
+const FreelanceProjectsLink = dynamic(() => import("@/components/freelance/freelanceProjects"), { ssr: false })
 // const GetSingleProjects = dynamic(() => import("@/components/projects/getsingleproject"), { ssr: false, loading: () => <GetSingleProjectsSkeleton /> });
 
 export default function Homepage() {
@@ -86,6 +87,7 @@ export default function Homepage() {
         </a>
       </p> */}
       <div className="md:hidden"><GetALlLinks /></div>
+      <div className="md:hidden"><FreelanceProjectsLink /></div>
       <TwoGhosts />
       {/* <GetSingleProjects /> */}
       <ApplicationPreview />

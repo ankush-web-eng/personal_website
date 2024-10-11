@@ -18,8 +18,8 @@ interface LinkProps {
 export default function ProjectLink({ params }: LinkProps) {
   const [send, setSend] = useState(false);
 
-  const {data:session} = useSession()
-  const email = session?.user?.email
+  const {data:session} = useSession();
+  const email = session?.user?.email;
 
   const deleteLink = async (id: string) => {
     try {
@@ -44,7 +44,7 @@ export default function ProjectLink({ params }: LinkProps) {
         height={25}
         fetchPriority="high"
       />
-      <Link href={params.url} target="_ankush" >{params.title}</Link>
+      <Link href={params.url} target="_blank" >{params.title}</Link>
       {email === "deshwalankush23@gmail.com" && <button onClick={() => deleteLink(params.id)}>
         {send ? (
           <TbLoader2 className="animate-spin" />

@@ -31,4 +31,4 @@ const TestimonoialSchema: Schema = new Schema({
     }
 });
 
-export const TestimonoialModel = mongoose.models.Skill || mongoose.model<Testimonoial>('Testimonial', TestimonoialSchema);
+export const TestimonoialModel = mongoose.models.Testimonial || mongoose.model<Testimonoial>('Testimonial', TestimonoialSchema);

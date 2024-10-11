@@ -35,7 +35,7 @@ export default function GetALlLinks() {
 
   return (
     <div className="bg-gray-50 shadow-md drop-shadow-md dark:shadow-blue-950 dark:bg-blue-950/20 rounded-xl space-y-2 flex flex-col p-3">
-      <h1 className="text-gray-500 dark:text-gray-100">Access all my Projects here:</h1>
+      <h1 className="text-neutral-600 dark:text-gray-100 font-semibold">Full Stack Projects:</h1>
       {data == null ? <Loading >Loading Links</Loading> :
         data.map((link, index) => <ProjectLink key={index} params={link} />)}
     </div>
