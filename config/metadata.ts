@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const siteConfig = {
+export const siteConfig = {
     name: "Ankush's World",
     description: "Ankush's professional space where you can find his professional profile, testimonials, blogs, and projects.",
     url: "https://ankushsingh.tech",

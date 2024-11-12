@@ -6,6 +6,7 @@ import { Toaster } from '@/components/ui/toaster';
 import OfflineNotification from '@/components/offline-navigator';
 import CustomHead from '@/components/custom-head';
 import { metadata as siteMetadata } from '@/config/metadata';
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,9 +19,9 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
+      <Head>
         <CustomHead />
-      </head>
+      </Head>
       <body className={inter.className}>
         <Provider>
           <Toaster />
