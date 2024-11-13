@@ -2,8 +2,9 @@
 
 import GetALlLinks from "@/components/projects/getalllinks";
 import { Button } from "@/components/ui/button";
+import { useToast } from "@/components/ui/use-toast";
 import axios from "axios";
-import { useState } from "react";
+import React, { useState } from "react";
 import { TbLoader2 } from "react-icons/tb";
 
 export default function Page() {
@@ -12,14 +13,17 @@ export default function Page() {
   const [file, setFile] = useState<File | null>(null);
   const [send, setSend] = useState(false);
 
-  const handleSubmit = async () => {
+  const { toast } = useToast();
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
     try {
       setSend(true);
       const formdata = new FormData();
       formdata.append("name", input1);
       formdata.append("link", input2);
       formdata.append("favicon", file as File);
-      const response = await axios.post("api/projects/addlink", formdata, {
+      const response = await axios.post("/api/projects/addlink", formdata, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -28,7 +32,11 @@ export default function Page() {
         setInput1("");
         setInput2("");
         setFile(null);
-        alert("Link added successfully");
+        toast({
+          title: "Success",
+          description: response.data.message,
+          duration: 2000,
+        })
         setSend(false);
       }
     } catch (error) {
@@ -88,7 +96,7 @@ export default function Page() {
         </div>
         <Button
           type="submit"
-          //   className="w-full px-4 py-2 font-medium text-white bg-blue-500 rounded-md shadow-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        //   className="w-full px-4 py-2 font-medium text-white bg-blue-500 rounded-md shadow-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
         >
           {send ? (
             <span className="flex space-x-2 items-center">
