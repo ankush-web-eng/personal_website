@@ -140,7 +140,7 @@ export default function Kaizen() {
             className="text-sky-400 flex space-x-2"
           >
             <RiMailCheckFill />
-            <Link href="https://mail.google.com/">
+            <Link href="mailto:ankushsingh.dev@gmail.com">
               ankushsingh.dev@gmail.com
             </Link>{" "}
           </motion.span>

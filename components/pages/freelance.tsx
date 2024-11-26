@@ -10,6 +10,7 @@ import GetSingleProjectsSkeleton from "@/components/skeleton/TwoProjectSkeleton"
 
 import { ScrollAnimationWrapper } from "@/components/pages/homepage";
 import { useSession } from "next-auth/react";
+import Testimonials from "../freelance/testimonials";
 
 const GetALlLinks = dynamic(() => import("@/components/projects/getalllinks"), { ssr: false })
 const Skills = dynamic(() => import("@/components/includes/skills"), { ssr: false })
@@ -81,6 +82,10 @@ export default function Freelance() {
           </div>
         </div>
       </ScrollAnimationWrapper>
+      
+      <h1 className="text-4xl text-sky-500 py-4 w-fit font-bold ">Testimonials</h1>
+
+      <Testimonials />
 
       <div className="md:hidden">
         <ScrollAnimationWrapper>
@@ -133,7 +138,7 @@ export default function Freelance() {
               transition={{ delay: 0.5 }}
             >
               <RiMailCheckFill />
-              <Link href="https://mail.google.com/">
+              <Link href="mailto:ankushsingh.dev@gmail.com">
                 ankushsingh.dev@gmail.com
               </Link>{" "}
             </motion.span>

@@ -1,9 +1,8 @@
 'use client';
-import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, ReactNode } from "react";
 
 import { RiMailCheckFill } from "react-icons/ri";
 
@@ -12,6 +11,7 @@ import TypewriterMain from "@/components/library/type";
 import TwoGhostsSkeleton from "@/components/skeleton/TwoGhostsSkeleton";
 import ApplicationGridSkeleton from "@/components/skeleton/ApplicationGridSkeleton";
 import ProfileCover from "@/components/includes/profileCover";
+import { TestimonialLink } from "../footer/insta";
 
 const GetALlLinks = dynamic(() => import("@/components/projects/getalllinks"));
 const TwoGhosts = dynamic(() => import("@/components/ghost/twoghosts"), { ssr: false, loading: () => <TwoGhostsSkeleton /> });
@@ -19,8 +19,6 @@ const LazyIframe = dynamic(() => import("@/components/includes/youtubeIntro"), {
 const ApplicationPreview = dynamic(() => import("@/components/applications/applicationPreview"), { ssr: false, loading: () => <ApplicationGridSkeleton /> });
 const FreelanceProjectsLink = dynamic(() => import("@/components/freelance/freelanceProjects"), { ssr: false })
 
-// Reusable Scroll-Triggered Animation Wrapper
-import { ReactNode } from "react";
 
 interface ScrollAnimationWrapperProps {
   children: ReactNode;
@@ -119,7 +117,7 @@ export default function Homepage() {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <Link
-              href="www.linkedin.com/in/ankush-singh07"
+              href="www.linkedin.com/in/whyankush07"
               target="ankush"
               className="text-sky-500"
               aria-label="Ankush Singh LinkedIn"
@@ -138,6 +136,11 @@ export default function Homepage() {
       <div className="md:hidden">
         <ScrollAnimationWrapper>
           <FreelanceProjectsLink />
+        </ScrollAnimationWrapper>
+      </div>
+      <div className="md:hidden">
+        <ScrollAnimationWrapper>
+        <TestimonialLink />
         </ScrollAnimationWrapper>
       </div>
 
@@ -173,7 +176,7 @@ export default function Homepage() {
               transition={{ delay: 0.5 }}
             >
               <RiMailCheckFill />
-              <Link href="https://mail.google.com/">
+              <Link href="mailto:ankushsingh.dev@gmail.com">
                 ankushsingh.dev@gmail.com
               </Link>{" "}
             </motion.span>

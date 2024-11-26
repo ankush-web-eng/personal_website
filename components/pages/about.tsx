@@ -169,7 +169,7 @@ export default function About() {
               transition={{ delay: 0.5 }}
             >
               <RiMailCheckFill />
-              <Link href="https://mail.google.com/">
+              <Link href="mailto:ankushsingh.dev@gmail.com">
                 ankushsingh.dev@gmail.com
               </Link>{" "}
             </motion.span>
