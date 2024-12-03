@@ -11,15 +11,15 @@ export default function LazyIframe() {
         <>
             {loaded ?
                 <div className="flex flex-col space-y-2">
-                    <h1 className="text-center">Recorded in January 2024</h1>
+                    <h1 className="text-center">November 2024</h1>
                     <iframe
                         className="rounded-lg"
-                        src="https://www.youtube.com/embed/UQ1loFxkfUE?si=CCzWqLXlv2YZhcze"
-                        title="About Ankush"
+                        src="https://www.youtube.com/embed/xtIb6E5_Wno?si=EUwVeGrnQdK617hU"
+                        title="Brolang - a fun programming language"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     ></iframe>
                 </div> :
-                <Button variant={'secondary'} onClick={() => setLoaded(true)}>Watch my Intro</Button>}
+                <Button variant={'secondary'} onClick={() => setLoaded(true)}>Video Presentation</Button>}
         </>
     )
 }
