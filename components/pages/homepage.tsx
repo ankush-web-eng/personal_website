@@ -30,7 +30,7 @@ export const ScrollAnimationWrapper = ({ children, direction = 'up' }: ScrollAni
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const variants = {
-    hidden: { 
+    hidden: {
       opacity: 0,
       y: direction === 'up' ? 50 : -50,
       x: direction === 'left' ? 50 : direction === 'right' ? -50 : 0
@@ -88,8 +88,9 @@ export default function Homepage() {
 
       <ScrollAnimationWrapper direction="left">
         <p className="text-gray-600 dark:text-gray-300">
-          Developer, Freelancer, Blog Writer, Student, Tech Enthusiast
-          with passion for <span className="text-sky-500">Code.</span>
+        A highly motivated guy who looks up at technology with curiosity, who belongs to a stereotypical space but still manages
+         to shine because of his belief system driven by koinophobia. Looking to work with curious minds to learn, grow and become more curious alongside them. Entered this industry because I was clueless in
+         life but have been developing myself more than ever while trying to build cool stuffs.
         </p>
       </ScrollAnimationWrapper>
 
@@ -140,7 +141,7 @@ export default function Homepage() {
       </div>
       <div className="md:hidden">
         <ScrollAnimationWrapper>
-        <TestimonialLink />
+          <TestimonialLink />
         </ScrollAnimationWrapper>
       </div>
 
@@ -160,16 +161,16 @@ export default function Homepage() {
 
       <ScrollAnimationWrapper direction="left">
         <div className="py-6 flex space-x-6 space-y-4 flex-wrap">
-          <motion.div 
+          <motion.div
             className="w-fit px-4 py-4 dark:text-slate-300 text-slate-500 dark:bg-inherit flex flex-col shadow-md dark:shadow-blue-950 bg-white rounded-sm"
-            whileHover={{ 
+            whileHover={{
               scale: 1.02,
               boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)"
             }}
             transition={{ type: "spring", stiffness: 300 }}
           >
             Want to connect with me via Mail?
-            <motion.span 
+            <motion.span
               className="text-sky-400 flex space-x-2"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
