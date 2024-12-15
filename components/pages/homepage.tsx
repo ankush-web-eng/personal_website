@@ -139,11 +139,11 @@ export default function Homepage() {
           <FreelanceProjectsLink />
         </ScrollAnimationWrapper>
       </div>
-      <div className="md:hidden">
+      {/* <div className="md:hidden">
         <ScrollAnimationWrapper>
           <TestimonialLink />
         </ScrollAnimationWrapper>
-      </div>
+      </div> */}
 
       <ScrollAnimationWrapper direction="right">
         <TwoGhosts />

@@ -85,7 +85,7 @@ export default function Freelance() {
       
       <h1 className="text-4xl text-sky-500 py-4 w-fit font-bold ">Testimonials</h1>
 
-      <Testimonials />
+      {/* <Testimonials /> */}
 
       <div className="md:hidden">
         <ScrollAnimationWrapper>
