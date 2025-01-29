@@ -63,7 +63,8 @@ export default function Homepage() {
     <div className="flex flex-col space-y-5">
       <ScrollAnimationWrapper>
         <ProfileCover
-          coverImageSrc="/ankush_bg_image.png"
+          // coverImageSrc="/ankush_bg_image.png"
+          coverImageSrc="/imagine-win.jpg"
           profileImageSrc="/Ankush.png"
           altCover="Cover image"
           altProfile="Profile picture"
