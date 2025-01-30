@@ -51,7 +51,7 @@ export default function Freelance() {
           I keep sharing on my my work and projects related to Full Stack
           and Tech.Drop me a high on{" "}
           <motion.a 
-            href={'https://x.com/Ankush__57s'} 
+            href={'https://x.com/whyankush07'} 
             className="text-sky-500"
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 300 }}
@@ -60,7 +60,7 @@ export default function Freelance() {
           </motion.a>{" "}
           as well as{" "}
           <motion.a 
-            href={'www.linkedin.com/in/ankush-singh07'} 
+            href={'www.linkedin.com/in/whyankush07'} 
             className="text-sky-500"
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 300 }}
@@ -85,7 +85,7 @@ export default function Freelance() {
       
       <h1 className="text-4xl text-sky-500 py-4 w-fit font-bold ">Testimonials</h1>
 
-      {/* <Testimonials /> */}
+      <Testimonials />
 
       <div className="md:hidden">
         <ScrollAnimationWrapper>
@@ -98,9 +98,9 @@ export default function Freelance() {
         </ScrollAnimationWrapper>
       </div>
 
-      <ScrollAnimationWrapper direction="left">
+      {/* <ScrollAnimationWrapper direction="left">
         <GetAllProjects />
-      </ScrollAnimationWrapper>
+      </ScrollAnimationWrapper> */}
 
       <ScrollAnimationWrapper direction="right">
         <ApplicationGrid />
