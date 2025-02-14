@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://ankushsingh.tech/api/messages/getdata</loc><lastmod>2024-12-03T12:40:35.720Z</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
-<url><loc>https://ankushsingh.tech/api/applications/getapps</loc><lastmod>2024-12-03T12:40:35.721Z</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
-<url><loc>https://ankushsingh.tech/api/testimonial/get</loc><lastmod>2024-12-03T12:40:35.721Z</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
-<url><loc>https://ankushsingh.tech/api/freelance/get</loc><lastmod>2024-12-03T12:40:35.721Z</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
-<url><loc>https://ankushsingh.tech</loc><lastmod>2024-12-03T12:40:35.721Z</lastmod><priority>1</priority></url>
-<url><loc>https://ankushsingh.tech/about</loc><lastmod>2024-12-03T12:40:35.721Z</lastmod><priority>0.8</priority></url>
-<url><loc>https://ankushsingh.tech/freelance</loc><lastmod>2024-12-03T12:40:35.721Z</lastmod><priority>0.8</priority></url>
-<url><loc>https://ankushsingh.tech/kaizen</loc><lastmod>2024-12-03T12:40:35.721Z</lastmod><priority>0.8</priority></url>
-<url><loc>https://ankushsingh.tech/messages</loc><lastmod>2024-12-03T12:40:35.721Z</lastmod><priority>0.8</priority></url>
+<url><loc>https://ankushsingh.tech/api/applications/getapps</loc><lastmod>2025-02-14T09:58:28.500Z</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+<url><loc>https://ankushsingh.tech/api/messages/getdata</loc><lastmod>2025-02-14T09:58:28.500Z</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+<url><loc>https://ankushsingh.tech/api/testimonial/get</loc><lastmod>2025-02-14T09:58:28.501Z</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+<url><loc>https://ankushsingh.tech/api/freelance/get</loc><lastmod>2025-02-14T09:58:28.501Z</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+<url><loc>https://ankushsingh.tech</loc><lastmod>2025-02-14T09:58:28.501Z</lastmod><priority>1</priority></url>
+<url><loc>https://ankushsingh.tech/about</loc><lastmod>2025-02-14T09:58:28.501Z</lastmod><priority>0.8</priority></url>
+<url><loc>https://ankushsingh.tech/freelance</loc><lastmod>2025-02-14T09:58:28.501Z</lastmod><priority>0.8</priority></url>
+<url><loc>https://ankushsingh.tech/kaizen</loc><lastmod>2025-02-14T09:58:28.501Z</lastmod><priority>0.8</priority></url>
+<url><loc>https://ankushsingh.tech/messages</loc><lastmod>2025-02-14T09:58:28.501Z</lastmod><priority>0.8</priority></url>
 </urlset>

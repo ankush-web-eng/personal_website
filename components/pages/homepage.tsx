@@ -65,7 +65,7 @@ export default function Homepage() {
         <ProfileCover
           // coverImageSrc="/ankush_bg_image.png"
           coverImageSrc="/imagine-win.jpg"
-          profileImageSrc="/Ankush.png"
+          profileImageSrc="/Professional.jpg"
           altCover="Cover image"
           altProfile="Profile picture"
         />
