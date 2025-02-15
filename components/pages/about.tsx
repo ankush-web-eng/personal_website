@@ -61,33 +61,7 @@ export default function About() {
           am open to new opportunities. I have a healthy obsession of learning new
           everyday which makes a better developer and a better{" "}
           <span className="text-sky-500">Athlete</span>. I love playing{" "}
-          <span className="text-sky-500">Cricket, Badminton & Basketball</span>.
-        </span>
-      </ScrollAnimationWrapper>
-
-      <ScrollAnimationWrapper direction="left">
-        <span className="text-slate-500 dark:text-gray-300">
-          I am a Content Writer and I love to write blogs on life and my
-          experiences. I am a Content Creator and I love to create content on
-          Self-Growth and my learnings. I own two Instagram pages. One for
-          storytelling Content{" "}
-          <motion.a 
-            className="text-sky-500" 
-            href="https://instagram.com/whyankush07"
-            whileHover={{ scale: 1.1 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            @whyankush07{" "}
-          </motion.a>
-          and another for tech content{" "}
-          <motion.a 
-            className="text-sky-500" 
-            href="https://instagram.com/howankush07"
-            whileHover={{ scale: 1.1 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            @howankush07
-          </motion.a>
+          <span className="text-sky-500">Cricket & Badminton.</span>.
         </span>
       </ScrollAnimationWrapper>
 

@@ -29,8 +29,8 @@ export default async function RootLayout({
           <Toaster />
           <Analytics />
           <NextTopLoader
-                showSpinner={false}
-              />
+            showSpinner={false}
+          />
           {children}
           <OfflineNotification />
         </Provider>

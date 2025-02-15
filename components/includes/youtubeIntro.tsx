@@ -19,7 +19,7 @@ export default function LazyIframe() {
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     ></iframe>
                 </div> :
-                <Button variant={'secondary'} onClick={() => setLoaded(true)}>Video Presentation</Button>}
+                <Button variant={'primary'} onClick={() => setLoaded(true)}>Video Presentation</Button>}
         </>
     )
 }

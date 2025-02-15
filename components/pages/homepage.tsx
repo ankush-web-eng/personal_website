@@ -97,10 +97,13 @@ export default function Homepage() {
 
       <ScrollAnimationWrapper direction="right">
         <p className="text-gray-600 dark:text-gray-300">
-          Quite <span className="text-sky-500">passionate</span> about Technology,
-          I decided to do Computer Science and Content Creation in this life. I
-          like to Code, Write, Create Content, Workout, Travel solo and network with
-          people.
+          Student, Freelancer, Developer, Lifter and a Calisthenics athlete. 
+        </p>
+      </ScrollAnimationWrapper>
+
+      <ScrollAnimationWrapper direction="left">
+        <p className="text-gray-600 dark:text-gray-300">
+          Feel free to connect with me on my socials:{" "}
         </p>
       </ScrollAnimationWrapper>
 
@@ -108,27 +111,6 @@ export default function Homepage() {
         <Sociallinks />
       </ScrollAnimationWrapper>
 
-      <ScrollAnimationWrapper direction="left">
-        <p className="text-gray-600 dark:text-gray-300">
-          I am constantly learning new technologies and sharing my achievements on
-          LinkedIn.
-          <br />
-          You can view my work here on LinkedIn{" "}
-          <motion.span
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            <Link
-              href="www.linkedin.com/in/whyankush07"
-              target="ankush"
-              className="text-sky-500"
-              aria-label="Ankush Singh LinkedIn"
-            >
-              @Ankush Singh
-            </Link>
-          </motion.span>
-        </p>
-      </ScrollAnimationWrapper>
 
       <div className="md:hidden">
         <ScrollAnimationWrapper>
@@ -140,18 +122,18 @@ export default function Homepage() {
           <FreelanceProjectsLink />
         </ScrollAnimationWrapper>
       </div>
-      {/* <div className="md:hidden">
+      <div className="md:hidden">
         <ScrollAnimationWrapper>
           <TestimonialLink />
         </ScrollAnimationWrapper>
-      </div> */}
-
-      <ScrollAnimationWrapper direction="right">
-        <TwoGhosts />
-      </ScrollAnimationWrapper>
+      </div>
 
       <ScrollAnimationWrapper direction="left">
         <ApplicationPreview />
+      </ScrollAnimationWrapper>
+      
+      <ScrollAnimationWrapper direction="right">
+        <TwoGhosts />
       </ScrollAnimationWrapper>
 
       <ScrollAnimationWrapper>
