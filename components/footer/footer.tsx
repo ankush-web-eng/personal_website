@@ -10,7 +10,7 @@ export default function Footer() {
         <GetALlLinks />
         {/* <Insta /> */}
         <FreelanceProjectsLink />
-        {/* <TestimonialLink /> */}
+        <TestimonialLink />
 
       </div>
     </div>
