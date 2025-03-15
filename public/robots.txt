@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://ankushsingh.tech
+Host: https://whyankush.wtf
 
 # Sitemaps
-Sitemap: https://ankushsingh.tech/sitemap.xml
+Sitemap: https://whyankush.wtf/sitemap.xml
