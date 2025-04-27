@@ -87,19 +87,19 @@ export default function Homepage() {
         </div>
       </ScrollAnimationWrapper>
 
-      <ScrollAnimationWrapper direction="left">
+      <ScrollAnimationWrapper direction="right">
         <p className="text-gray-600 dark:text-gray-300">
-        A highly motivated guy who looks up at technology with curiosity, who belongs to a stereotypical space but still manages
-         to shine because of his belief system driven by koinophobia. Looking to work with curious minds to learn, grow and become more curious alongside them. Entered this industry because I was clueless in
-         life but have been developing myself more than ever while trying to build cool stuffs.
+          Mentor, Freelancer, Developer, Lifter and Dreamer 
         </p>
       </ScrollAnimationWrapper>
 
-      <ScrollAnimationWrapper direction="right">
+      <ScrollAnimationWrapper direction="left">
         <p className="text-gray-600 dark:text-gray-300">
-          Student, Freelancer, Developer, Lifter and a Calisthenics athlete. 
+        A highly motivated guy who looks up at technology with curiosity, who belongs to a stereotypical space but still manages
+         to shine because of his belief system driven by koinophobia.
         </p>
       </ScrollAnimationWrapper>
+
 
       <ScrollAnimationWrapper direction="left">
         <p className="text-gray-600 dark:text-gray-300">

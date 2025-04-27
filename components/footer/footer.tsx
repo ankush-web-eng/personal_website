@@ -1,5 +1,5 @@
 import GetALlLinks from "@/components/projects/getalllinks"
-import Insta, { TestimonialLink } from "./insta";
+import YouTube, { TestimonialLink } from "./insta";
 import FreelanceProjectsLink from "@/components/freelance/freelanceProjects";
 
 export default function Footer() {
@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="h-full w-full flex flex-col space-y-3 items-center">
 
         <GetALlLinks />
-        {/* <Insta /> */}
+        <YouTube />
         <FreelanceProjectsLink />
         <TestimonialLink />
 
