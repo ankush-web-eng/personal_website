@@ -36,7 +36,7 @@ export default function YouTube() {
     <SocialCard
       title="YouTube Channel"
       username="@whyankush07"
-      href="https://youtube.com/whyankush07/"
+      href="https://youtube.com/@whyankush07/"
       platform="YouTube"
     />
   );
