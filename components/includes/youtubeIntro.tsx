@@ -14,7 +14,7 @@ export default function LazyIframe() {
                     <h1 className="text-center">November 2024</h1>
                     <iframe
                         className="rounded-lg"
-                        src="https://www.youtube.com/embed/xtIb6E5_Wno?si=EUwVeGrnQdK617hU"
+                        src="https://www.youtube.com/embed/OKYOCbUT2Fs?si=6FAGnWrhVVHBCWN3"
                         title="Brolang - a fun programming language"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     ></iframe>

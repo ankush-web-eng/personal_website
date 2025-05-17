@@ -5,7 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { MdDelete } from "react-icons/md";
-import { TbLoader2, TbTimeDuration0 } from "react-icons/tb";
+import { TbLoader2 } from "react-icons/tb";
+import { FaArrowRight } from "react-icons/fa";
 import { useToast } from "../ui/use-toast";
 import { ApiResponse } from "@/types/ApiResponse";
 import ProjectLinksSkeleton from "@/components/skeleton/ProjectLinkSkeleton";
@@ -30,6 +31,7 @@ export default function FreelanceProjectsLink() {
       setLoading(false);
     } catch (error) {
       console.error("Error fetching projects: ", error);
+      setLoading(false);
     }
   };
 
@@ -38,21 +40,32 @@ export default function FreelanceProjectsLink() {
   }, []);
 
   if (loading) {
-    return <ProjectLinksSkeleton />
+    return <ProjectLinksSkeleton />;
   }
 
   return (
-    <div className="bg-gray-50 shadow-md drop-shadow-md dark:shadow-blue-950 dark:bg-blue-950/20 rounded-xl space-y-2 flex flex-col p-3">
-      <h1 className="text-neutral-600 dark:text-gray-100 font-semibold">Freelace gigs:</h1>
-      {data == null ? <Loading >Loading Links</Loading> :
-        data.map((link, index) => <ProjectLink key={index} params={link} />)}
+    <div className="transition-all duration-300 p-4 rounded-lg border border-gray-200 dark:border-gray-800 hover:shadow-md bg-white dark:bg-gray-900 w-full max-w-xs">
+      <div className="flex flex-col space-y-3">
+        <h3 className="text-sm text-gray-500 dark:text-gray-400 font-medium">
+          Freelance Projects
+        </h3>
+        
+        {data === null ? (
+          <Loading>Loading Projects</Loading>
+        ) : (
+          <div className="flex flex-col space-y-2">
+            {data.map((link, index) => (
+              <FreelanceProjectLink key={index} params={link} />
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 }
 
-const ProjectLink = ({ params }: { params: FreelanceProjects }) => {
+const FreelanceProjectLink = ({ params }: { params: FreelanceProjects }) => {
   const [send, setSend] = useState(false);
-
   const { data: session } = useSession();
   const email = session?.user?.email;
   const { toast } = useToast();
@@ -73,29 +86,51 @@ const ProjectLink = ({ params }: { params: FreelanceProjects }) => {
         variant: 'destructive',
         duration: 2000,
         description: axiosError?.response?.data.message
-      })
+      });
     } finally {
       setSend(false);
     }
   };
 
   return (
-    <div className="text-sky-500 space-x-3 flex items-center dark:text-gray-200">
-      <Image
-        src={params?.icon || ""}
-        alt={params?.name}
-        width={25}
-        height={25}
-        fetchPriority="high"
-      />
-      <Link href={params?.link || "/"} target={params.link !== "" ? "_blank" : "_parent"} >{params?.name}</Link>
-      {email === "deshwalankush23@gmail.com" && <button onClick={() => deleteLink(params?._id)}>
-        {send ? (
-          <TbLoader2 className="animate-spin" />
-        ) : (
-          <MdDelete className="hover:bg-slate-500 rounded-md" />
+    <div className="flex items-center justify-between">
+      <Link 
+        href={params?.link || "/"} 
+        target={params.link !== "" ? "_blank" : "_parent"} 
+        className="group flex items-center text-sm font-medium"
+      >
+        {params?.icon && (
+          <Image
+            src={params.icon}
+            alt={params.name}
+            width={18}
+            height={18}
+            className="mr-2 rounded-sm"
+            fetchPriority="high"
+          />
         )}
-      </button>}
+        <span className="text-gray-800 dark:text-gray-200 group-hover:text-sky-500 transition-colors">
+          {params.name}
+        </span>
+        <FaArrowRight 
+          className="ml-2 text-gray-400 group-hover:text-sky-500 transform group-hover:translate-x-1 transition-all" 
+          size={12}
+        />
+      </Link>
+      
+      {email === "deshwalankush23@gmail.com" && (
+        <button 
+          onClick={() => deleteLink(params?._id)}
+          className="p-1 rounded-md text-gray-400 hover:text-red-500 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+          aria-label="Delete project"
+        >
+          {send ? (
+            <TbLoader2 className="animate-spin" size={16} />
+          ) : (
+            <MdDelete size={16} />
+          )}
+        </button>
+      )}
     </div>
   );
 }

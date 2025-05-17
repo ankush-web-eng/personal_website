@@ -3,7 +3,6 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import { motion, useInView } from "framer-motion";
 import { useRef, ReactNode } from "react";
-
 import { RiMailCheckFill } from "react-icons/ri";
 
 import Sociallinks from "@/components/includes/social";
@@ -11,14 +10,24 @@ import TypewriterMain from "@/components/library/type";
 import TwoGhostsSkeleton from "@/components/skeleton/TwoGhostsSkeleton";
 import ApplicationGridSkeleton from "@/components/skeleton/ApplicationGridSkeleton";
 import ProfileCover from "@/components/includes/profileCover";
-import { TestimonialLink } from "../footer/insta";
+import YouTube, { Insta, TestimonialLink } from "../footer/insta";
 
+// Dynamic imports
 const GetALlLinks = dynamic(() => import("@/components/projects/getalllinks"));
-const TwoGhosts = dynamic(() => import("@/components/ghost/twoghosts"), { ssr: false, loading: () => <TwoGhostsSkeleton /> });
-const LazyIframe = dynamic(() => import("@/components/includes/youtubeIntro"), { ssr: false });
-const ApplicationPreview = dynamic(() => import("@/components/applications/applicationPreview"), { ssr: false, loading: () => <ApplicationGridSkeleton /> });
-const FreelanceProjectsLink = dynamic(() => import("@/components/freelance/freelanceProjects"), { ssr: false })
-
+const TwoGhosts = dynamic(() => import("@/components/ghost/twoghosts"), {
+  ssr: false,
+  loading: () => <TwoGhostsSkeleton />
+});
+const LazyIframe = dynamic(() => import("@/components/includes/youtubeIntro"), {
+  ssr: false
+});
+const ApplicationPreview = dynamic(() => import("@/components/applications/applicationPreview"), {
+  ssr: false,
+  loading: () => <ApplicationGridSkeleton />
+});
+const FreelanceProjectsLink = dynamic(() => import("@/components/freelance/freelanceProjects"), {
+  ssr: false
+});
 
 interface ScrollAnimationWrapperProps {
   children: ReactNode;
@@ -32,7 +41,7 @@ export const ScrollAnimationWrapper = ({ children, direction = 'up' }: ScrollAni
   const variants = {
     hidden: {
       opacity: 0,
-      y: direction === 'up' ? 50 : -50,
+      y: direction === 'up' ? 50 : direction === 'down' ? -50 : 0,
       x: direction === 'left' ? 50 : direction === 'right' ? -50 : 0
     },
     visible: {
@@ -63,7 +72,6 @@ export default function Homepage() {
     <div className="flex flex-col space-y-5">
       <ScrollAnimationWrapper>
         <ProfileCover
-          // coverImageSrc="/ankush_bg_image.png"
           coverImageSrc="/imagine-win.jpg"
           profileImageSrc="/Professional.jpg"
           altCover="Cover image"
@@ -89,21 +97,30 @@ export default function Homepage() {
 
       <ScrollAnimationWrapper direction="right">
         <p className="text-gray-600 dark:text-gray-300">
-          Mentor, Freelancer, Developer, Lifter and Dreamer 
+          Developer, Mentor, Freelancer, Fitness Enthusiast, Explorer
         </p>
       </ScrollAnimationWrapper>
 
       <ScrollAnimationWrapper direction="left">
         <p className="text-gray-600 dark:text-gray-300">
-        A highly motivated guy who looks up at technology with curiosity, who belongs to a stereotypical space but still manages
-         to shine because of his belief system driven by koinophobia.
+          Hey, I&apos;m Ankush — a third-year engineering student who lifts weights, hits smashes in badminton,
+          codes like crazy, and travels whenever I can. I run a freelancing agency, teach full stack development,
+          and build products from scratch that range from AI video generators to terminal emulators.
         </p>
       </ScrollAnimationWrapper>
 
+      <ScrollAnimationWrapper direction="right">
+        <p className="text-gray-600 dark:text-gray-300">
+          Whether it&apos;s guiding someone on cracking their first internship, leading a hackathon-winning team,
+          or teaching system design to early-stage startups, I thrive when I&apos;m creating impact. You&apos;ll find me
+          debugging Go routines one moment and recording tech content the next — all while helping folks level up
+          in tech, career, and mindset.
+        </p>
+      </ScrollAnimationWrapper>
 
       <ScrollAnimationWrapper direction="left">
         <p className="text-gray-600 dark:text-gray-300">
-          Feel free to connect with me on my socials:{" "}
+          Feel free to connect with me on my socials:
         </p>
       </ScrollAnimationWrapper>
 
@@ -111,7 +128,7 @@ export default function Homepage() {
         <Sociallinks />
       </ScrollAnimationWrapper>
 
-
+      {/* Mobile-only components */}
       <div className="md:hidden">
         <ScrollAnimationWrapper>
           <GetALlLinks />
@@ -127,11 +144,21 @@ export default function Homepage() {
           <TestimonialLink />
         </ScrollAnimationWrapper>
       </div>
+      <div className="md:hidden">
+        <ScrollAnimationWrapper>
+          <Insta />
+        </ScrollAnimationWrapper>
+      </div>
+      <div className="md:hidden">
+        <ScrollAnimationWrapper>
+          <YouTube />
+        </ScrollAnimationWrapper>
+      </div>
 
       <ScrollAnimationWrapper direction="left">
         <ApplicationPreview />
       </ScrollAnimationWrapper>
-      
+
       <ScrollAnimationWrapper direction="right">
         <TwoGhosts />
       </ScrollAnimationWrapper>
@@ -162,7 +189,7 @@ export default function Homepage() {
               <RiMailCheckFill />
               <Link href="mailto:ankushsingh.dev@gmail.com">
                 ankushsingh.dev@gmail.com
-              </Link>{" "}
+              </Link>
             </motion.span>
           </motion.div>
         </div>
