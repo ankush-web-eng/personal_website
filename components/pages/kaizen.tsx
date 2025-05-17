@@ -72,37 +72,6 @@ export default function Kaizen() {
         me and on Social Media and then try to take out some learning from it.
       </motion.span>
 
-      <motion.span
-        variants={itemVariants}
-        className="text-slate-500 dark:text-slate-300"
-      >
-        Well this is the place where I keep writing and show and hone my writing
-        skills. To actually meet the writer inside me, I pick up and a Pen & a
-        Paper and then make the pen my sword as my keyboard is for me while
-        coding😁.
-      </motion.span>
-
-      <motion.span
-        variants={itemVariants}
-        className="text-slate-500 dark:text-slate-300"
-      >
-        Well, I also try to give life to my writings by adding my voice and
-        B-Rolls. I keep posting such content on my instagram cause I love doing
-        this. And become someone who puts good message to this youth and inspire
-        someone like me who feels like changing something for himself and world.
-        You can view them{" "}
-        <motion.span
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <Link
-            href={"https://instagram.com/whyankush07/"}
-            className="text-sky-500"
-          >
-            here!
-          </Link>
-        </motion.span>
-      </motion.span>
 
       <motion.div
         variants={itemVariants}
