@@ -14,7 +14,11 @@ export async function GET(req: NextRequest) {
             return NextResponse.json({ success: false, message: 'Invalid secret code' }, { status: 403 });
         }
 
-        const users = await prisma.clients.findMany();
+        const users = await prisma.clients.findMany({
+            select : {
+                email : true
+            }
+        });
 
         return NextResponse.json({ success: true, data: users }, { status: 200 });
     } catch (error) {
