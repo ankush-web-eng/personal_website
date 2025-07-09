@@ -62,3 +62,12 @@ model Ghost {
   image    String
   content  String[]
 }
+
+model Clients {
+  id         String   @id @default(uuid())
+  email      String   @unique
+  isVerified Boolean  @default(false)
+  verifyCode String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}

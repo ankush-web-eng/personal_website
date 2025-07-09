@@ -1,9 +1,9 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { ExternalLink, FileText, BookOpen, Users, Briefcase, GraduationCap, Target, Zap } from 'lucide-react';
-import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 interface ResourceLink {
     title: string;
@@ -113,6 +113,16 @@ const Resources = () => {
         bio: "Free resources and roadmaps to help you succeed in tech",
         avatar: "/Professional.jpg"
     };
+    const router = useRouter();
+
+    useEffect(() => {
+        const email = localStorage.getItem('userEmail');
+        const isVerified = localStorage.getItem('isVerified');
+
+        if (!email || isVerified !== 'true') {
+            router.push('/auth');
+        }
+    }, [router]);
 
     return (
         <motion.div
