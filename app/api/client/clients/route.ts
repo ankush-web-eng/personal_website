@@ -15,12 +15,15 @@ export async function GET(req: NextRequest) {
         }
 
         const users = await prisma.clients.findMany({
-            select : {
-                email : true
+            where: {
+                isVerified: true,
+            },
+            select: {
+                email: true
             }
         });
 
-        return NextResponse.json({ success: true, data: users }, { status: 200 });
+        return NextResponse.json({ totalEmails: users.length, data: users }, { status: 200 });
     } catch (error) {
         return NextResponse.json({ success: false, message: 'An error occurred while fetching clients.' }, { status: 500 });
     }
