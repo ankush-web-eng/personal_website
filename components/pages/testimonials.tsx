@@ -161,7 +161,7 @@ const TestimonialsPage = () => {
     };
 
     return (
-        <div className="min-h-screen bg-background relative overflow-hidden">
+        <div className="min-h-screen bg-background relative">
             <div className="absolute inset-0 overflow-hidden">
                 {[...Array(20)].map((_, i) => (
                     <motion.div
@@ -208,20 +208,7 @@ const TestimonialsPage = () => {
                         transition={{ delay: 0.6, duration: 0.8 }}
                     >
                         Real stories from amazing people who are taught and mentored by me. Their feedback is invaluable and helps us improve every day.
-                    </motion.p>
-
-                    <motion.div
-                        className="flex items-center justify-center gap-6 mt-6"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.8, duration: 0.6 }}
-                    >
-                        <div className="flex items-center gap-2 text-muted-foreground text-sm">
-                            <Heart className="w-4 h-4 text-red-500" />
-                            <span>100% Satisfaction</span>
-                        </div>
-                    </motion.div>
-                </motion.div>
+                    </motion.p>         </motion.div>
 
                 <motion.div
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 max-w-7xl mx-auto"
