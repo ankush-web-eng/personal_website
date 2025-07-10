@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
       create: { name, email, image, rating, message },
     });
 
-    const path = req.nextUrl.searchParams.get('path') || "/kaizen";
+    const path = req.nextUrl.searchParams.get('path') || "/testimimonials";
     revalidatePath(path);
 
     return NextResponse.json({ success: true, message: "Review submitted successfully" }, { status: 200 });

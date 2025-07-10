@@ -217,10 +217,6 @@ const TestimonialsPage = () => {
                         transition={{ delay: 0.8, duration: 0.6 }}
                     >
                         <div className="flex items-center gap-2 text-muted-foreground text-sm">
-                            <Users className="w-4 h-4" />
-                            <span>{testimonials?.length} Happy Students</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-muted-foreground text-sm">
                             <Heart className="w-4 h-4 text-red-500" />
                             <span>100% Satisfaction</span>
                         </div>

@@ -25,8 +25,7 @@ export async function PUT(request: NextRequest) {
             }
         });
 
-
-        const path = request.nextUrl.searchParams.get('path') || "/kaizen";
+        const path = request.nextUrl.searchParams.get('path') || "/testimimonials";
         revalidatePath(path);
 
         return NextResponse.json({ message: "Testimonial updated successfully" }, { status: 200 });

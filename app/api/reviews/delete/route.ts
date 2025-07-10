@@ -23,7 +23,7 @@ export async function DELETE(request: NextRequest) {
         });
 
 
-        const path = request.nextUrl.searchParams.get('path') || "/kaizen";
+        const path = request.nextUrl.searchParams.get('path') || "/testimimonials";
         revalidatePath(path);
 
         return NextResponse.json({ message: "Testimonial deleted successfully" }, { status: 200 });

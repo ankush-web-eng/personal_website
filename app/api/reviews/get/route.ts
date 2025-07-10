@@ -1,5 +1,4 @@
 import { prisma } from "@/lib/prisma";
-import { revalidatePath } from "next/cache";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(req: NextRequest) {
@@ -12,10 +11,6 @@ export async function GET(req: NextRequest) {
             },
             take: 50,
         });
-
-        
-        const path = req.nextUrl.searchParams.get('path') || "/kaizen";
-        revalidatePath(path);
 
         return NextResponse.json({ success: true, reviews }, { status: 200 });
 
