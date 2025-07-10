@@ -12,17 +12,15 @@ export default function Profile() {
 
     return (
         <div className="relative cursor-pointer">
-            <Image
+            {session?.user && <Image
                 onClick={() => setOpen(!open)}
                 width={32}
                 height={32}
                 alt={session?.user?.name || "User"}
                 src={session?.user?.image || "/user.png"}
                 className="rounded-full w-[32px] h-[32px]"
-            />
-            {open && <div className="absolute top-8 z-50 right-2 rounded-xl">
-                <Auth />
-            </div>}
+            />}
+            {!session?.user && <Auth />}
         </div>
     )
 }

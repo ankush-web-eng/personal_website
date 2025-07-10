@@ -1,6 +1,7 @@
 "use client";
 import { signIn, useSession, signOut } from "next-auth/react";
 import { Button } from "@/components/ui/button";
+import { PiSignOutBold } from "react-icons/pi";
 
 function AuthButton() {
   const { data: session } = useSession();
@@ -10,8 +11,7 @@ function AuthButton() {
         variant={'default'}
         onClick={() => signOut()}
       >
-
-        <span className="font-semibold italic">Sign Out</span>
+        <PiSignOutBold />
       </Button>
     );
   } else {
@@ -45,7 +45,6 @@ function AuthButton() {
           />
           <path d="M1 1h22v22H1z" fill="none" />
         </svg>
-        <span className="font-semibold italic">Sign In</span>
       </Button>
     );
   }

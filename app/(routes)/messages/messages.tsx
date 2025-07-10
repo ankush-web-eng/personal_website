@@ -101,7 +101,7 @@ export default function MessagesPage() {
       } else {
         setUser(data.data.data.name);
       }
-    } catch (error) {}
+    } catch (error) { }
   };
 
   const getChats = async () => {
@@ -149,6 +149,7 @@ export default function MessagesPage() {
         <TbLoader2 className="animate-spin w-1/5 h-1/5 text-sky-500" />
       </div>
     );
+
   return (
     <div className="w-full h-screen pt-8 space-y-8 pl-6">
       <h1 className="text-4xl font-bold">

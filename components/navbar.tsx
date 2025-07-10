@@ -87,6 +87,27 @@ export const Navbar = () => {
       ),
     },
     {
+      path: "/testimonials",
+      label: "Testimonials",
+      icon: (active, hovered) => (
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          className={`${getIconColor("/resources")} transition-all duration-300 ease-in-out`}
+          xmlns="http://www.w3.org/2000/svg"
+          stroke="currentColor"
+          fill="none"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+        </svg>
+      ),
+    },
+    {
       path: "/freelance",
       label: "Resume",
       icon: (active, hovered) => (
@@ -128,27 +149,6 @@ export const Navbar = () => {
         >
           <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
           <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-        </svg>
-      ),
-    },
-    {
-      path: "/levelup",
-      label: "Resources",
-      icon: (active, hovered) => (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          className={`${getIconColor("/resources")} transition-all duration-300 ease-in-out`}
-          xmlns="http://www.w3.org/2000/svg"
-          stroke="currentColor"
-          fill="none"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
-          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
         </svg>
       ),
     },

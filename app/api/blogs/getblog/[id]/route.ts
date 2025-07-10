@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { PrismaClient } from "@prisma/client";
 import { revalidatePath } from "next/cache";
-const prisma = new PrismaClient()
+import { prisma } from "@/lib/prisma";
 
 type Params = {
     params : {
