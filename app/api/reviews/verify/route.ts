@@ -1,7 +1,8 @@
 import { prisma } from "@/lib/prisma";
-import { NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function PUT(request: Request) {
+export async function PUT(request: NextRequest) {
     const { id } = await request.json();
 
     if (!id) {
@@ -23,6 +24,10 @@ export async function PUT(request: Request) {
                 isVerified: true
             }
         });
+
+
+        const path = request.nextUrl.searchParams.get('path') || "/kaizen";
+        revalidatePath(path);
 
         return NextResponse.json({ message: "Testimonial updated successfully" }, { status: 200 });
     } catch (error) {

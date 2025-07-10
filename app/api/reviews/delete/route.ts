@@ -1,7 +1,8 @@
 import { prisma } from "@/lib/prisma";
-import { NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function DELETE(request: Request) {
+export async function DELETE(request: NextRequest) {
     const { id } = await request.json();
 
     if (!id) {
@@ -20,6 +21,10 @@ export async function DELETE(request: Request) {
         await prisma.reviews.delete({
             where: { id },
         });
+
+
+        const path = request.nextUrl.searchParams.get('path') || "/kaizen";
+        revalidatePath(path);
 
         return NextResponse.json({ message: "Testimonial deleted successfully" }, { status: 200 });
     } catch (error) {

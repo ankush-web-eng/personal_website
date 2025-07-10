@@ -11,7 +11,7 @@ export default function Profile() {
     const { data: session } = useSession();
 
     return (
-        <div className="relative cursor-pointer">
+        <div className="flex space-x-2 relative cursor-pointer">
             {session?.user && <Image
                 onClick={() => setOpen(!open)}
                 width={32}
@@ -20,7 +20,7 @@ export default function Profile() {
                 src={session?.user?.image || "/user.png"}
                 className="rounded-full w-[32px] h-[32px]"
             />}
-            {!session?.user && <Auth />}
+            <div><Auth /></div>
         </div>
     )
 }

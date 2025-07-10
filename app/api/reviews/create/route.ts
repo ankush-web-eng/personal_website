@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/prisma";
+import { revalidatePath } from "next/cache";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
@@ -15,6 +16,9 @@ export async function POST(req: NextRequest) {
       update: { name, image, rating, message },
       create: { name, email, image, rating, message },
     });
+
+    const path = req.nextUrl.searchParams.get('path') || "/kaizen";
+    revalidatePath(path);
 
     return NextResponse.json({ success: true, message: "Review submitted successfully" }, { status: 200 });
 
