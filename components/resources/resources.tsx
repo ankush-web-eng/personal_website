@@ -60,6 +60,8 @@ const Resources = () => {
         if (filename.includes('Projects')) return <BookOpen className="w-5 h-5" />;
         if (filename.includes('Blueprint')) return <Target className="w-5 h-5" />;
         if (filename.includes('full_stack')) return <Zap className="w-5 h-5" />;
+        if (filename.includes('Cloud_Computing')) return <Users className="w-5 h-5" />;
+        if (filename.includes('Machine_Learning')) return <Users className="w-5 h-5" />;
         return <FileText className="w-5 h-5" />;
     };
 
@@ -87,6 +89,8 @@ const Resources = () => {
         if (filename.includes('Projects')) return 'Curated project ideas and implementations';
         if (filename.includes('Blueprint')) return 'The ultimate blueprint for tech success';
         if (filename.includes('full_stack')) return 'Complete full stack development path';
+        if (filename.includes('Cloud_Computing')) return 'Guide to mastering cloud computing';
+        if (filename.includes('Machine_Learning')) return 'Comprehensive machine learning resources';
         return 'Professional development resource';
     };
 
@@ -99,6 +103,8 @@ const Resources = () => {
         'full_stack_roadmap.pdf',
         'Projects_by_Ankush.pdf',
         'Freelancing_Roadmap.pdf',
+        'Cloud_Computing_Roadmap.pdf',
+        'Machine_Learning_Resource.pdf',
     ].map(filename => ({
         title: formatTitle(filename),
         url: `/Resources/${filename}`,
