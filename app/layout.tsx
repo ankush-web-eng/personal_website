@@ -21,9 +21,9 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <Head>
+      {/* <Head>
         <CustomHead />
-      </Head>
+      </Head> */}
       <body className={inter.className}>
         <Provider>
           <CloudflareAnalytics />

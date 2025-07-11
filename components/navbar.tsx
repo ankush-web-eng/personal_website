@@ -15,7 +15,6 @@ export const Navbar = () => {
   const pathname = usePathname();
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
-  // Framer motion variants
   const navbarVariants = {
     hidden: { opacity: 0, x: -50 },
     visible: {
@@ -94,7 +93,7 @@ export const Navbar = () => {
           width="24"
           height="24"
           viewBox="0 0 24 24"
-          className={`${getIconColor("/resources")} transition-all duration-300 ease-in-out`}
+          className={`${getIconColor("/testimonials")} transition-all duration-300 ease-in-out`}
           xmlns="http://www.w3.org/2000/svg"
           stroke="currentColor"
           fill="none"
@@ -104,6 +103,29 @@ export const Navbar = () => {
         >
           <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
           <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+        </svg>
+      ),
+    },
+    {
+      path: "/levelup",
+      label: "Resources",
+      icon: (active, hovered) => (
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          className={`${getIconColor("/levelup")} transition-all duration-300 ease-in-out`}
+          xmlns="http://www.w3.org/2000/svg"
+          stroke="currentColor"
+          fill="none"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+          <path d="M14 2v6h6" />
+          <path d="M12 18v-6" />
+          <path d="M9 15l3-3 3 3" />
         </svg>
       ),
     },
@@ -175,7 +197,6 @@ export const Navbar = () => {
           >
             {item.icon(isActive(item.path), hoveredItem === item.path)}
 
-            {/* Glow effect */}
             {(isActive(item.path) || hoveredItem === item.path) && (
               <motion.div
                 layoutId="glow"
@@ -187,7 +208,6 @@ export const Navbar = () => {
               />
             )}
 
-            {/* Label that appears on hover - only on desktop */}
             <motion.span
               className="absolute left-full ml-2 whitespace-nowrap hidden md:block text-sm font-medium text-gray-700 dark:text-gray-300"
               initial={{ opacity: 0, x: -5 }}
