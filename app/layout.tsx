@@ -7,7 +7,7 @@ import OfflineNotification from '@/components/offline-navigator';
 import CustomHead from '@/components/custom-head';
 import { metadata as siteMetadata } from '@/config/metadata';
 import Head from "next/head";
-import { Analytics } from "@vercel/analytics/react";
+// import { Analytics } from "@vercel/analytics/react";
 import NextTopLoader from 'nextjs-toploader';
 
 const inter = Inter({ subsets: ["latin"] });
@@ -27,7 +27,7 @@ export default async function RootLayout({
       <body className={inter.className}>
         <Provider>
           <Toaster />
-          <Analytics />
+          {/* <Analytics /> */}
           <NextTopLoader
             showSpinner={false}
           />
