@@ -4,11 +4,10 @@ import "@/styles/globals.css";
 import Provider from "./provider";
 import { Toaster } from '@/components/ui/toaster';
 import OfflineNotification from '@/components/offline-navigator';
-import CustomHead from '@/components/custom-head';
 import { metadata as siteMetadata } from '@/config/metadata';
-import Head from "next/head";
 import NextTopLoader from 'nextjs-toploader';
 import CloudflareAnalytics from '@/components/CloudflareAnalytics';
+import { Toaster as SonnerToast } from "@/components/ui/sonner"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +27,7 @@ export default async function RootLayout({
         <Provider>
           <CloudflareAnalytics />
           <Toaster />
+          <SonnerToast richColors position="top-right" />
           <NextTopLoader
             showSpinner={false}
           />

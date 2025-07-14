@@ -4,6 +4,8 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { ExternalLink, FileText, BookOpen, Users, Briefcase, GraduationCap, Target, Zap } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import { Button } from '../ui/button';
+import {toast} from 'sonner'
 
 interface ResourceLink {
     title: string;
@@ -119,6 +121,17 @@ const Resources = () => {
         bio: "Free resources and roadmaps to help you succeed in tech",
         avatar: "/Professional.jpg"
     };
+
+    const handleWaitlistJoin = () => {
+        const hasJoined = localStorage.getItem('waitlistJoined');
+        if (!hasJoined) {
+            toast.success('Joined the waitlist successfully!');
+            localStorage.setItem('waitlistJoined', 'true');
+        } else {
+            toast.success('You are already on the waitlist.');
+        }
+    }
+
     const router = useRouter();
 
     useEffect(() => {
@@ -139,6 +152,15 @@ const Resources = () => {
             className="min-h-screen bg-background text-foreground flex items-center justify-center p-4"
         >
             <div className="w-full max-w-md mx-auto">
+
+                <motion.div
+                    variants={profileVariants}
+                    className="text-center mb-12"
+                >
+                    <Button onClick={handleWaitlistJoin} className="rounded-full float-right" variant={'primary'}>
+                        Join waitlist
+                    </Button>
+                </motion.div>
 
                 <motion.div
                     variants={profileVariants}
