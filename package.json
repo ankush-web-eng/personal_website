@@ -9,6 +9,7 @@
     "lint": "next lint",
     "vercel-build": "prisma generate && prisma migrate deploy && next build",
     "prisma:generate": "prisma generate",
+    "postinstall": "prisma generate",
     "postbuild": "next-sitemap"
   },
   "dependencies": {
@@ -50,6 +51,7 @@
     "uuid": "^9.0.1"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.11.6",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
