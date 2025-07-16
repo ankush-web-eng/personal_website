@@ -6,7 +6,7 @@ import { Toaster } from '@/components/ui/toaster';
 import OfflineNotification from '@/components/offline-navigator';
 import { metadata as siteMetadata } from '@/config/metadata';
 import NextTopLoader from 'nextjs-toploader';
-import CloudflareAnalytics from '@/components/CloudflareAnalytics';
+import { CloudflareAnalyticsOne, CloudflareAnalyticsTwo } from '@/components/CloudflareAnalytics';
 import { Toaster as SonnerToast } from "@/components/ui/sonner"
 
 const inter = Inter({ subsets: ["latin"] });
@@ -25,7 +25,8 @@ export default async function RootLayout({
       </Head> */}
       <body className={inter.className}>
         <Provider>
-          <CloudflareAnalytics />
+          <CloudflareAnalyticsOne />
+          <CloudflareAnalyticsTwo />
           <Toaster />
           <SonnerToast richColors position="top-right" />
           <NextTopLoader
