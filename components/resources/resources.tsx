@@ -136,9 +136,13 @@ const Resources = () => {
 
     useEffect(() => {
         const email = localStorage.getItem('userEmail');
+        if (!email) {
+            router.push('/auth');
+            return;
+        }
         const isVerified = localStorage.getItem('isVerified');
 
-        if (!email || isVerified !== 'true') {
+        if (!isVerified || isVerified !== 'true') {
             router.push('/auth');
         }
     }, [router]);

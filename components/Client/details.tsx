@@ -89,9 +89,10 @@ export default function AuthPage() {
 
     useEffect(() => {
         const email = localStorage.getItem('userEmail');
+        if (!email) return;
         const isVerified = localStorage.getItem('isVerified');
 
-        if (email || isVerified === 'true') {
+        if (isVerified === 'true') {
             router.push('/levelup');
         }
     }, [router]);
