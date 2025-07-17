@@ -64,6 +64,7 @@ const Resources = () => {
         if (filename.includes('full_stack')) return <Zap className="w-5 h-5" />;
         if (filename.includes('Cloud_Computing')) return <Users className="w-5 h-5" />;
         if (filename.includes('Machine_Learning')) return <Users className="w-5 h-5" />;
+        if (filename.includes('Technical_skills')) return <Users className="w-5 h-5" />;
         return <FileText className="w-5 h-5" />;
     };
 
@@ -72,7 +73,7 @@ const Resources = () => {
         if (filename.includes('Blueprint')) return 'blueprint';
         return 'guide';
     };
-
+    
     const formatTitle = (filename: string): string => {
         return filename
             .replace('.pdf', '')
@@ -93,6 +94,7 @@ const Resources = () => {
         if (filename.includes('full_stack')) return 'Complete full stack development path';
         if (filename.includes('Cloud_Computing')) return 'Guide to mastering cloud computing';
         if (filename.includes('Machine_Learning')) return 'Comprehensive machine learning resources';
+        if (filename.includes('Technical_skills')) return 'Essential technical skills guide';
         return 'Professional development resource';
     };
 
@@ -107,6 +109,7 @@ const Resources = () => {
         'Freelancing_Roadmap.pdf',
         'Cloud_Computing_Roadmap.pdf',
         'Machine_Learning_Resource.pdf',
+        'Technical_skills_guide.pdf'
     ].map(filename => ({
         title: formatTitle(filename),
         url: `/Resources/${filename}`,
