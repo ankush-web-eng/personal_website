@@ -2,26 +2,26 @@
 
 import Script from 'next/script'
 
-export function CloudflareAnalyticsOne() {
+export default function CloudflareAnalytics() {
     return (
         <Script
             src="https://static.cloudflareinsights.com/beacon.min.js"
             data-cf-beacon={JSON.stringify({
-                token: process.env.NEXT_PUBLIC_CLOUDFLARE_ANALYTICS_TOKEN_ONE,
+                token: process.env.NEXT_PUBLIC_CLOUDFLARE_ANALYTICS_TOKEN,
             })}
             strategy="afterInteractive"
         />
     )
 }
 
-export function CloudflareAnalyticsTwo() {
-    return (
-        <Script
-            src="https://static.cloudflareinsights.com/beacon.min.js"
-            data-cf-beacon={JSON.stringify({
-                token: process.env.NEXT_PUBLIC_CLOUDFLARE_ANALYTICS_TOKEN_TWO,
-            })}
-            strategy="afterInteractive"
-        />
-    )
-}
+// export function CloudflareAnalyticsTwo() {
+//     return (
+//         <Script
+//             src="https://static.cloudflareinsights.com/beacon.min.js"
+//             data-cf-beacon={JSON.stringify({
+//                 token: process.env.NEXT_PUBLIC_CLOUDFLARE_ANALYTICS_TOKEN_TWO,
+//             })}
+//             strategy="afterInteractive"
+//         />
+//     )
+// }
