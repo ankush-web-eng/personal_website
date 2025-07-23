@@ -137,18 +137,18 @@ const Resources = () => {
 
     const router = useRouter();
 
-    useEffect(() => {
-        const email = localStorage.getItem('userEmail');
-        if (!email) {
-            router.push('/auth');
-            return;
-        }
-        const isVerified = localStorage.getItem('isVerified');
+    // useEffect(() => {
+    //     const email = localStorage.getItem('userEmail');
+    //     if (!email) {
+    //         router.push('/auth');
+    //         return;
+    //     }
+    //     const isVerified = localStorage.getItem('isVerified');
 
-        if (!isVerified || isVerified !== 'true') {
-            router.push('/auth');
-        }
-    }, [router]);
+    //     if (!isVerified || isVerified !== 'true') {
+    //         router.push('/auth');
+    //     }
+    // }, [router]);
 
     return (
         <motion.div
