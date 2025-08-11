@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(req: NextRequest) {
     try {
-        const reviews = await prisma.reviews.findMany({
+        const feedbacks = await prisma.feedback.findMany({
             orderBy: { createdAt: "desc" },
             where: {
                 isVerified: false,
@@ -13,13 +13,13 @@ export async function GET(req: NextRequest) {
             take: 50,
         });
 
-        const path = req.nextUrl.searchParams.get('path') || "/testimonials";
+        const path = req.nextUrl.searchParams.get('path') || "/feedbacks";
         revalidatePath(path);
 
-        return NextResponse.json({ success: true, reviews }, { status: 200 });
+        return NextResponse.json({ success: true, feedbacks }, { status: 200 });
 
     } catch (error) {
-        console.error("Error in /api/reviews/get", error);
+        console.error("Error in /api/feedbacks/get", error);
         return NextResponse.json({ message: "Internal Server Error", success: false }, { status: 500 });
     }
 }
