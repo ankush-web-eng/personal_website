@@ -72,7 +72,7 @@ export default function Homepage() {
     <div className="flex flex-col space-y-5">
       <ScrollAnimationWrapper>
         <ProfileCover
-          coverImageSrcs={["imagine-win.webp", "thumbnail.webp"]}
+          coverImageSrcs={["imagine-win.webp"]}
           profileImageSrc="/Professional.jpg"
           altCover="Cover image"
           altProfile="Profile picture"
