@@ -1,5 +1,5 @@
 import GetAllLinks from "@/components/projects/getalllinks"
-import YouTube, { Insta, TestimonialLink } from "./insta";
+import YouTube, { FeedbackLink, Insta, TestimonialLink } from "./insta";
 import FreelanceProjectsLink from "@/components/freelance/freelanceProjects";
 
 export default function Footer() {
@@ -9,10 +9,11 @@ export default function Footer() {
         {/* Social cards container with consistent spacing */}
         <div className="w-full flex flex-col space-y-3">
           <GetAllLinks />
-          <YouTube />
-          <Insta />
           <FreelanceProjectsLink />
           <TestimonialLink />
+          <FeedbackLink />
+          <YouTube />
+          <Insta />
         </div>
       </div>
     </div>

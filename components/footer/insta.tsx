@@ -35,8 +35,8 @@ export default function YouTube() {
   return (
     <SocialCard
       title="YouTube Channel"
-      username="@whyankush07"
-      href="https://youtube.com/@whyankush07/"
+      username="@howankush07"
+      href="https://youtube.com/@howankush07"
       platform="YouTube"
     />
   );
@@ -45,9 +45,9 @@ export default function YouTube() {
 export function Insta() {
   return (
     <SocialCard
-      title="Instagram Profile"
+      title="Instagram Profile (24k+)"
       username="@howankush07"
-      href="https://instagram.com/howankush07/"
+      href="https://instagram.com/howankush07"
       platform="Instagram"
     />
   );
@@ -59,7 +59,18 @@ export const TestimonialLink = () => {
       title="Client Reviews"
       username="Testimonials"
       href="/freelance"
-      platform="Testimonials"
+      platform="Personal Website"
+    />
+  );
+}
+
+export const FeedbackLink = () => {
+  return (
+    <SocialCard
+      title="Student Feedback"
+      username="Feedback"
+      href="/testimonials"
+      platform="Personal Website"
     />
   );
 }
