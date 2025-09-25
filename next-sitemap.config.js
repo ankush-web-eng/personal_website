@@ -14,6 +14,16 @@ module.exports = {
       lastmod: new Date().toISOString(),
     },
     {
+      loc: '/testimonials',
+      priority: 0.8,
+      lastmod: new Date().toISOString(),
+    },
+    {
+      loc: '/levelup',
+      priority: 0.8,
+      lastmod: new Date().toISOString(),
+    },
+    {
       loc: '/about',
       priority: 0.8,
       lastmod: new Date().toISOString(),
